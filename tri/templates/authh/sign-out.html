@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form method="post" action="{% url 'sign out' %}">
-    {{ form }}
-    <button>Logout</button>
-    {% csrf_token %}
-</form>
-</body>
-</html>
+{% extends 'base/base.html' %}
+{% block page_content %}
+
+    <form method="post" action="{% url 'sign out' %}">
+        <div>
+            <a1>You have been signed out.</a1>
+        </div>
+
+        {{ form }}
+        <a href="{% url 'index'%}">Return to Home Page</a>
+        {% csrf_token %}
+    </form>
+
+{% endblock %}

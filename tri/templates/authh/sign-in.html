@@ -1,18 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base/base.html' %}
+{% block page_content %}
 
-<form method="post" action="{% url 'sign in' %}">
-    {{ form.as_p }}
-    <input type="hidden" value="{{ next }}">
-    <button>Sign In
-    </button>
-    {% csrf_token %}
-</form>
+    <!-- Your Profile Data -->
+    <h1>Sign in form: </h1>
 
-</body>
-</html>
+    <form method="post" action="{% url 'sign in' %}">
+        {{ form.as_p }}
+        <input name="next" type="hidden" value="{{ next }}">
+        <button>Sign in!</button>
+        {% csrf_token %}
+    </form>
+
+
+
+    {#    <div class="body">#}
+    {#        <div class="form">#}
+    {#            <div>#}
+    {#                <form method="post" action="{% url 'sign in' %}">#}
+    {#                    {{ form.as_p}}#}
+    {#                    <input type="hidden" name="next" value="{{ next }}">#}
+    {#                </form>#}
+    {#            </div>#}
+    {#            <div class="right">#}
+    {#                <!-- Edit Profile Button -->#}
+    {#                <a class="button edit" href="#">Sign in</a>#}
+    {#                {% csrf_token %}#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+
+{% endblock %}
