@@ -11,11 +11,11 @@ class SignUpForm(UserCreationForm):
     age = forms.IntegerField()
     first_name = forms.CharField()
     last_name = forms.CharField()
-    gender = forms.ChoiceField()
+    # gender = forms.ChoiceField()
 
     class Meta:
         model = UserModel
-        fields = ('email', 'password1', 'password2', 'first_name', 'last_name', 'age', 'gender',)
+        fields = ('email', 'password1', 'password2', 'first_name', 'last_name', 'age',)
 
 
     def save(self, commit=True):

@@ -21,21 +21,20 @@ class AppUser(AbstractBaseUser, PermissionsMixin):
     objects = AppUserManager()
 
 
-class ChoicesEnumMixin:
-    @classmethod
-    def choices(cls):
-        return [(x.name, x.value) for x in cls]
-
-    @classmethod
-    def max_len(cls):
-        return max(len(name) for name, _ in cls.choices())
-
-
-class Gender(ChoicesEnumMixin, Enum):
-    male = 'male'
-    female = 'female'
-    DoNotShow = 'do not show'
-
+# class ChoicesEnumMixin:
+#     @classmethod
+#     def choices(cls):
+#         return [(x.name, x.value) for x in cls]
+#
+#     @classmethod
+#     def max_len(cls):
+#         return max(len(name) for name, _ in cls.choices())
+#
+#
+# class Gender(ChoicesEnumMixin, Enum):
+#     male = 'male'
+#     female = 'female'
+#     DoNotShow = 'do not show'
 
 
 class Profile(models.Model):
@@ -47,13 +46,21 @@ class Profile(models.Model):
     )
     age = models.PositiveIntegerField()
 
-    gender = models.CharField(
-        choices=Gender.choices(),
-        max_length=Gender.max_len(),
-    )
+    # gender = models.CharField(
+    #     max_length=len('DoNotShow'),
+    #     choices=(
+    #         ('male', 'male'),
+    #         ('female', 'female'),
+    #         ('DoNotShow', 'do not show'),
+    #     ),
+    # )
 
     user = models.OneToOneField(
         AppUser,
         primary_key=True,
         on_delete=models.CASCADE,
     )
+
+    @property
+    def full_name(self):
+        return f'{self.first_name} {self.last_name}'

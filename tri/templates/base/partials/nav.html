@@ -3,16 +3,17 @@
         <li class="img"><img src="/static/images/dollar.png" alt="dollar"></li>
         <li><a href="{% url 'index' %}">Tri Spot</a></li>
 
+
+    
         <li class="right">
             {% if not request.user.is_authenticated %}
                 <a href="{% url 'sign up' %}">Create Profile</a>
                 <a href="{% url 'sign in' %}">Sign in</a>
-
             {% else %}
                 <a href="{% url 'profile details' pk=request.user.pk %}">User Details</a>
                 <a href="{% url 'sign out' %}">Sign Out</a>
-
             {% endif %}
+                 <a href="{% url 'about' %}">About</a>
     </ul>
 
 </nav>

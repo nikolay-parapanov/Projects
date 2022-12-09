@@ -3,29 +3,39 @@
 
     <!-- Your Profile Data -->
     <h1>Your Profile</h1>
-        {{ obejct.first_name }}
-        {{ obejct.last_name }}
+    {{ first_name }}
+    {{ obejct.last_name }}
 
 
-        <div class="expenses-container">
-            <div class="expense-container">
-                <!-- Full Name -->
-                <h2>{{ object.pk }}</h2>
-                <h2>{{ object.email }}</h2>
-                <!-- Profile Image -->
-                <img src="/static/images/user.png" alt="profile pic">
-                <!-- Profile Description -->
-                <!-- Total Items Bought -->
-                <p>Total Items Bought: 2</p>
-                <!-- Budget Left -->
-                <p>Budget Left: 100.00$</p>
-                <div class="right">
-                    <!-- Edit Profile Button -->
-                    <a class="button edit" href="#">Edit Profile</a>
-                    <!-- Delete Profile Button -->
-                    <a class="button delete" href="#">Delete Profile</a>
-                </div>
+    <div class="expenses-container">
+        <div class="expense-container">
+            <!-- Full Name -->
+            {#            <h2>{{ object.pk }}</h2>#}
+            <!-- Profile Image -->
+            <img src="/static/images/user.png" alt="profile pic">
+            <p>
+                <label>e-mail:  </label>
+                <a1>{{ object.email }}</a1>
+            </p>
+            <p>
+                <label>first name:  </label>
+                <a2>{{ first_name_for_form }}</a2>
+            </p>
+            <p>
+                <label>last name:  </label>
+                <a2>{{ last_name_for_form }}</a2>
+            </p>
+            <p>
+                <labe>age:  </labe>
+                <a2>{{ age_for_form }}</a2>
+            </p>
+            <div class="right">
+                <!-- Edit Profile Button -->
+                <a class="button edit" href="{% url 'profile update' pk=object.pk %}">Edit Profile</a>
+                <!-- Delete Profile Button -->
+                <a class="button delete" href="{% url 'profile delete' pk=object.pk %}">Delete Profile</a>
             </div>
         </div>
+    </div>
     <!-- End Your Profile Data -->
 {% endblock %}

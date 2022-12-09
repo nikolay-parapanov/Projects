@@ -1,6 +1,8 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import ListView, DetailView
+from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 
 from tri.authh.models import Profile
 
@@ -13,15 +15,55 @@ class UsersListView(LoginRequiredMixin, ListView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        print(self.request.user.__class__)
         return context
 
 
 class UserDetailsView(DetailView):
-    template_name = 'profile/profile-details.html'
     model = UserModel
-    first_name = Profile.first_name
-    last_name = Profile.last_name
+    template_name = 'profile/profile-details.html'
 
-    @property
-    def full_name(self):
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user_id = int(context['object'].id)
+        profile_data = Profile.objects.filter(pk=user_id).get()
+        context['first_name_for_form'] = profile_data.first_name
+        context['last_name_for_form'] = profile_data.last_name
+        context['age_for_form'] = profile_data.age
+        return context
+
+
+class UserUpdateView(UpdateView):
+    fields = '__all__'
+    model = UserModel
+    template_name = 'profile/profile-edit.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user_id = int(context['object'].id)
+        profile_data = Profile.objects.filter(pk=user_id).get()
+        context['first_name_for_form'] = profile_data.first_name
+        context['last_name_for_form'] = profile_data.last_name
+        context['age_for_form'] = profile_data.age
+        return context
+
+    def get_success_url(self):
+        created_object = self.object
+        return reverse_lazy('profile details', kwargs={
+            'pk': created_object.pk,
+        })
+
+
+class UserDeleteView(DeleteView):
+    fields = ('email',)
+    model = UserModel
+    template_name = 'profile/profile-delete.html'
+    success_url = '/'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+
+def about(request):
+    if request.method == "GET":
+        return render(request,'web/about.html')

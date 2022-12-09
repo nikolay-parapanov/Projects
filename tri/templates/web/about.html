@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    <ul>
+        {% for user in object_list %}
+            <li>
+                {% if user == request.user %}
+                    <strong>
+                        {{ user.email }}
+                    </strong>
+                {% else %}
+                    {{ user.email }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+<p>
+Main Info re the web-page:
+</p>
+{% endblock %}
