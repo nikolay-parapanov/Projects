@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+
+    <br>
+    <br>
+    <br>
+    <button type="button">List new Item</button>
+
+    <div>
+        <br>
+        <h1>Marketplace Item Detail: </h1>
+        <h1>______________________________________</h1>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+    <div class="expense-container">
+        <!-- Full Name -->
+        {#            <h2>{{ object.pk }}</h2>#}
+        <!-- Profile Image -->
+        <img src="/static/images/user.png" alt="profile pic">
+        <p>
+            <label>name: </label>
+            <a1>{{ object_name.name }}</a1>
+        </p>
+        <p>
+            <label>description: </label>
+            <a2>{{ item.description }}</a2>
+        </p>
+        <p>
+            <label>type: </label>
+            <a2>{{ item.type }}</a2>
+        </p>
+        <p>
+            <labe>price (EUR):</labe>
+            <a2>{{ item.price|floatformat:2 }}</a2>
+        </p>
+        <div class="right">
+            <a class="button edit" href="#">Item Details</a>
+            {% csrf_token %}
+        </div>
+    </div>
+
+    </div>
+    </ul>
+    </h1>
+{% endblock %}

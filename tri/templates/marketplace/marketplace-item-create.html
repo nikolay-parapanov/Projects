@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+
+
+    <div>
+        <br>
+        <h1>Marketplace New Item Form: </h1>
+        <h1>______________________________________</h1>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+    {##}
+    <div class="expense-container">
+        <!-- Full Name -->
+        <h2>{{ object.pk }}</h2>
+        <!-- Profile Image -->
+        <img src="/static/images/user.png" alt="profile pic">
+        <p>
+            <label>name: </label>
+            <a1>{{ form.name }}</a1>
+        </p>
+        <p>
+            <label>description: </label>
+            <a2>{{ form.description }}</a2>
+        </p>
+        <p>
+            <label>type: </label>
+            <a2>{{ form.type }}</a2>
+        </p>
+        <p>
+            <labe>price (EUR):</labe>
+            <a2>{{ form.price }}</a2>
+        </p>
+        <div class="right">
+            <a class="button edit" href="{% url 'marketplace details item' pk=item.pk %}">Save item</a>
+        </div>
+    </div>
+
+
+{% endblock %}
