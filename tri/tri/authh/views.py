@@ -18,6 +18,7 @@ class SignUpView(views.CreateView):
         return result
 
 
+
 class SignInView(auth_views.LoginView):
     template_name = 'authh/sign-in.html'
 

@@ -1,3 +1,4 @@
+from django.urls import reverse_lazy
 from django.views import generic as views
 from tri.marketplace import models as models
 
@@ -34,3 +35,10 @@ class MarketplaceItemCreateView(views.CreateView):
     template_name = 'marketplace/marketplace-item-create.html'
     model = models.MarketItems
     fields = '__all__'
+    success_url = 'marketplace/marketplace-list/'
+
+    # def get_success_url(self):
+    #     created_object = self.object
+    #     return reverse_lazy('marketplace details item', kwargs={
+    #         pk:created_object.id
+    #     })
