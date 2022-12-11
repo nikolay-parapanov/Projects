@@ -1,5 +1,4 @@
 from django.urls import path
-
 from tri.authh.views import SignUpView, SignInView, SignOutView
 
 urlpatterns = (

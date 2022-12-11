@@ -4,8 +4,6 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 
-from tri.authh.models import Profile
-
 UserModel = get_user_model()
 
 
@@ -24,11 +22,11 @@ class UserDetailsView(DetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        user_id = int(context['object'].id)
-        profile_data = Profile.objects.filter(pk=user_id).get()
-        context['first_name_for_form'] = profile_data.first_name
-        context['last_name_for_form'] = profile_data.last_name
-        context['age_for_form'] = profile_data.age
+        # user_id = int(context['object'].id)
+        # profile_data = Profile.objects.filter(pk=user_id).get()
+        # context['first_name_for_form'] = profile_data.first_name
+        # context['last_name_for_form'] = profile_data.last_name
+        # context['age_for_form'] = profile_data.age
         return context
 
 
@@ -39,11 +37,11 @@ class UserUpdateView(UpdateView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        user_id = int(context['object'].id)
-        profile_data = Profile.objects.filter(pk=user_id).get()
-        context['first_name_for_form'] = profile_data.first_name
-        context['last_name_for_form'] = profile_data.last_name
-        context['age_for_form'] = profile_data.age
+        # user_id = int(context['object'].id)
+        # profile_data = Profile.objects.filter(pk=user_id).get()
+        # context['first_name_for_form'] = profile_data.first_name
+        # context['last_name_for_form'] = profile_data.last_name
+        # context['age_for_form'] = profile_data.age
         return context
 
     def get_success_url(self):

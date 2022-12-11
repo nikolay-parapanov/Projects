@@ -1,5 +1,6 @@
 from django.urls import path, include
-from tri.web.views import UsersListView, UserDetailsView, UserUpdateView, UserDeleteView, about
+
+from tri.web.views import UsersListView, about, UserDetailsView, UserUpdateView, UserDeleteView
 
 urlpatterns = (
     path('', UsersListView.as_view(), name='index'),
@@ -9,5 +10,4 @@ urlpatterns = (
         path('edit/', UserUpdateView.as_view(), name='profile update' ),
         path('delete/', UserDeleteView.as_view(), name='profile delete' ),
     ]))
-
 )

@@ -1,64 +1,57 @@
 from enum import Enum
-
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.contrib.auth import models as auth_models
+from django.core import validators
 from django.db import models
 
-from tri.authh.managers import AppUserManager
+from tri.common.validators import validate_only_letters
 
 
-class AppUser(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(
-        unique=True,
-        null=False,
-        blank=False,
-    )
-    is_staff = models.BooleanField(
-        default=False,
-        null=False,
-        blank=False,
-    )
-    USERNAME_FIELD = 'email'
-    objects = AppUserManager()
+class ChoicesEnumMixin:
+    @classmethod
+    def choices(cls):
+        return [(x.name, x.value) for x in cls]
+
+    @classmethod
+    def max_len(cls):
+        return max(len(name) for name, _ in cls.choices())
 
 
-# class ChoicesEnumMixin:
-#     @classmethod
-#     def choices(cls):
-#         return [(x.name, x.value) for x in cls]
-#
-#     @classmethod
-#     def max_len(cls):
-#         return max(len(name) for name, _ in cls.choices())
-#
-#
-# class Gender(ChoicesEnumMixin, Enum):
-#     male = 'male'
-#     female = 'female'
-#     DoNotShow = 'do not show'
+class Gender(ChoicesEnumMixin, Enum):
+    male = 'male'
+    female = 'female'
+    DoNotShow = 'do not show'
 
 
-class Profile(models.Model):
+class AppUser(auth_models.AbstractUser):
+    MIN_LEN_FIRST_NAME = 2
+    MAX_LEN_FIRST_NAME = 30
+    MIN_LEN_LAST_NAME = 2
+    Max_LEN_LAST_NAME = 30
+
     first_name = models.CharField(
-        max_length=25
+        max_length=MAX_LEN_FIRST_NAME,
+        validators=(
+            validators.MinLengthValidator(MIN_LEN_FIRST_NAME),
+            validate_only_letters,
+        )
     )
     last_name = models.CharField(
-        max_length=25
+        max_length=Max_LEN_LAST_NAME,
+        validators=(
+            validators.MinLengthValidator(MIN_LEN_LAST_NAME),
+            validate_only_letters,
+        )
     )
-    age = models.PositiveIntegerField()
-
-    # gender = models.CharField(
-    #     max_length=len('DoNotShow'),
-    #     choices=(
-    #         ('male', 'male'),
-    #         ('female', 'female'),
-    #         ('DoNotShow', 'do not show'),
-    #     ),
-    # )
-
-    user = models.OneToOneField(
-        AppUser,
-        primary_key=True,
-        on_delete=models.CASCADE,
+    email = models.EmailField(
+        unique=True,
+    )
+    gender = models.CharField(
+        choices=Gender.choices(),
+        max_length=Gender.max_len(),
+    )
+    age = models.PositiveIntegerField(
+        null=True,
+        blank=True,
     )
 
     @property

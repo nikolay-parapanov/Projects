@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'tri.authh',
-    'tri.web'
+    'tri.web',
+    'tri.marketplace'
 ]
 
 MIDDLEWARE = [

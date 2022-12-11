@@ -3,10 +3,10 @@
 {% block page_content %}
     <h1>Sign up form: </h1>
 
-<form method="post" action="{% url 'sign up' %}">
-    {{ form.as_p }}
-    <button>Sign up!</button>
-    {% csrf_token %}
-</form>
+    <form method="post" action="{% url 'sign up' %}">
+        {{ form.as_p }}
+        <button>Sign up!</button>
+        {% csrf_token %}
+    </form>
 
 {% endblock %}

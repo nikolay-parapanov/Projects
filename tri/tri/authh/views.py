@@ -1,11 +1,12 @@
-from django.contrib.auth import login
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth import login, get_user_model
+from django.contrib.auth import views as auth_views
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views import generic as views
 from tri.authh.forms import SignUpForm
 
+UserModel=get_user_model()
 
-class SignUpView(CreateView):
+class SignUpView(views.CreateView):
     template_name = 'authh/sign-up.html'
     form_class = SignUpForm
     success_url = reverse_lazy('index')
@@ -17,10 +18,10 @@ class SignUpView(CreateView):
         return result
 
 
-class SignInView(LoginView):
+class SignInView(auth_views.LoginView):
     template_name = 'authh/sign-in.html'
 
 
 
-class SignOutView(LogoutView):
+class SignOutView(auth_views.LogoutView):
     next_page = reverse_lazy('index')
