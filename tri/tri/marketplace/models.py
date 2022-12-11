@@ -1,5 +1,9 @@
+from django.contrib.auth import get_user_model
 from django.core import validators
 from django.db import models
+
+UserModel = get_user_model()
+
 
 class MarketItems(models.Model):
     TYPE_MAX_LEN = 4
@@ -39,3 +43,8 @@ class MarketItems(models.Model):
         choices=ITEM_TYPE_CHOICES,
         default=NEW,
         )
+
+    user = models.ForeignKey(
+        UserModel,
+        on_delete=models.RESTRICT,
+    )

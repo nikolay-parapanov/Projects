@@ -34,6 +34,7 @@
                 <a class="button edit" href="{% url 'profile update' pk=object.pk %}">Edit Profile</a>
                 <!-- Delete Profile Button -->
                 <a class="button delete" href="{% url 'profile delete' pk=object.pk %}">Delete Profile</a>
+                {% csrf_token %}
             </div>
         </div>
     </div>
