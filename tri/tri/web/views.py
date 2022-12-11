@@ -31,7 +31,8 @@ class UserDetailsView(DetailView):
 
 
 class UserUpdateView(UpdateView):
-    fields = '__all__'
+
+    fields = ['first_name', 'last_name', 'age']
     model = UserModel
     template_name = 'profile/profile-edit.html'
 

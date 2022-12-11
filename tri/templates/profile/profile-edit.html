@@ -5,32 +5,32 @@
     <h1>Edit Profile</h1>
 
     <!-- Profile Edit Form -->
+
     <div class="form">
-        <form method="POST" action="profile-edit.html">
+        <form method="POST" action="{% url 'profile update' pk=object.pk %}">
 
             <!-- Profile Image -->
             <img src="/static/images/user.png" alt="profile pic">
 
             <label for="firstName">first name: </label>
-            <input type="text" name="first_name" value="{{ first_name_for_form }}" maxlength="15" required=""
+            <input type="text" name="first_name" value="{{ object.first_name }}" maxlength="15" required=""
                    id="firstName">
 
             <label for="lastName">last name: </label>
-            <input type="text" name="last_name" value="{{ last_name_for_form }}" maxlength="15" required=""
+            <input type="text" name="last_name" value="{{ object.last_name }}" maxlength="15" required=""
                    id="lastName">
 
-            <label for="lastName">age: </label>
-            <input type="text" name="last_name" value="{{ age_for_form }}" maxlength="15" required=""
-                   id="lastName">
+            <label for="age">age: </label>
+            <input type="text" name="age" value="{{ object.age }}" maxlength="15" required=""
+                   id="age">
 
             <label for="image">Profile Image:</label>
-            <input type="file" class="form-file" name="last_name" id="image">
+            <input type="file" class="form-file" name="image" id="image">
 
-            <a class="button edit" href="{% url 'profile update' pk=user.pk%}">Edit Profile</a>
+            <button type="submit">Edit Profile</button>
             {% csrf_token %}
 
         </form>
-
     </div>
 {% endblock %}
 
