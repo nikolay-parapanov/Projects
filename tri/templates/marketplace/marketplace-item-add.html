@@ -12,11 +12,11 @@
     </div>
 
 
-    <form method="post" action="{% url 'marketplace new item' %}">
-        {{ form.as_p }}
-        <button>Sign up!</button>
-        {% csrf_token %}
-    </form>
+        <form method="post" action="{% url 'marketplace item add' %}">
+            {{ form.as_p }}
+            <button>Sign up!</button>
+            {% csrf_token %}
+        </form>
 
 
 {% endblock %}

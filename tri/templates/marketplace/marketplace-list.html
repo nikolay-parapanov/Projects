@@ -3,8 +3,8 @@
     <br>
     <br>
     <br>
-    <form method="post" action="{% url 'marketplace new item' %}">
-        <input type="submit" value="List new Item"/>
+    <form method="post" action="{% url 'marketplace item add' %}">
+        <input type="submit" value="Add new Item"/>
     {% csrf_token %}
     </form>
     <br>
@@ -64,7 +64,7 @@
                             <a2>{{ item.price|floatformat:2 }}</a2>
                         </p>
                         <div class="right">
-                            <a class="button edit" href="{% url 'marketplace details item' pk=item.pk %}">Item
+                            <a class="button edit" href="{% url 'marketplace item details' pk=item.pk %}">Item
                                 Details</a>
                         </div>
                     </div>
