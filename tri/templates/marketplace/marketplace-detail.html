@@ -4,7 +4,6 @@
     <br>
     <br>
     <br>
-    <button type="button">List new Item</button>
 
     <div>
         <br>
@@ -17,28 +16,33 @@
 
 
     <div class="expense-container">
-        <!-- Full Name -->
-        {#            <h2>{{ object.pk }}</h2>#}
-        <!-- Profile Image -->
         <img src="/static/images/user.png" alt="profile pic">
         <p>
             <label>name: </label>
-            <a1>{{ object_name.name }}</a1>
+            <a1>{{ object.name }}</a1>
         </p>
         <p>
             <label>description: </label>
-            <a2>{{ item.description }}</a2>
+            <a2>{{ object.description }}</a2>
         </p>
         <p>
             <label>type: </label>
-            <a2>{{ item.type }}</a2>
+            <a2>{{ object.type }}</a2>
         </p>
         <p>
             <labe>price (EUR):</labe>
-            <a2>{{ item.price|floatformat:2 }}</a2>
+            <a2>{{ object.price|floatformat:2 }}</a2>
         </p>
-        <div class="right">
-            <a class="button edit" href="#">Item Details</a>
+        <div>
+            <div>
+            <button onclick="location.href='{% url 'marketplace item edit' pk=object.pk %}'" type="button">Edit Item</button>
+            </div>
+            <br>
+            <br>
+            <br>
+            <button onclick="location.href='{% url 'marketplace list' %}'" type="button">Back to Marketplace</button>
+
+
             {% csrf_token %}
         </div>
     </div>

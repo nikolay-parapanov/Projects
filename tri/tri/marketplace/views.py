@@ -1,4 +1,5 @@
 from django import forms
+from django.urls import reverse_lazy
 from django.views import generic as views
 from tri.marketplace import models as models
 from tri.marketplace.models import MarketItems
@@ -30,15 +31,16 @@ class MarketplaceDetailsView(views.DetailView):
     template_name = 'marketplace/marketplace-detail.html'
     model = models.MarketItems
 
-class ItemCreateForm(forms.ModelForm):
+
+class MarketplaceItemCreateForm(forms.ModelForm):
     class Meta:
         model = models.MarketItems
-        exclude = ['user_id']
+        fields = ('name', 'description', 'price', 'type')
         labels = {
             'name': 'name',
             'description': 'description',
             'price': 'price:',
-            'type': 'Date of Birth',
+            'type': 'type',
         }
         widgets = {
             'name': forms.TextInput(
@@ -48,32 +50,43 @@ class ItemCreateForm(forms.ModelForm):
             ),
             'description': forms.Textarea(
                 attrs={
-                    'placeholder': 'Short description of the item'
+                    'placeholder': 'Short description of the item',
+                    'cols': 60,
+                    'rows':5
                 }
             ),
             'price': forms.NumberInput(
                 attrs={
                     'placeholder': 'Price (in EUR)',
                 }
-            ),
-            'type': forms.Select(
-                attrs={
-                    'placeholder': 'Select from the dropdown options',
-                }
             )
         }
 
-class MarketplaceItemCreateView(views.CreateView, ItemCreateForm):
+class MarketplaceItemCreateView(views.CreateView, MarketplaceItemCreateForm):
     template_name = 'marketplace/marketplace-item-add.html'
     model = models.MarketItems
-    # fields = ['name', 'description', 'price', 'type']
+    form_class = MarketplaceItemCreateForm
 
-    form_class = ItemCreateForm
+    # def post(self, request, *args, **kwargs):
 
-    # success_url = reverse_lazy('marketplace item details')
+    def get_success_url(self):
+        created_object = self.object
+        return reverse_lazy('marketplace item details', kwargs={
+            'pk': created_object.pk,
+        })
 
-    # def get_success_url(self):
-    #     created_object = self.object
-    #     return reverse_lazy('marketplace details item', kwargs={
-    #         pk:created_object.id
-    #     })
+class MarketplaceItemDeleteView(views.DeleteView):
+    template_name = 'marketplace/marketplace-item-delete.html'
+    model = MarketItems
+    success_url = '/'
+
+class MarketplaceItemUpdateView(views.UpdateView):
+    template_name = 'marketplace/marketplace-item-edit.html'
+    fields = '__all__'
+    model = MarketItems
+
+    def get_success_url(self):
+        created_object = self.object
+        return reverse_lazy('marketplace item details', kwargs={
+            'pk': created_object.pk,
+        })

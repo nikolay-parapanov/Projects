@@ -5,7 +5,7 @@
     <br>
     <form method="post" action="{% url 'marketplace item add' %}">
         <input type="submit" value="Add new Item"/>
-    {% csrf_token %}
+        {% csrf_token %}
     </form>
     <br>
     <br>
@@ -26,14 +26,14 @@
     <br>
     <br>
     <br>
-    <form method="get" action="{% url 'marketplace list'%}">
-    <label>
-        <input name="pattern" placeholder="Enter text:"/>
-    </label>
-    <button>
-        Search
-    </button>
-    {% csrf_token %}
+    <form method="get" action="{% url 'marketplace list' %}">
+        <label>
+            <input name="pattern" placeholder="Enter item name:"/>
+        </label>
+        <button>
+            Find
+        </button>
+        {% csrf_token %}
     </form>
     <br>
     <h1>
