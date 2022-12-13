@@ -34,9 +34,13 @@
             <a2>{{ object.price|floatformat:2 }}</a2>
         </p>
         <div>
-            <div>
-            <button onclick="location.href='{% url 'marketplace item edit' pk=object.pk %}'" type="button">Edit Item</button>
-            </div>
+            {% if is_owner %}
+                <div>
+                    <button onclick="location.href='{% url 'marketplace item edit' pk=object.pk %}'" type="button">Edit
+                        Item
+                    </button>
+                </div>
+            {% endif %}
             <br>
             <br>
             <br>
@@ -47,7 +51,4 @@
         </div>
     </div>
 
-    </div>
-    </ul>
-    </h1>
 {% endblock %}

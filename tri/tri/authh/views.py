@@ -6,6 +6,7 @@ from tri.authh.forms import SignUpForm
 
 UserModel=get_user_model()
 
+
 class SignUpView(views.CreateView):
     template_name = 'authh/sign-up.html'
     form_class = SignUpForm

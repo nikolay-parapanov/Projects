@@ -1,7 +1,9 @@
 from django import forms
+from django.http import request
 from django.urls import reverse_lazy
 from django.views import generic as views
 from tri.marketplace import models as models
+from tri.marketplace.forms import MarketplaceItemCreateForm
 from tri.marketplace.models import MarketItems
 
 
@@ -31,43 +33,34 @@ class MarketplaceDetailsView(views.DetailView):
     template_name = 'marketplace/marketplace-detail.html'
     model = models.MarketItems
 
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        current_object = kwargs['object']
+        print(current_object.user_id)
+        print(self.request.user.id)
+        print(self.request.user.id == current_object.user_id)
+        context['is_owner'] = self.request.user.id == current_object.user_id
+        return context
 
-class MarketplaceItemCreateForm(forms.ModelForm):
-    class Meta:
-        model = models.MarketItems
-        fields = ('name', 'description', 'price', 'type')
-        labels = {
-            'name': 'name',
-            'description': 'description',
-            'price': 'price:',
-            'type': 'type',
-        }
-        widgets = {
-            'name': forms.TextInput(
-                attrs={
-                    'placeholder': 'Item name'
-                }
-            ),
-            'description': forms.Textarea(
-                attrs={
-                    'placeholder': 'Short description of the item',
-                    'cols': 60,
-                    'rows':5
-                }
-            ),
-            'price': forms.NumberInput(
-                attrs={
-                    'placeholder': 'Price (in EUR)',
-                }
-            )
-        }
 
 class MarketplaceItemCreateView(views.CreateView, MarketplaceItemCreateForm):
     template_name = 'marketplace/marketplace-item-add.html'
     model = models.MarketItems
     form_class = MarketplaceItemCreateForm
 
-    # def post(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
+        response = super().post(request, *args, **kwargs)
+        last_object_in_items = MarketItems.objects.last()
+        last_object_in_items.user_id = request.user.pk
+        last_object_in_items.save()
+        return response
+
+    # def save(self):
+    # def get_form(self, form_class=None):
+    #     form = super().get_form(form_class=form_class)
+    #     form['user_id'] = request.user.pk
+    #     print(form)
+    #     return form
 
     def get_success_url(self):
         created_object = self.object
@@ -75,10 +68,12 @@ class MarketplaceItemCreateView(views.CreateView, MarketplaceItemCreateForm):
             'pk': created_object.pk,
         })
 
+
 class MarketplaceItemDeleteView(views.DeleteView):
     template_name = 'marketplace/marketplace-item-delete.html'
     model = MarketItems
     success_url = '/'
+
 
 class MarketplaceItemUpdateView(views.UpdateView):
     template_name = 'marketplace/marketplace-item-edit.html'

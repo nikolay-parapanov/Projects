@@ -50,3 +50,4 @@ class MarketItems(models.Model):
         null=True,
         blank=True,
     )
+

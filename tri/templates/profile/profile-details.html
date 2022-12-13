@@ -2,39 +2,47 @@
 {% block page_content %}
 
     <!-- Your Profile Data -->
-    <h1>Your Profile</h1>
-    {{ first_name }}
-    {{ obejct.last_name }}
-
-
+    <br>
+    <br>
+    {% if is_owner %}
+        <h1>Your Profile</h1>
+    {% else %}
+        <h1>Profile</h1>
+    {% endif %}
     <div class="expenses-container">
         <div class="expense-container">
             <!-- Full Name -->
             {#            <h2>{{ object.pk }}</h2>#}
             <!-- Profile Image -->
             <img src="/static/images/user.png" alt="profile pic">
+
+            <h1>General info:</h1>
             <p>
-                <label>e-mail:  </label>
+                <label>e-mail: </label>
                 <a1>{{ object.email }}</a1>
             </p>
             <p>
-                <label>first name:  </label>
+                <label>first name: </label>
                 <a2>{{ object.first_name }}</a2>
             </p>
             <p>
-                <label>last name:  </label>
+                <label>last name: </label>
                 <a2>{{ object.last_name }}</a2>
             </p>
-            <p>
-                <labe>age:  </labe>
-                <a2>{{ object.age }}</a2>
-            </p>
+
+            {% if is_owner %}
+                <h1>Personal info:</h1>
+                <p>
+                    <labe>age:</labe>
+                    <a2>{{ object.age }}</a2>
+                </p>
+            {% endif %}
             <div class="right">
-                <!-- Edit Profile Button -->
-                <a class="button edit" href="{% url 'profile update' pk=object.pk %}">Edit Profile</a>
-                <!-- Delete Profile Button -->
-                <a class="button delete" href="{% url 'profile delete' pk=object.pk %}">Delete Profile</a>
-                {% csrf_token %}
+                {% if is_owner %}
+                    <a class="button edit" href="{% url 'profile update' pk=object.pk %}">Edit Profile</a>
+                    <a class="button delete" href="{% url 'profile delete' pk=object.pk %}">Delete Profile</a>
+                    {% csrf_token %}
+                {% endif %}
             </div>
         </div>
     </div>

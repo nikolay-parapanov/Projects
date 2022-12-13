@@ -41,11 +41,7 @@
             <div class="expenses-container">
                 {% for item in object_list %}
 
-
                     <div class="expense-container">
-                        <!-- Full Name -->
-                        {#            <h2>{{ object.pk }}</h2>#}
-                        <!-- Profile Image -->
                         <img src="/static/images/user.png" alt="profile pic">
                         <p>
                             <label>name: </label>
@@ -68,29 +64,6 @@
                                 Details</a>
                         </div>
                     </div>
-
-                    {#                #}
-                    {#                <form pos#}
-                    {##}
-                    {#                <ul>#}
-                    {#                    <label>name: </label>#}
-                    {#                    {{ item.name }}#}
-                    {#                </ul>#}
-                    {#                <ul>#}
-                    {#                    <label>description: </label>#}
-                    {#                    {{ item.description }}#}
-                    {#                </ul>#}
-                    {#                <ul>#}
-                    {#                    <label>type: </label>#}
-                    {#                    {{ item.type }}#}
-                    {#                </ul>#}
-                    {#                <ul>#}
-                    {#                    <label>price (EUR): </label>#}
-                    {#                    {{ item.price|floatformat:2 }}#}
-                    {#                </ul>#}
-                    {#                <button type="button" action="">Item details</button>#}
-                    {#                <h1>______________________________________</h1>#}
-                    {#                <br>#}
                 {% endfor %}
             </div>
         </ul>

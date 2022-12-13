@@ -20,15 +20,11 @@ class UserDetailsView(DetailView):
     model = UserModel
     template_name = 'profile/profile-details.html'
 
+
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        # user_id = int(context['object'].id)
-        # profile_data = Profile.objects.filter(pk=user_id).get()
-        # context['first_name_for_form'] = profile_data.first_name
-        # context['last_name_for_form'] = profile_data.last_name
-        # context['age_for_form'] = profile_data.age
+        context['is_owner'] = self.request.user == self.object
         return context
-
 
 class UserUpdateView(UpdateView):
 
@@ -36,14 +32,7 @@ class UserUpdateView(UpdateView):
     model = UserModel
     template_name = 'profile/profile-edit.html'
 
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(**kwargs)
-        # user_id = int(context['object'].id)
-        # profile_data = Profile.objects.filter(pk=user_id).get()
-        # context['first_name_for_form'] = profile_data.first_name
-        # context['last_name_for_form'] = profile_data.last_name
-        # context['age_for_form'] = profile_data.age
-        return context
+
 
     def get_success_url(self):
         created_object = self.object
