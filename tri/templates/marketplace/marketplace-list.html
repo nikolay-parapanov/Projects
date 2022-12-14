@@ -1,102 +1,99 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
-    <br>
-    <br>
-    <br>
-    <form method="post" action="{% url 'marketplace item add' %}">
-        <input type="submit" value="Add new Item"/>
-        {% csrf_token %}
-    </form>
-    <br>
-    <br>
-    <br>
 
-    <div>
+    {% if user.is_authenticated %}
+        <br><br><br>
+        <form method="post" action="{% url 'marketplace item add' %}">
+            <input type="submit" value="Add new Item"/>
+            {% csrf_token %}
+        </form>
+        <br><br><br>
+        <div>
+            <br>
+            <h1>Marketplace: </h1>
+            <h1>______________________________________</h1>
+        </div>
+        <br><br><br>
+        <form method="get" action="{% url 'marketplace list' %}">
+            <label>
+                <input name="pattern" placeholder="Enter item name:"/>
+            </label>
+            <button>
+                Find
+            </button>
+            {% csrf_token %}
+        </form>
+        <br><br>
+        <form method="get" action="{% url 'marketplace list' %}">
+            <label>Please select number of items for preview:
+                <select name="page_size">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                </select>
+            </label>
+            <button>Set</button>
+        </form>
+
+        {% if page_obj.has_previous %}
+            <a href="?page=1">first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% else %}
+            <a>first</a>
+            <a>previous</a>
+        {% endif %}
+
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last</a>
+        {% else %}
+            <a>next</a>
+            <a>last</a>
+        {% endif %}
+
         <br>
-        <h1>Marketplace: </h1>
-        <h1>______________________________________</h1>
-    </div>
+        <h1>
+            <ul>
+                <div class="expenses-container">
+                    {% for item in object_list %}
 
-    <br>
-    <br>
-    <div>
-        <h1>Total number of items: {{ object_list.count }}</h1>
-        <h1>______________________________________</h1>
-    </div>
-    <br>
-    <br>
-    <br>
-    <form method="get" action="{% url 'marketplace list' %}">
-        <label>
-            <input name="pattern" placeholder="Enter item name:"/>
-        </label>
-        <button>
-            Find
-        </button>
-        {% csrf_token %}
-    </form>
-    <br>
-    <br>
-    <form method="get" action="{% url 'marketplace list' %}">
-        <label>Please select number of items for preview:
-            <select name="page_size">
-                <option value="3">3</option>
-                <option value="6">6</option>
-                <option value="9">9</option>
-            </select>
-        </label>
-        <button>Set</button>
-    </form>
-
-    {% if page_obj.has_previous %}
-        <a href="?page=1">first</a>
-        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-    {% else %}
-        <a>first</a>
-        <a>previous</a>
-    {% endif %}
-
-    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-
-    {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}">next</a>
-        <a href="?page={{ page_obj.paginator.num_pages }}">last</a>
-    {% else %}
-        <a>next</a>
-        <a>last</a>
-    {% endif %}
-
-    <br>
-    <h1>
-        <ul>
-            <div class="expenses-container">
-                {% for item in object_list %}
-
-                    <div class="expense-container">
-                        <img src="/static/images/user.png" alt="profile pic">
-                        <p>
-                            <label>name: </label>
-                            <a1>{{ item.name }}</a1>
-                        </p>
-                        <p>
-                            <label>description: </label>
-                            <a2>{{ item.description }}</a2>
-                        </p>
-                        <p>
-                            <label>type: </label>
-                            <a2>{{ item.type }}</a2>
-                        </p>
-                        <p>
-                            <labe>price (EUR):</labe>
-                            <a2>{{ item.price|floatformat:2 }}</a2>
-                        </p>
-                        <div class="right">
-                            <a class="button edit" href="{% url 'marketplace item details' pk=item.pk %}">Item
-                                Details</a>
+                        <div class="expense-container">
+                            <img src="/static/images/user.png" alt="profile pic">
+                            <p>
+                                <label>name: </label>
+                                <a1>{{ item.name }}</a1>
+                            </p>
+                            <p>
+                                <label>description: </label>
+                                <a2>{{ item.description }}</a2>
+                            </p>
+                            <p>
+                                <label>type: </label>
+                                <a2>{{ item.type }}</a2>
+                            </p>
+                            <p>
+                                <labe>price (EUR):</labe>
+                                <a2>{{ item.price|floatformat:2 }}</a2>
+                            </p>
+                            <div class="right">
+                                <a class="button edit" href="{% url 'marketplace item details' pk=item.pk %}">Item
+                                    Details</a>
+                            </div>
                         </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </ul>
-    </h1>
+                    {% endfor %}
+                </div>
+            </ul>
+        </h1>
+    {% else %}
+        <br><br><br><br>
+        <h1>Dear Guest,<br><br>
+            In order to use the functionality of the 'Marketplace' page you should be
+            <a style="color: #145374" href="{% url 'sign in' %}">Logged in</a>.
+            <br><br>
+            If you don't have account, please
+            <a style="color: #145374" href="{% url 'sign up' %}">Sign up</a>.
+        </h1>
+    {% endif %}
 {% endblock %}

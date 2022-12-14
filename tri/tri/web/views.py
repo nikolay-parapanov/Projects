@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 
+from tri.marketplace.models import MarketItems
+
 UserModel = get_user_model()
 
 
@@ -20,19 +22,19 @@ class UserDetailsView(DetailView):
     model = UserModel
     template_name = 'profile/profile-details.html'
 
-
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
+        current_user_id = kwargs['object'].pk
         context['is_owner'] = self.request.user == self.object
+        context['items_listed_by_owner'] = MarketItems.objects.filter(user_id=self.request.user.id)
+        context['items_listed_by_user'] = MarketItems.objects.filter(user_id=current_user_id)
         return context
 
-class UserUpdateView(UpdateView):
 
+class UserUpdateView(UpdateView):
     fields = ['first_name', 'last_name', 'age']
     model = UserModel
     template_name = 'profile/profile-edit.html'
-
-
 
     def get_success_url(self):
         created_object = self.object
@@ -54,4 +56,4 @@ class UserDeleteView(DeleteView):
 
 def about(request):
     if request.method == "GET":
-        return render(request,'web/about.html')
+        return render(request, 'web/about.html')

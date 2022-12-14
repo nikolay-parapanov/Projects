@@ -1,20 +1,39 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
-    <ul>
-        {% for user in object_list %}
-            <li>
-                {% if user == request.user %}
-                    <strong>
-                        {{ user.email }}
-                    </strong>
-                {% else %}
-                    {{ user.email }}
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    {% if user.is_authenticated %}
+        <h1> Welcome, {{ user.first_name }}!</h1>
+    {% else %}
+        <h1>Dear Guest, </h1>
+        <h1>Below you can find some information about this web site... </h1>
+    {% endif %}
+    <h1>__________________________________________________</h1>
+    <br>
+    <br>
+    <br>
+    <div>
+        <ul>
+            - Project for the course: Python Web Framework Dec-2022
+        </ul>
+    </div>
+    <div>
+        <ul>
+            - Source control reposotory:
+            <a href="https://github.com/nikolay-parapanov/Projects">https://github.com/nikolay-parapanov/Projects/</a>
+            <br>
+            <br>
+            - Please note that in order to user the Marketplace you should be
+            <a href="{% url 'sign in' %}">logged in</a>.
+            <br>- In case you don't have account- you can sign-up
+            <a href="{% url 'sign up' %}">here</a>.
+        </ul>
+    </div>
 
-<p>
-Main Info re the web-page:
-</p>
+
+
 {% endblock %}

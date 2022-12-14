@@ -1,8 +1,13 @@
 <nav>
     <ul>
         <li class="img"><img src="/static/images/dollar.png" alt="dollar"></li>
-        <li><a href="{% url 'index' %}">Triathlon Market</a></li>
+        <li><a href="{% url 'index' %}">Triathlon Market  </a></li>
 
+        <li>
+            {% if user.is_authenticated %}
+            {{ user.username }} ({{ user.first_name }} {{ user.last_name }})
+            {% endif %}
+        </li>
         <li class="right">
             <a href="{% url 'marketplace list' %}">Marketplace</a>
             {% if not request.user.is_authenticated %}

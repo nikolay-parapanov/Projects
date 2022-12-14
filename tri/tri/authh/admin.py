@@ -6,31 +6,6 @@ UserModel = get_user_model()
 @admin.register(UserModel)
 class UserAdmin(auth_admin.UserAdmin):
     list_filter = ["is_staff", "is_superuser", "is_active", "groups", "first_name", "last_name", "gender", "age"]
-    list_display = ["pk", "username", "email", "first_name", "last_name", "age", "gender", "is_staff"]
+    list_display = ["pk", "username", "email", "first_name", "last_name", "age", "gender", "is_superuser", "is_staff"]
     search_fields = ["username", "first_name", "last_name", "email", "age", "gender"]
-    ordering = ["first_name"]
-#     form = UserEditForm
-#     add_form = UserCreateForm
-#
-#     fieldsets = (
-#         (
-#             None,
-#             {
-#                 'fields': (
-#                     'username',
-#                     'password',
-#                 ),
-#             }),
-#         (
-#             'Personal info',
-#             {
-#                 'fields': (
-#                     'first_name',
-#                     'last_name',
-#                     'email',
-#                     'gender',
-#                     'age',
-#                 ),
-#             },
-#         ),
-#         )
+    ordering = ["is_superuser", "is_staff", "pk"]

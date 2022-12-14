@@ -28,20 +28,23 @@ nav ul li a {
     color: white;
     text-decoration: none;
     list-style: none;
-    font-size: 40px;
+    font-size: 20px;
     padding: 12px;
-    margin-top: 7px;
+    margin-top: 40px;
     padding-right: 15px;
+
 }
 
 nav ul li.right {
     position: absolute;
-    right: 15px;
+    right: 20px;
+    margin-top: 14px;
 }
 
 nav ul li.right a {
     font-size: 25px;
     margin: 0px auto;
+    margin-top: 8px;
 }
 
 nav ul li.img {
