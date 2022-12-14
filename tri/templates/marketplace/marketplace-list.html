@@ -36,6 +36,37 @@
         {% csrf_token %}
     </form>
     <br>
+    <br>
+    <form method="get" action="{% url 'marketplace list' %}">
+        <label>Please select number of items for preview:
+            <select name="page_size">
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+            </select>
+        </label>
+        <button>Set</button>
+    </form>
+
+    {% if page_obj.has_previous %}
+        <a href="?page=1">first</a>
+        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+    {% else %}
+        <a>first</a>
+        <a>previous</a>
+    {% endif %}
+
+    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">next</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">last</a>
+    {% else %}
+        <a>next</a>
+        <a>last</a>
+    {% endif %}
+
+    <br>
     <h1>
         <ul>
             <div class="expenses-container">

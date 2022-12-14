@@ -1,5 +1,3 @@
-from django import forms
-from django.http import request
 from django.urls import reverse_lazy
 from django.views import generic as views
 from tri.marketplace import models as models
@@ -10,6 +8,10 @@ from tri.marketplace.models import MarketItems
 class MarketplaceListView(views.ListView):
     model = models.MarketItems
     template_name = 'marketplace/marketplace-list.html'
+    default_paginate_by = 3
+
+    def get_paginate_by(self, queryset):
+        return self.request.GET.get('page_size', self.default_paginate_by)
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
