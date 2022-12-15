@@ -16,7 +16,6 @@ class MarketplaceListView(views.ListView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        # context['is_logged_in'] =
         return context
 
     def get_queryset(self):

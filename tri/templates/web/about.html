@@ -1,21 +1,17 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br><br><br>
+
     {% if user.is_authenticated %}
-        <h1> Welcome, {{ user.first_name }}!</h1>
+        <h1> Hi, {{ user.first_name }}!</h1>
     {% else %}
         <h1>Dear Guest, </h1>
         <h1>Below you can find some information about this web site... </h1>
     {% endif %}
     <h1>__________________________________________________</h1>
-    <br>
-    <br>
-    <br>
+
+    <br><br><br>
+
     <div>
         <ul>
             - Project for the course: Python Web Framework Dec-2022
