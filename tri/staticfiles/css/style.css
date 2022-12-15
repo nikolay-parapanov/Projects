@@ -16,11 +16,12 @@ a {
 
 nav {
     background: #019f3b;
-    height: 80px;
+    padding: 8px 0 0;
 }
 
 nav ul {
     display: flex;
+    align-items: center;
 }
 
 nav ul li,
@@ -30,7 +31,6 @@ nav ul li a {
     list-style: none;
     font-size: 20px;
     padding: 12px;
-    margin-top: 40px;
     padding-right: 15px;
 
 }
@@ -38,23 +38,23 @@ nav ul li a {
 nav ul li.right {
     position: absolute;
     right: 20px;
-    margin-top: 14px;
 }
 
 nav ul li.right a {
     font-size: 25px;
     margin: 0px auto;
-    margin-top: 8px;
-}
-
-nav ul li.img {
-    margin-top: 5px;
 }
 
 h1 {
     text-align: center;
     font-size: 25px;
     color: #019f3b;
+}
+.container {
+    max-width: 1088px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
 }
 
 .form {
@@ -71,7 +71,8 @@ input[type=number],
 select,
 textarea {
     width: 400px;
-    padding: 4px 20px;
+    max-width: 100%;
+    padding: 4px 12px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -105,7 +106,9 @@ input[type=submit]:hover,
     background-color: #c73131;
     text-decoration: underline;
 }
-
+.body{
+    padding-bottom: 60px;
+}
 .body > .button {
     display: block;
     width: 200px;
@@ -158,8 +161,7 @@ ul.expenses-list li.green {
     display: flex;
     flex-wrap: wrap;
     gap: 30px 3.5%;
-    justify-content: flex-start;
-    padding: 30px;
+    justify-content: center;
     margin-top: 50px;
 }
 
@@ -251,4 +253,25 @@ footer div {
     .expense-container {
         width:100%;
     }
+}
+
+.items-pagination {
+    width: 60px;
+}
+
+label {
+    display: block;
+}
+
+.nav-user {
+    color: #145374;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+.profile-form img {
+    margin-bottom: 10px;
 }

@@ -12,11 +12,55 @@
     </div>
 
 
-        <form method="post" action="{% url 'marketplace item add' %}">
-            {{ form.as_p }}
-            <button>Sign up!</button>
-            {% csrf_token %}
-        </form>
+{#        <form method="post" action="{% url 'marketplace item add' %}">#}
+{#            {{ form.as_p }}#}
+{#            <button>Sign up!</button>#}
+{#            {% csrf_token %}#}
+{#        </form>#}
+
+<div class="expenses-container">
+        <div class="expense-container">
+            <form method="POST" action="{% url 'marketplace item add' %} ">
+                <img src="/static/images/user.png" alt="profile pic">
+                <p>
+                    <label for="name">name: </label>
+                    <input type="text" name="name" value="{{ object.name }}" maxlength="30" id="name">
+                </p>
+                <p>
+                    <label for="description">description: </label>
+                    <textarea rows="3" name="description" id="description">{{ object.description }}</textarea>
+                </p>
+                <p>
+                    <label for="type">type: </label>
+                    <select name="type" placeholder="select type" value="{{ object.type }}" id="type">
+                        {% if object.type == 'new' %}selected{% endif %}
+                        <option value="new" {% if object.type == 'new' %}selected{% endif %}>new</option>
+                        <option value="used" {% if object.type == 'used' %}selected{% endif %}>used</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="price">price (EUR): </label>
+                    <input type="number" name="price" value="{{ object.price|floatformat:2 }}" id="price">
+                </p>
+                <div>
+
+{#                    <button class="button edit" onclick="location.href='{% url 'marketplace item edit' pk=object.pk %}'"#}
+{#                            type="submit">Edit#}
+{#                    </button>#}
+{#                    <button class="button delete"#}
+{#                            onclick="location.href='{% url 'marketplace item delete' pk=object.pk %}'"#}
+{#                            type="button">Delete#}
+                    </button>
+                </div>
+                <br>
+                <br>
+                <br>
+{#                <button onclick="location.href='{% url 'marketplace list' %}'" type="button">Back to Marketplace#}
+                </button>
+                {% csrf_token %}
+            </form>
+        </div>
+    </div>
 
 
 {% endblock %}

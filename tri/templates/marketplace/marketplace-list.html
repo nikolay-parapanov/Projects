@@ -15,9 +15,8 @@
         </div>
         <br><br><br>
         <form method="get" action="{% url 'marketplace list' %}">
-            <label>
+
                 <input name="pattern" placeholder="Enter item name:"/>
-            </label>
             <button>
                 Find
             </button>
@@ -25,13 +24,12 @@
         </form>
         <br><br>
         <form method="get" action="{% url 'marketplace list' %}">
-            <label>Please select number of items for preview:
-                <select name="page_size">
+            <label>Please select number of items for preview:</label>
+                <select class="items-pagination" name="page_size">
                     <option value="3">3</option>
                     <option value="6">6</option>
                     <option value="9">9</option>
                 </select>
-            </label>
             <button>Set</button>
         </form>
         {% if page_obj.has_previous %}
@@ -53,38 +51,34 @@
         {% endif %}
 
         <br>
-        <h1>
-            <ul>
-                <div class="expenses-container">
-                    {% for item in object_list %}
+        <div class="expenses-container">
+            {% for item in object_list %}
 
-                        <div class="expense-container">
-                            <img src="/static/images/user.png" alt="profile pic">
-                            <p>
-                                <label>name: </label>
-                                <a1>{{ item.name }}</a1>
-                            </p>
-                            <p>
-                                <label>description: </label>
-                                <a2>{{ item.description }}</a2>
-                            </p>
-                            <p>
-                                <label>type: </label>
-                                <a2>{{ item.type }}</a2>
-                            </p>
-                            <p>
-                                <labe>price (EUR):</labe>
-                                <a2>{{ item.price|floatformat:2 }}</a2>
-                            </p>
-                            <div class="right">
-                                <a class="button edit" href="{% url 'marketplace item details' pk=item.pk %}">Item
-                                    Details</a>
-                            </div>
-                        </div>
-                    {% endfor %}
+                <div class="expense-container">
+                    <img src="/static/images/user.png" alt="profile pic">
+                    <p>
+                        <label>name: </label>
+                        <a1>{{ item.name }}</a1>
+                    </p>
+                    <p>
+                        <label>description: </label>
+                        <a2>{{ item.description }}</a2>
+                    </p>
+                    <p>
+                        <label>type: </label>
+                        <a2>{{ item.type }}</a2>
+                    </p>
+                    <p>
+                        <labe>price (EUR):</labe>
+                        <a2>{{ item.price|floatformat:2 }}</a2>
+                    </p>
+                    <div class="right">
+                        <a class="button edit" href="{% url 'marketplace item details' pk=item.pk %}">Item
+                            Details</a>
+                    </div>
                 </div>
-            </ul>
-        </h1>
+            {% endfor %}
+        </div>
     {% else %}
         <br><br><br><br>
         <h1>Dear Guest,<br><br>

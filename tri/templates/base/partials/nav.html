@@ -3,7 +3,7 @@
         <li class="img"><img src="/static/images/dollar.png" alt="dollar"></li>
         <li><a href="{% url 'index' %}">Triathlon Market  </a></li>
 
-        <li>
+        <li class="nav-user">
             {% if user.is_authenticated %}
             {{ user.username }} ({{ user.first_name }} {{ user.last_name }})
             {% endif %}

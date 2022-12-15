@@ -58,12 +58,6 @@ class MarketplaceItemCreateView(views.CreateView, MarketplaceItemCreateForm):
         last_object_in_items.save()
         return response
 
-    # def save(self):
-    # def get_form(self, form_class=None):
-    #     form = super().get_form(form_class=form_class)
-    #     form['user_id'] = request.user.pk
-    #     print(form)
-    #     return form
 
     def get_success_url(self):
         created_object = self.object
@@ -83,8 +77,22 @@ class MarketplaceItemUpdateView(views.UpdateView):
     fields = '__all__'
     model = MarketItems
 
+    def get(self,request, *args, **kwargs):
+        response = super().post(request, *args, **kwargs)
+        print(**kwargs)
+        return response
+    def post(self, request, *args, **kwargs):
+        response = super().post(request, *args, **kwargs)
+        item_pk=kwargs['pk']
+        current_item = MarketItems.objects.get(pk=item_pk)
+        current_item.user_id =
+        # last_object_in_items.user_id = request.user.pk
+        # last_object_in_items.save()
+        return response
+
     def get_success_url(self):
         created_object = self.object
         return reverse_lazy('marketplace item details', kwargs={
             'pk': created_object.pk,
+
         })

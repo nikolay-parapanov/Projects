@@ -6,10 +6,11 @@
 
     <!-- Profile Edit Form -->
 
-    <div class="form">
+    <div class="form profile-form" >
         <form method="POST" action="{% url 'profile update' pk=object.pk %}">
 
             <!-- Profile Image -->
+
             <img src="/static/images/user.png" alt="profile pic">
 
             <label for="firstName">first name: </label>
