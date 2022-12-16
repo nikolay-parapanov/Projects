@@ -15,6 +15,8 @@ class MarketItems(models.Model):
     ]
     NAME_MAX_LEN = 30
     NAME_MIN_LEN = 2
+    PRICE_MAX_DIGITS = 12
+    PRICE_DECIMAL_PLACES= 2
 
     name = models.CharField(
         max_length=NAME_MAX_LEN,
@@ -30,7 +32,9 @@ class MarketItems(models.Model):
         blank=True,
     )
 
-    price = models.FloatField(
+    price = models.DecimalField(
+        max_digits=PRICE_MAX_DIGITS,
+        decimal_places=PRICE_DECIMAL_PLACES,
         validators=(
             validators.MinValueValidator(0.0),
         ),

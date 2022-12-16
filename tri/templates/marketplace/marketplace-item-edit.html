@@ -28,7 +28,7 @@
                 </p>
                 <p>
                     <label for="price">price (EUR): </label>
-                    <input type="number" name="price" value="{{ object.price|floatformat:2 }}" id="price">
+                    <input type="number" step="0.01" placeholder="0.00" name="price" value="{{ object.price }}" id="price">
                 </p>
                 <div>
 

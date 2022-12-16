@@ -6,7 +6,7 @@
 
     <!-- Profile Edit Form -->
 
-    <div class="form profile-form" >
+    <div class="form profile-form">
         <form method="POST" action="{% url 'profile update' pk=object.pk %}">
 
             <!-- Profile Image -->
@@ -27,8 +27,12 @@
 
             <label for="image">Profile Image:</label>
             <input type="file" class="form-file" name="image" id="image">
-
-            <button type="submit">Edit Profile</button>
+            <br>
+            <button class="button edit" onclick="location.href='{% url 'profile update' pk=object.pk %}'"
+               type="submit">Update</button>
+            <br><br>
+            <button onclick="location.href='{% url 'marketplace list' %}'" type="button">Back to Marketplace
+            </button>
             {% csrf_token %}
 
         </form>

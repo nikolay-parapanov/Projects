@@ -3,10 +3,9 @@ from tri.marketplace import models
 
 
 class MarketplaceItemCreateForm(forms.ModelForm):
-
     class Meta:
         model = models.MarketItems
-        fields = ('name', 'description', 'price', 'type')
+        fields = ('name', 'description', 'price', 'type', 'user')
         labels = {
             'name': 'name',
             'description': 'description',
@@ -23,12 +22,13 @@ class MarketplaceItemCreateForm(forms.ModelForm):
                 attrs={
                     'placeholder': 'Short description of the item',
                     'cols': 60,
-                    'rows':5
+                    'rows': 5
                 }
             ),
-            'price': forms.NumberInput(
-                attrs={
-                    'placeholder': 'Price (in EUR)',
-                }
-            )
+            # 'price': forms.DecimalField(
+            #     attrs={
+            #         'max_value' : 9999999999.99,
+            #         'min_value' : 0.00,
+        # }
+        # )
         }

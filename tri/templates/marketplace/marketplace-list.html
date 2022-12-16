@@ -72,6 +72,13 @@
                         <labe>price (EUR):</labe>
                         <a2>{{ item.price|floatformat:2 }}</a2>
                     </p>
+                    <p>
+                        <label>View all items listed by this Profile:</label>
+                        {{ item.user_id }}
+                        <button onclick="location.href='{% url 'profile details' pk=item.user_id%}'" type="button">View Profile & Items
+                        </button>
+                        {% csrf_token %}
+                    </p>
                     <div class="right">
                         <a class="button edit" href="{% url 'marketplace item details' pk=item.pk %}">Item
                             Details</a>

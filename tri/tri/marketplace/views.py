@@ -33,7 +33,7 @@ class MarketplaceListView(views.ListView):
 
 
 class MarketplaceDetailsView(views.DetailView):
-    template_name = 'marketplace/marketplace-detail.html'
+    template_name = 'marketplace/marketplace-item-detail.html'
     model = models.MarketItems
 
     def get_context_data(self, *args, **kwargs):
@@ -74,21 +74,9 @@ class MarketplaceItemDeleteView(views.DeleteView):
 
 class MarketplaceItemUpdateView(views.UpdateView):
     template_name = 'marketplace/marketplace-item-edit.html'
-    fields = '__all__'
+    fields = ['name', 'description', 'price', 'type']
     model = MarketItems
 
-    def get(self,request, *args, **kwargs):
-        response = super().post(request, *args, **kwargs)
-        print(**kwargs)
-        return response
-    def post(self, request, *args, **kwargs):
-        response = super().post(request, *args, **kwargs)
-        item_pk=kwargs['pk']
-        current_item = MarketItems.objects.get(pk=item_pk)
-        current_item.user_id =
-        # last_object_in_items.user_id = request.user.pk
-        # last_object_in_items.save()
-        return response
 
     def get_success_url(self):
         created_object = self.object

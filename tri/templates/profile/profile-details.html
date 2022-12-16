@@ -29,7 +29,7 @@
                 <a2>{{ object.last_name }}</a2>
             </p>
 
-            {% if is_owner or has_profile_admin_rights%}
+            {% if is_owner or has_profile_admin_rights %}
                 <h1>Personal info:</h1>
                 <p>
                     <labe>age:</labe>
@@ -44,6 +44,10 @@
                     {% csrf_token %}
                 {% endif %}
             </div>
+            <br>
+            <button onclick="location.href='{% url 'marketplace list' %}'" type="button">Back to Marketplace
+            </button>
+            {% csrf_token %}
         </div>
     </div>
 
@@ -55,32 +59,32 @@
         <h1>Listed items by this Profile</h1>
     {% endif %}
 
-        <div class="expenses-container">
-            {% for item in items_listed_by_user %}
-                <div class="expense-container">
-                    <img src="/static/images/user.png" alt="profile pic">
-                    <p>
-                        <label>name: </label>
-                        <a1>{{ item.name }}</a1>
-                    </p>
-                    <p>
-                        <label>description: </label>
-                        <a2>{{ item.description }}</a2>
-                    </p>
-                    <p>
-                        <label>type: </label>
-                        <a2>{{ item.type }}</a2>
-                    </p>
-                    <p>
-                        <labe>price (EUR):</labe>
-                        <a2>{{ item.price|floatformat:2 }}</a2>
-                    </p>
-                    <div class="right">
-                        <a class="button edit" href="{% url 'marketplace item edit' pk=item.pk %}">Edit Item</a>
-                    </div>
+    <div class="expenses-container">
+        {% for item in items_listed_by_user %}
+            <div class="expense-container">
+                <img src="/static/images/user.png" alt="profile pic">
+                <p>
+                    <label>name: </label>
+                    <a1>{{ item.name }}</a1>
+                </p>
+                <p>
+                    <label>description: </label>
+                    <a2>{{ item.description }}</a2>
+                </p>
+                <p>
+                    <label>type: </label>
+                    <a2>{{ item.type }}</a2>
+                </p>
+                <p>
+                    <labe>price (EUR):</labe>
+                    <a2>{{ item.price|floatformat:2 }}</a2>
+                </p>
+                <div class="right">
+                    <a class="button edit" href="{% url 'marketplace item edit' pk=item.pk %}">Edit Item</a>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
+    </div>
 
     {##}
 
