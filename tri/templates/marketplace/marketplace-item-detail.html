@@ -1,10 +1,14 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
 
-    <br><br><br>
-        <h1>Marketplace Item Detail: </h1>
-        <h1>______________________________________</h1>
-        <br><br><br>
+    <br><br>
+    {% if is_owner %}
+        <h1>Your Item Details</h1>
+    {% elif is_superuser or has_market_admin_rights %}
+        <h1>You can moderate Items section as you're logged as Superuser or Marketplace(Items) admin user</h1>
+    {% else %}
+        <h1>Item Details</h1>
+    {% endif %}
 
     <div class="expense-container">
         <img src="/static/images/user.png" alt="profile pic">
@@ -24,8 +28,13 @@
             <labe>price (EUR):</labe>
             <a2>{{ object.price|floatformat:2 }}</a2>
         </p>
+        <p>
+            <labe>Listed by:</labe>
+            <a href="{% url 'profile details' pk=user_from_user_table.pk %}">{{ user_full_name }}</a>
+        </p>
+
         <div>
-            {% if is_owner %}
+            {% if is_owner or has_market_admin_rights%}
                 <div>
                     <button onclick="location.href='{% url 'marketplace item edit' pk=object.pk %}'" type="button">Edit
                         Item

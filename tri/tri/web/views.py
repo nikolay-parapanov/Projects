@@ -58,6 +58,14 @@ class UserUpdateView(UpdateView):
     model = UserModel
     template_name = 'profile/profile-edit.html'
 
+    def get(self, request, *args, **kwargs):
+        response = super().get(self, request, *args, **kwargs)
+        # if self.request.user.pk != kwargs['pk']
+        #     response
+        return response
+    # def post(self, request, *args, **kwargs):
+    #     :
+
     def get_success_url(self):
         created_object = self.object
         return reverse_lazy('profile details', kwargs={

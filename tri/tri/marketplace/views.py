@@ -1,6 +1,8 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.views import generic as views
+
+from tri.authh.models import AppUser
 from tri.marketplace import models as models
 from tri.marketplace.forms import MarketplaceItemCreateForm
 from tri.marketplace.models import MarketItems
@@ -21,7 +23,6 @@ class MarketplaceListView(views.ListView):
     def get_queryset(self):
         queryset = super().get_queryset()
         queryset = queryset.order_by('id')
-
         pattern = self.__get_pattern()
         if pattern:
             queryset = queryset.filter(name__icontains=pattern.lower())
@@ -38,11 +39,20 @@ class MarketplaceDetailsView(views.DetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
-        current_object = kwargs['object']
-        print(current_object.user_id)
-        print(self.request.user.id)
-        print(self.request.user.id == current_object.user_id)
-        context['is_owner'] = self.request.user.id == current_object.user_id
+        item = kwargs['object']
+
+        context['is_owner'] = self.request.user.id == item.user_id
+
+        user_from_user_table = AppUser.objects.get(pk=item.user_id)
+        context['user_from_user_table'] = user_from_user_table
+        context['user_full_name'] = f'{user_from_user_table.first_name} {user_from_user_table.last_name}'
+
+        context['has_market_admin_rights'] = False
+        market_admins = AppUser.objects.filter(is_staff=1, username__icontains="staff_marketplace_")
+        for market_admin in market_admins:
+            if market_admin.username == self.request.user.username:
+                context['has_market_admin_rights'] = True
+
         return context
 
 
@@ -57,7 +67,6 @@ class MarketplaceItemCreateView(views.CreateView, MarketplaceItemCreateForm):
         last_object_in_items.user_id = request.user.pk
         last_object_in_items.save()
         return response
-
 
     def get_success_url(self):
         created_object = self.object

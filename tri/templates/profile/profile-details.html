@@ -2,12 +2,11 @@
 {% block page_content %}
 
     <!-- Your Profile Data -->
-    <br>
-    <br>
+    <br><br>
     {% if is_owner %}
         <h1>Your Profile information</h1>
     {% elif is_superuser or has_profile_admin_rights %}
-        <h1>You can moderate Profile section as you're logged as Superuser or Profile admin user:</h1>
+        <h1>You can moderate Profile section as you're logged as Superuser or Profile admin user</h1>
     {% else %}
         <h1>Profile</h1>
     {% endif %}
@@ -32,7 +31,7 @@
             {% if is_owner or has_profile_admin_rights %}
                 <h1>Personal info:</h1>
                 <p>
-                    <labe>age:</labe>
+                    <label>age:</label>
                     <a2>{{ object.age }}</a2>
                 </p>
             {% endif %}
@@ -53,7 +52,7 @@
 
     {% if is_owner %}
         <h1>You have listed the following items in the 'Marketplace' section:</h1>
-    {% elif is_superuser or has_market_admin_rights %}
+    {% elif is_superuser %}
         <h1>You can moderate Marketplace section as you're logged as superuser or Marketplace admin user</h1>
     {% else %}
         <h1>Listed items by this Profile</h1>
