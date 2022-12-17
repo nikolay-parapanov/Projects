@@ -54,6 +54,9 @@ class MyTest(TestCase):
         item.full_clean()
         item.save()
 
+        assert len(AppUser.objects.all()) == 1
+        assert len(MarketItems.objects.all()) == 1
+
 
     def testSignUpForm(self):
         data = {
