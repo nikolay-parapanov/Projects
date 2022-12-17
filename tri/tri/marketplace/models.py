@@ -53,5 +53,6 @@ class MarketItems(models.Model):
         on_delete=models.CASCADE,
         null=True,
         blank=True,
+        related_name="market_items"
     )
 

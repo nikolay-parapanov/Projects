@@ -1,11 +1,11 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render
+from django.core.exceptions import PermissionDenied, ObjectDoesNotExist
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from rest_framework import generics as rest_views
 from rest_framework import serializers
-
 
 from tri.authh.models import AppUser
 from tri.marketplace.models import MarketItems
@@ -29,6 +29,8 @@ class UserDetailsView(DetailView):
     model = UserModel
     template_name = 'profile/profile-details.html'
 
+
+
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
         current_user_id = kwargs['object'].pk
@@ -40,34 +42,44 @@ class UserDetailsView(DetailView):
         context['has_profile_admin_rights'] = False
         context['has_market_admin_rights'] = False
 
-        for user in superusers:
-            if user == self.request.user:
-                context['is_superuser'] = True
-        else:
-            for user in profile_admins:
-                if self.request.user in profile_admins:
-                    context['has_profile_admin_rights'] = True
-            for user in market_admins:
-                if self.request.user in profile_admins:
-                    context['has_profile_admin_rights'] = True
+        if self.request.user in superusers:
+            context['is_superuser'] = True
+        if self.request.user in profile_admins:
+            context['has_profile_admin_rights'] = True
+        if self.request.user in market_admins:
+            context['has_market_admin_rights'] = True
 
         context['items_listed_by_user'] = MarketItems.objects.filter(user_id=current_user_id)
+
         return context
 
 
 class UserUpdateView(UpdateView):
-    fields = ['first_name', 'last_name', 'age']
+    fields = ['first_name', 'last_name', 'age', 'profile_pic']
     model = UserModel
     template_name = 'profile/profile-edit.html'
 
     def get(self, request, *args, **kwargs):
-        response = super().get(self, request, *args, **kwargs)
+        display_user = None
+        try:
+            display_user = AppUser.objects.get(pk=kwargs['pk'])
+        except ObjectDoesNotExist:
+            return redirect("marketplace list")
+
+        superusers = AppUser.objects.filter(is_superuser=1)
+        profile_admins = AppUser.objects.filter(is_staff=1, username__icontains="staff_profiles_")
+        if self.request.user != display_user and not self.request.user in profile_admins \
+                and not self.request.user in superusers:
+            raise PermissionDenied("You are not allowed to view this page!")
+
+        request = super().get(self, request, *args, **kwargs)
+        return request
+
+    def post(self, request, *args, **kwargs):
+        response = super().post(self, request, *args, **kwargs)
         # if self.request.user.pk != kwargs['pk']
         #     response
         return response
-
-    # def post(self, request, *args, **kwargs):
-    #     :
 
     def get_success_url(self):
         created_object = self.object
@@ -98,27 +110,31 @@ class ShortProfileSerializer(serializers.ModelSerializer):
         fields = ['first_name', 'last_name', 'email']
 
 class MartketItemsSerializer(serializers.ModelSerializer):
-    user_id = ShortProfileSerializer()
+    user = ShortProfileSerializer()
     class Meta:
         model = MarketItems
         fields = '__all__'
 
 
-class MarketItemsListApiView(rest_views.ListAPIView):
+class MarketItemsListApiView(rest_views.ListCreateAPIView):
     queryset = MarketItems.objects.all()
     serializer_class = MartketItemsSerializer
-
 
 
 class ShortMarketItemsSerializer(serializers.ModelSerializer):
     class Meta:
         model = MarketItems
         fields = ['name']
+
+
 class ProfileSerializer(serializers.ModelSerializer):
-    marketitems_set = ShortMarketItemsSerializer(many=True)
+    market_items = ShortMarketItemsSerializer(many=True)
+
     class Meta:
         model = AppUser
-        fields = ['first_name', 'last_name', 'email']
-class ProfilesListApiView(rest_views.ListAPIView):
+        fields = ['first_name', 'last_name', 'email', 'market_items']
+
+
+class ProfilesListApiView(rest_views.ListCreateAPIView):
     queryset = AppUser.objects.all()
     serializer_class = ProfileSerializer

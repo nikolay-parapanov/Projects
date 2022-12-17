@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% block page_content %}
 
     <!-- Your Profile Data -->
@@ -13,7 +14,11 @@
 
     <div class="expenses-container">
         <div class="expense-container">
-            <img src="/static/images/user.png" alt="profile pic">
+            {%  if object.profile_pic  %}
+            <img src="{{ object.profile_pic }}" alt="profile pic">
+            {% else %}
+            <img src="{% static '/images/user.png' %}" alt="profile pic">
+            {% endif %}
             <h1>General info:</h1>
             <p>
                 <label>e-mail: </label>
@@ -37,7 +42,7 @@
             {% endif %}
 
             <div class="right">
-                {% if is_owner or has_profile_admin_rights %}
+                {% if is_owner or is_superuser or has_profile_admin_rights %}
                     <a class="button edit" href="{% url 'profile update' pk=object.pk %}">Edit Profile</a>
                     <a class="button delete" href="{% url 'profile delete' pk=object.pk %}">Delete Profile</a>
                     {% csrf_token %}
@@ -79,7 +84,9 @@
                     <a2>{{ item.price|floatformat:2 }}</a2>
                 </p>
                 <div class="right">
+                    {% if is_owner or is_superuser or has_market_admin_rights %}
                     <a class="button edit" href="{% url 'marketplace item edit' pk=item.pk %}">Edit Item</a>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}

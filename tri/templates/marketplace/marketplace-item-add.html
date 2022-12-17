@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% block page_content %}
 
 
@@ -20,8 +21,8 @@
 
 <div class="expenses-container">
         <div class="expense-container">
-            <form method="POST" action="{% url 'marketplace item add' %} ">
-                <img src="/static/images/user.png" alt="profile pic">
+            <form method="POST" action="{% url 'marketplace item add' %} " enctype="multipart/form-data">
+                <img src="{% static 'images/user.png'%}" alt="profile pic">
                 <p>
                     <label for="name">name: </label>
                     <input type="text" name="name" value="{{ object.name }}" maxlength="30" id="name">

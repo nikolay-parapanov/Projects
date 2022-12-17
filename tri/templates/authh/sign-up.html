@@ -3,7 +3,7 @@
 {% block page_content %}
     <h1>Sign up form: </h1>
 
-    <form method="post" action="{% url 'sign up' %}">
+    <form method="post" action="{% url 'sign up' %}" enctype="multipart/form-data">
         {{ form.as_p }}
         <button>Sign up!</button>
         {% csrf_token %}

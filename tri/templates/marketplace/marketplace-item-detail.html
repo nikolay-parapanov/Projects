@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% block page_content %}
 
     <br><br>
@@ -11,7 +12,7 @@
     {% endif %}
 
     <div class="expense-container">
-        <img src="/static/images/user.png" alt="profile pic">
+        <img src="{% static 'images/user.png' %}" alt="profile pic">
         <p>
             <label>name: </label>
             <a1>{{ object.name }}</a1>
@@ -34,7 +35,7 @@
         </p>
 
         <div>
-            {% if is_owner or has_market_admin_rights%}
+            {% if is_owner or is_superuser or has_market_admin_rights %}
                 <div>
                     <button onclick="location.href='{% url 'marketplace item edit' pk=object.pk %}'" type="button">Edit
                         Item

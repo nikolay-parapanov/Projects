@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% block page_content %}
 
     <!-- Your Profile Data -->
@@ -7,11 +8,15 @@
     <!-- Profile Edit Form -->
 
     <div class="form profile-form">
-        <form method="POST" action="{% url 'profile update' pk=object.pk %}">
+        <form method="POST" action="{% url 'profile update' pk=object.pk %}" enctype="multipart/form-data">
 
             <!-- Profile Image -->
 
-            <img src="/static/images/user.png" alt="profile pic">
+            {%  if object.profile_pic  %}
+            <img src="{{ object.profile_pic }}" alt="profile pic">
+            {% else %}
+            <img src="{% static '/images/user.png' %}" alt="profile pic">
+            {% endif %}
 
             <label for="firstName">first name: </label>
             <input type="text" name="first_name" value="{{ object.first_name }}" maxlength="15" required=""
@@ -25,11 +30,12 @@
             <input type="text" name="age" value="{{ object.age }}" maxlength="15" required=""
                    id="age">
 
-            <label for="image">Profile Image:</label>
-            <input type="file" class="form-file" name="image" id="image">
+            <label for="profile_pic">Profile Image:</label>
+            <input type="file" class="form-file" name="profile_pic" id="profile_pic">
             <br>
             <button class="button edit" onclick="location.href='{% url 'profile update' pk=object.pk %}'"
-               type="submit">Update</button>
+                    type="submit">Update
+            </button>
             <br><br>
             <button onclick="location.href='{% url 'marketplace list' %}'" type="button">Back to Marketplace
             </button>

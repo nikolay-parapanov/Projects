@@ -46,12 +46,17 @@ class MarketplaceDetailsView(views.DetailView):
         user_from_user_table = AppUser.objects.get(pk=item.user_id)
         context['user_from_user_table'] = user_from_user_table
         context['user_full_name'] = f'{user_from_user_table.first_name} {user_from_user_table.last_name}'
-
-        context['has_market_admin_rights'] = False
         market_admins = AppUser.objects.filter(is_staff=1, username__icontains="staff_marketplace_")
-        for market_admin in market_admins:
-            if market_admin.username == self.request.user.username:
-                context['has_market_admin_rights'] = True
+        superusers = AppUser.objects.filter(is_superuser=1)
+        context['has_market_admin_rights'] = False
+
+        context['is_superuser'] = False
+        if self.request.user in superusers:
+            context['is_superuser'] = True
+        else:
+            for market_admin in market_admins:
+                if market_admin.username == self.request.user.username:
+                    context['has_market_admin_rights'] = True
 
         return context
 
