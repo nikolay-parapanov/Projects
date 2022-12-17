@@ -1,9 +1,11 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
-# from django.contrib.auth.models import GroupPermissions
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
+from rest_framework import generics as rest_views
+from rest_framework import serializers
+
 
 from tri.authh.models import AppUser
 from tri.marketplace.models import MarketItems
@@ -63,6 +65,7 @@ class UserUpdateView(UpdateView):
         # if self.request.user.pk != kwargs['pk']
         #     response
         return response
+
     # def post(self, request, *args, **kwargs):
     #     :
 
@@ -87,3 +90,14 @@ class UserDeleteView(DeleteView):
 def about(request):
     if request.method == "GET":
         return render(request, 'web/about.html')
+
+
+class MartketItemsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MarketItems
+        fields = '__all__'
+
+
+class MarketItemsListApiView(rest_views.ListCreateAPIView):
+    queryset = MarketItems.objects.all()
+    serializer_class = MartketItemsSerializer
