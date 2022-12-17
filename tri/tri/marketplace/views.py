@@ -88,7 +88,7 @@ class MarketplaceItemDeleteView(views.DeleteView):
 
 class MarketplaceItemUpdateView(views.UpdateView):
     template_name = 'marketplace/marketplace-item-edit.html'
-    fields = ['name', 'description', 'price', 'type']
+    fields = ['name', 'description', 'price', 'type', 'item_pic']
     model = MarketItems
 
 

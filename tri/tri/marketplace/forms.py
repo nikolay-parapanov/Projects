@@ -5,7 +5,7 @@ from tri.marketplace import models
 class MarketplaceItemCreateForm(forms.ModelForm):
     class Meta:
         model = models.MarketItems
-        fields = ('name', 'description', 'price', 'type', 'user')
+        fields = ('name', 'description', 'price', 'type', 'user', 'item_pic')
         labels = {
             'name': 'name',
             'description': 'description',

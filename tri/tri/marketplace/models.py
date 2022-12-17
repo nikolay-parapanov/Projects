@@ -56,3 +56,8 @@ class MarketItems(models.Model):
         related_name="market_items"
     )
 
+    item_pic = models.ImageField(
+        null=True,
+        blank=True,
+    )
+

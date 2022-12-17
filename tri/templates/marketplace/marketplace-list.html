@@ -17,7 +17,7 @@
         <br><br><br>
         <form method="get" action="{% url 'marketplace list' %}">
 
-                <input name="pattern" placeholder="Enter item name:"/>
+            <input name="pattern" placeholder="Enter item name:"/>
             <button>
                 Find
             </button>
@@ -26,11 +26,11 @@
         <br><br>
         <form method="get" action="{% url 'marketplace list' %}">
             <label>Please select number of items for preview:</label>
-                <select class="items-pagination" name="page_size">
-                    <option value="3">3</option>
-                    <option value="6">6</option>
-                    <option value="9">9</option>
-                </select>
+            <select class="items-pagination" name="page_size">
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+            </select>
             <button>Set</button>
         </form>
         {% if page_obj.has_previous %}
@@ -56,7 +56,11 @@
             {% for item in object_list %}
 
                 <div class="expense-container">
-                    <img src="{% static 'images/user.png'%}" alt="profile pic">
+                    {% if item.item_pic %}
+                        <img src="{{ item.item_pic.url }}" alt="profile pic">
+                    {% else %}
+                        <img src="{% static '/images/user.png' %}" alt="profile pic">
+                    {% endif %}
                     <p>
                         <label>name: </label>
                         <a1>{{ item.name }}</a1>
@@ -76,7 +80,8 @@
                     <p>
                         <label>View all items listed by this Profile:</label>
                         {{ item.user_id }}
-                        <button onclick="location.href='{% url 'profile details' pk=item.user_id%}'" type="button">View Profile & Items
+                        <button onclick="location.href='{% url 'profile details' pk=item.user_id %}'" type="button">View
+                            Profile & Items
                         </button>
                         {% csrf_token %}
                     </p>

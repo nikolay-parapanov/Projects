@@ -12,7 +12,11 @@
     {% endif %}
 
     <div class="expense-container">
-        <img src="{% static 'images/user.png' %}" alt="profile pic">
+        {% if object.item_pic %}
+            <img src="{{ object.item_pic.url }}" alt="item pic">
+        {% else %}
+            <img src="{% static '/images/user.png' %}" alt="profile pic">
+        {% endif %}
         <p>
             <label>name: </label>
             <a1>{{ object.name }}</a1>
