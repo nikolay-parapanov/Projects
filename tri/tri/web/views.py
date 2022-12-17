@@ -92,12 +92,33 @@ def about(request):
         return render(request, 'web/about.html')
 
 
+class ShortProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AppUser
+        fields = ['first_name', 'last_name', 'email']
+
 class MartketItemsSerializer(serializers.ModelSerializer):
+    user_id = ShortProfileSerializer()
     class Meta:
         model = MarketItems
         fields = '__all__'
 
 
-class MarketItemsListApiView(rest_views.ListCreateAPIView):
+class MarketItemsListApiView(rest_views.ListAPIView):
     queryset = MarketItems.objects.all()
     serializer_class = MartketItemsSerializer
+
+
+
+class ShortMarketItemsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MarketItems
+        fields = ['name']
+class ProfileSerializer(serializers.ModelSerializer):
+    marketitems_set = ShortMarketItemsSerializer(many=True)
+    class Meta:
+        model = AppUser
+        fields = ['first_name', 'last_name', 'email']
+class ProfilesListApiView(rest_views.ListAPIView):
+    queryset = AppUser.objects.all()
+    serializer_class = ProfileSerializer

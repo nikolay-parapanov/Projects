@@ -1,6 +1,7 @@
 from django.urls import path, include
 
-from tri.web.views import UsersListView, about, UserDetailsView, UserUpdateView, UserDeleteView, MarketItemsListApiView
+from tri.web.views import UsersListView, about, UserDetailsView, UserUpdateView, UserDeleteView, MarketItemsListApiView, \
+    ProfilesListApiView
 
 urlpatterns = (
     path('', UsersListView.as_view(), name='index'),
@@ -11,5 +12,6 @@ urlpatterns = (
         path('delete/', UserDeleteView.as_view(), name='profile delete'),
     ])),
 
-    path('api/market-items/', MarketItemsListApiView.as_view(), name='api list marketitems')
+    path('api/market-items/', MarketItemsListApiView.as_view(), name='api list marketitems'),
+    path('api/profiles/', ProfilesListApiView.as_view(), name='api list profiles'),
 )
