@@ -11,12 +11,22 @@ class SignUpView(views.CreateView):
     template_name = 'authh/sign-up.html'
     form_class = SignUpForm
     success_url = reverse_lazy('index')
+    # fields = ('username', 'password1', 'password2', 'email', 'age', 'profile_pic')
+
+    def post(self, request, *args, **kwargs):
+        response = super().post(self, request, *args, **kwargs)
+
+        return response
 
     #Automatically sign-in the user after successfull registration
     def form_valid(self, form):
         result= super().form_valid(form)
         login(self.request,self.object)
         return result
+
+    # def post(self, request, *args, **kwargs):
+    #     response = super().post(self, request, args, kwargs)
+    #     return response
 
 
 

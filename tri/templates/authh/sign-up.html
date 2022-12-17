@@ -3,10 +3,59 @@
 {% block page_content %}
     <h1>Sign up form: </h1>
 
-    <form method="post" action="{% url 'sign up' %}" enctype="multipart/form-data">
-        {{ form.as_p }}
-        <button>Sign up!</button>
-        {% csrf_token %}
-    </form>
+    {#    <form method="post" action="{% url 'sign up' %}" enctype="multipart/form-data">#}
+    {#        {{ form.as_p }}#}
+    {#        <button>Sign up!</button>#}
+    {#        {% csrf_token %}#}
+    {#    </form>#}
+
+    <div class="form profile-form">
+        <form method="POST" action="{% url 'sign up' %}" enctype="multipart/form-data">
+
+            <label for="username">username: </label>
+            <input type="text" name="username" value="{{ object.username }}" maxlength="30" required=""
+                   id="username">
+            <br><br>
+            <label for="password1">enter password: </label>
+            <input type="password" name="password1" value="{{ object.password1 }}" required="" id="password1">
+            <br><br>
+
+            <label for="password2">confirm password: </label>
+            <input type="password" name="password2" value="{{ object.password2 }}" required="" id="password2">
+            <br><br>
+
+            <label for="first_name">First name: </label>
+            <input type="text" name="first_name" value="{{ object.first_name }}" id="first_name">
+            <br><br>
+
+            <label for="last_name">Last name: </label>
+            <input type="text" name="last_name" value="{{ object.last_name }}" id="last_name">
+            <br><br>
+
+            <label for="email">e-mail: </label>
+            <input type="email" name="email" value="{{ object.email }}" id="email">
+            <br><br>
+
+            <label for="age">age: </label>
+            <input type="number" name="age" value="{{ object.age }}" id="age">
+            <br><br>
+
+            <label for="gender">gender: </label>
+            <select name="gender" placeholder="select gender" value="{{ object.gender }}" id="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <option value="other">other</option>
+            </select>
+
+            <label for="profile_pic">Profile Image:</label>
+            <input type="file" class="form-file" name="profile_pic" id="profile_pic">
+            <br><br>
+
+            <button class="button edit" type="submit">Create</button>
+
+            {% csrf_token %}
+
+        </form>
+    </div>
 
 {% endblock %}

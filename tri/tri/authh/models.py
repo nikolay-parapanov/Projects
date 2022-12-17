@@ -19,7 +19,7 @@ class ChoicesEnumMixin:
 class Gender(ChoicesEnumMixin, Enum):
     male = 'male'
     female = 'female'
-    DoNotShow = 'do not show'
+    other = 'other'
 
 
 class AppUser(auth_models.AbstractUser):
@@ -33,14 +33,14 @@ class AppUser(auth_models.AbstractUser):
         validators=(
             validators.MinLengthValidator(MIN_LEN_FIRST_NAME),
             validate_only_letters,
-        )
+        ),
     )
     last_name = models.CharField(
         max_length=Max_LEN_LAST_NAME,
         validators=(
             validators.MinLengthValidator(MIN_LEN_LAST_NAME),
             validate_only_letters,
-        )
+        ),
     )
     email = models.EmailField(
         unique=True,
