@@ -1,4 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.exceptions import ObjectDoesNotExist, PermissionDenied
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import generic as views
 
@@ -91,6 +93,22 @@ class MarketplaceItemUpdateView(views.UpdateView):
     fields = ['name', 'description', 'price', 'type', 'item_pic']
     model = MarketItems
 
+    def get(self, request, *args, **kwargs):
+        display_item = None
+        try:
+            display_item = MarketItems.objects.get(pk=kwargs['pk'])
+        except ObjectDoesNotExist:
+            return redirect("marketplace list")
+        owner_id = display_item.user_id
+        item_owner = AppUser.objects.get(pk=owner_id)
+        superusers = AppUser.objects.filter(is_superuser=1)
+        market_admins = AppUser.objects.filter(is_staff=1, username__icontains="staff_marketplace_")
+        if self.request.user != item_owner and not self.request.user in market_admins \
+                and not self.request.user in superusers:
+            raise PermissionDenied("You are not allowed to view this page!")
+
+        request = super().get(self, request, *args, **kwargs)
+        return request
 
     def get_success_url(self):
         created_object = self.object

@@ -57,8 +57,8 @@
 
     {% if is_owner %}
         <h1>You have listed the following items in the 'Marketplace' section:</h1>
-    {% elif is_superuser %}
-        <h1>You can moderate Marketplace section as you're logged as superuser or Marketplace admin user</h1>
+    {% elif is_superuser or has_market_admin_rights%}
+        <h1>You can moderate Marketplace section as you're logged as Superuser or Marketplace admin user</h1>
     {% else %}
         <h1>Listed items by this Profile</h1>
     {% endif %}
