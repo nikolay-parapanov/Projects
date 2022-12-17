@@ -5,6 +5,8 @@ from django.test import Client
 from tri.authh.forms import SignUpForm
 from tri.authh.models import AppUser
 from tri.common.validators import validate_only_letters
+from tri.marketplace.models import MarketItems
+
 
 class MyTest(TestCase):
     def setUp(self):
@@ -24,10 +26,34 @@ class MyTest(TestCase):
         assert context.exception.message == 'Only letters are allowed'
 
 
-    def testAppUserFullName(self):
+    def testModelsCreation(self):
         user = AppUser(first_name = "Petar", last_name="Ivanov")
         assert user.full_name == "Petar Ivanov"
         assert not user.full_name == "PetarIvanov"
+
+        with self.assertRaises(ValidationError) as exception_context:
+            user.full_clean()
+            user.save()
+
+        user.username = "petarivanov"
+        user.password = "aptor123123"
+        user.email = "petar@microsoft.com"
+        user.gender = "male"
+
+        user.full_clean()
+        user.save()
+
+        item = MarketItems()
+        with self.assertRaises(ValidationError) as exception_context:
+            item.full_clean()
+            item.save()
+
+        item.name = "Shoes"
+        item.price = 101
+        item.user_id = user.id
+        item.full_clean()
+        item.save()
+
 
     def testSignUpForm(self):
         data = {
