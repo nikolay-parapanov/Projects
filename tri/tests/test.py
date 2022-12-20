@@ -12,7 +12,7 @@ class MyTest(TestCase):
     def setUp(self):
         self.test_client = Client()
 
-    def testOnlyLetersValidator(self):
+    def testOnlyLettersValidator(self):
         validate_only_letters("Nikolay")
 
         with self.assertRaises(ValidationError) as context:

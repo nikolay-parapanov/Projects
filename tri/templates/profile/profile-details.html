@@ -14,10 +14,10 @@
 
     <div class="expenses-container">
         <div class="expense-container">
-            {%  if object.profile_pic  %}
-            <img src="{{ object.profile_pic.url }}" alt="profile pic">
+            {% if object.profile_pic %}
+                <img src="{{ object.profile_pic.url }}" alt="profile pic">
             {% else %}
-            <img src="{% static '/images/user.png' %}" alt="profile pic">
+                <img src="{% static '/images/user.png' %}" alt="profile pic">
             {% endif %}
             <h1>General info:</h1>
             <p>
@@ -57,7 +57,7 @@
 
     {% if is_owner %}
         <h1>You have listed the following items in the 'Marketplace' section:</h1>
-    {% elif is_superuser or has_market_admin_rights%}
+    {% elif is_superuser or has_market_admin_rights %}
         <h1>You can moderate Marketplace section as you're logged as Superuser or Marketplace admin user</h1>
     {% else %}
         <h1>Listed items by this Profile</h1>
@@ -66,7 +66,11 @@
     <div class="expenses-container">
         {% for item in items_listed_by_user %}
             <div class="expense-container">
-                <img src="/static/images/user.png" alt="profile pic">
+                {% if item.item_pic %}
+                    <img src="{{ item.item_pic.url }}" alt="item pic">
+                {% else %}
+                    <img src="{% static '/images/user.png' %}" alt="item pic">
+                {% endif %}
                 <p>
                     <label>name: </label>
                     <a1>{{ item.name }}</a1>
@@ -85,7 +89,7 @@
                 </p>
                 <div class="right">
                     {% if is_owner or is_superuser or has_market_admin_rights %}
-                    <a class="button edit" href="{% url 'marketplace item edit' pk=item.pk %}">Edit Item</a>
+                        <a class="button edit" href="{% url 'marketplace item edit' pk=item.pk %}">Edit Item</a>
                     {% endif %}
                 </div>
             </div>
