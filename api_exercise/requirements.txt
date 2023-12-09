@@ -1,5 +1,6 @@
 lightweight-charts
 yfinance
+pandas
 pandas_ta
 ib_insync
 nest_asyncio
