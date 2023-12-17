@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body { font-family: arial; margin: 20px}
+    </style>
+</head>
+
+
+<body>
+    <h1>Screener</h1>
+
+    <form>
+        <select name="pattern">
+            {% for pattern in patterns %}
+            <option value="{{ pattern }}">{{ patterns[pattern] }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Scan">
+    </form>
+
+</body>
+
+
+</html>
