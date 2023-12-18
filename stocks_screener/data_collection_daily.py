@@ -17,4 +17,6 @@ def data_collection_daily():
             all_symbols_df = pd.concat([all_symbols_df, current_symbol_df])
 
         print(all_symbols_df)
-        # all_symbols_df.to_csv('database/daily/all_symbols_daily.csv')
+        data_collected_df = all_symbols_df
+        all_symbols_df.to_csv('database/daily/all_symbols_initial_daily.csv')
+        return data_collected_df
