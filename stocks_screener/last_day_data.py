@@ -21,5 +21,6 @@ def last_day_data():
         last_days_data_for_each_ticker = pd.concat([last_days_data_for_each_ticker, last_rows])
 
     print(last_days_data_for_each_ticker)
+    last_days_data_for_each_ticker.to_csv('database/daily/last_days_data_enriched19_daily.csv')
 
     return 'data from last day filtered'
