@@ -35,11 +35,13 @@ def check_for_setups_in_last_days():
                 bear_pattern_count += 1
                 bear_pattern_names.append(column_names[col])
             #
-        df.iloc[row, len(column_names)+1] = bull_pattern_count
-        df.iloc[row, len(column_names)+2] = ','.join(bull_pattern_names)
-        df.iloc[row, len(column_names)+3] = bear_pattern_count
-        # df.iloc[row, len(column_names)+4] = ','.join(bear_pattern_names)
+        df.iloc[row, len(column_names)] = bull_pattern_count
+        df.iloc[row, len(column_names)+1] = ','.join(bull_pattern_names)
+        df.iloc[row, len(column_names)+2] = bear_pattern_count
+        df.iloc[row, len(column_names)+3] = ','.join(bear_pattern_names)
+
 
     print(df)
+    df.to_csv('database/daily/all_symbols_daily_patterns_added.csv')
 
     return
