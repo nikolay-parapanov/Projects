@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
-import adding_preselected_patterns_from_talib, check_for_setups, data_collection_daily, last_day_data, patterns
-
+import adding_preselected_patterns_from_talib, check_for_setups, data_collection_daily, last_day_data, patterns, test
 
 app = Flask(__name__)
 
@@ -43,3 +42,10 @@ def check():
 
     return 'check for setups has been done'
 
+
+@app.route('/test')
+def test1():
+
+    test.test_code()
+
+    return 'test code'
