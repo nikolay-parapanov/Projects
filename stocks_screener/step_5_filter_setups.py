@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def filter_setups_for_summary():
-    df = pd.read_csv('database/daily/all_symbols_daily_patterns_added.csv')
+    df = pd.read_csv('database/daily/step_4_-_all_symbols_daily_enriched_19_ta_lib_patterns_last_days_extracted_signals_added.csv')
 
     df['filtered'] = 0
 
@@ -13,6 +13,6 @@ def filter_setups_for_summary():
 
     df_filtered = df[df['filtered'] == 1]
 
-    df_filtered.to_csv('database/daily/all_symbols_daily_patterns_added_and_filtered.csv')
+    df_filtered.to_csv('database/daily/step_5_-_all_symbols_daily_enriched_19_ta_lib_patterns_last_days_extracted_signals_added_filtered_for_visualization.csv')
 
     return

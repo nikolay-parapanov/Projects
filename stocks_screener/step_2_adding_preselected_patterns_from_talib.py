@@ -5,7 +5,7 @@ import pandas as pd
 # Data enrichment with few patterns from TA-lib
 
 def adding_preselected_patterns_to_df_from_ta_lib():
-    df = pd.read_csv('database/daily/all_symbols_initial_daily.csv')
+    df = pd.read_csv('database/daily/step_1_-_all_symbols_daily_initial.csv')
 
     op = df['Open']
     hi = df['High']
@@ -29,6 +29,6 @@ def adding_preselected_patterns_to_df_from_ta_lib():
             pass
 
     # print(df)
-    df.to_csv('database/daily/all_symbols_daily_enriched_19.csv')
+    df.to_csv('database/daily/step_2_-_all_symbols_daily_enriched_19_ta_lib_patterns.csv')
 
     return

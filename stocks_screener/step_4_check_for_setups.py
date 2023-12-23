@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def check_for_setups_in_last_days():
-    df = pd.read_csv('database/daily/last_days_data_enriched19_daily.csv')
+    df = pd.read_csv('database/daily/step_3_-_all_symbols_daily_enriched_19_ta_lib_patterns_last_days_extracted.csv')
 
     # First index from the enrichment is 'CDLMARUBOZU', therefore this is the start index for the columns nested loop
 
@@ -42,6 +42,6 @@ def check_for_setups_in_last_days():
 
 
     print(df)
-    df.to_csv('database/daily/all_symbols_daily_patterns_added.csv')
+    df.to_csv('database/daily/step_4_-_all_symbols_daily_enriched_19_ta_lib_patterns_last_days_extracted_signals_added.csv')
 
     return

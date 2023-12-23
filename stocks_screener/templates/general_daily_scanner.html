@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{%block head%}
+{%endblock%}
+
+{%block header%}
+<title>General Daily Screener</title>
+{%endblock%}
+
+{%block body%}
+<br>
+<h1>General Daily Screener</h1>
+<br>
+<h2>
+    Process Description:
+</h2>
+<ul>
+    <li>data collection (daily for all SPY tickers) </li>
+    <li>enriching the data with 19 pe-defined patterns from TA-lib</li>
+    <li>filter on last day(s), where we have patterns</li>
+    <li>classification of setups type and magnitude (bullish/ bearish signals)</li>
+    <li>filter on setups tickers for visualization</li>
+    <li>visualize</li>
+</ul>
+<br>
+<br>
+
+<table class="table table-bordered">
+    <tr>
+        <th scope="col" class="table-light">Symbol:</th>
+        <th scope="col" class="table-light">Company name:</th>
+        <th scope="col" class="table-light">Signal:</th>
+    </tr>
+    {% for key, value in details.items() %}
+    <tr>
+        <td>{{key}}</td>
+        <td>company - name</td>
+        <td> {{value[0]}}</td>
+    </tr>
+    <tr>
+        <td colspan="3"><img src="https://finviz.com/chart.ashx?t={{key}}&ty=c&ta=1&p=d&s=l"/></td>
+        <td>
+            <p> Signal: {{value[0]}}</p>
+            <p> Date: {{value[1]}}</p>
+            {% if value[0] == 'Buy' %}
+                <p> Bullish pattern name(s): {{value[2]}}</p>
+            {% elif value[0] == 'Sell' %}
+                <p> Bearish pattern name(s): {{value[3]}}</p>
+            {%endif%}
+            <a href="http://127.0.0.1:5000/ticker/{{key}}">Details for this ticker</a>
+        </td>
+    </tr>
+    <tr>
+    </tr>
+    {%endfor%}
+
+</table>
+
+{%endblock%}

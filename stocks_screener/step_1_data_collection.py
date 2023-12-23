@@ -18,5 +18,5 @@ def data_collection_daily():
 
         print(all_symbols_df)
         data_collected_df = all_symbols_df
-        all_symbols_df.to_csv('database/daily/all_symbols_initial_daily.csv')
+        all_symbols_df.to_csv('database/daily/step_1_-_all_symbols_daily_initial.csv')
         return data_collected_df
