@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+
+{%block head%}
+
+<title>Screener-home</title>
+
+{%endblock%}
+
+{%block header%}
+
+<h1>Home Page</h1>
+
+{%endblock%}
+
+{%block body%}
 
 
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        body { font-family: arial; margin: 20px}
-    </style>
-</head>
+Types of analysis:
+<br><br><br>
+
+<ul>
+
+<li>    <a href="http://127.0.0.1:5000/general_daily_scanner">General daily Scanner</a></li>
+    <li> </li>
+</ul>
 
 
-<body>
-    <h1>Screener</h1>
-
-    <form>
-        <select name="pattern">
-            {% for pattern in patterns %}
-            <option value="{{ pattern }}">{{ patterns[pattern] }}</option>
-            {% endfor %}
-        </select>
-        <input type="submit" value="Scan">
-    </form>
-
-</body>
+{%endblock%}
 
 
-</html>
