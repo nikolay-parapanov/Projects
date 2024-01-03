@@ -1,4 +1,6 @@
-from flask import Flask, render_template, url_for
+import io
+from PIL import Image
+from flask import Flask, render_template, url_for, send_file
 import daily_step_1_data_collection, daily_step_2_adding_preselected_patterns_from_talib, daily_step_4_check_for_setups, \
     daily_step_1_data_collection, daily_step_3_last_data, patterns, test, \
     daily_step_5_filter_setups, daily_step_6_visualization
@@ -30,10 +32,33 @@ def general_daily_scanner_route():
 
 @app.route('/symbol/<ticker>')
 def scanner_for_specific_symbol(ticker):
+    img_candlestick, img_rsi = symbol_analysis.individual_symbol_analysis(ticker)
 
-    symbol_analysis.individual_symbol_analysis(ticker)
+    # Convert BytesIO objects to PIL Image objects
+    img_candlestick_pil = Image.open(img_candlestick)
+    img_rsi_pil = Image.open(img_rsi)
 
-    return 'test 1-2-3'
+    # Calculate the total height of the combined image
+    combined_height = img_candlestick_pil.height + img_rsi_pil.height
+
+    # Create a new Image object with the total height
+    combined_image = Image.new('RGB', (img_candlestick_pil.width, combined_height))
+
+    # Paste the candlestick image at the top
+    combined_image.paste(img_candlestick_pil, (0, 0))
+
+    # Paste the RSI image below the candlestick image
+    combined_image.paste(img_rsi_pil, (0, img_candlestick_pil.height))
+
+    # Save the combined image into a BytesIO buffer
+    combined_buffer = io.BytesIO()
+    combined_image.save(combined_buffer, format='PNG')
+
+    # Move the buffer cursor to the beginning
+    combined_buffer.seek(0)
+
+    # Return the combined buffer as a response
+    return send_file(combined_buffer, mimetype='image/png')
 
 
 @app.route('/collect_data')
