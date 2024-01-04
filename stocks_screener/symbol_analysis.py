@@ -8,52 +8,59 @@ import yfinance as yf
 import datetime as dt
 import pandas_ta as ta
 from dateutil.relativedelta import relativedelta
-from matplotlib.dates import DateFormatter
-from ta.volatility import BollingerBands, AverageTrueRange
 import matplotlib.pyplot as plt
 
 
 # Downloading different intervals data from Yahoo based on preselected ticker
-def individual_symbol_analysis(symbol):
+def individual_symbol_analysis(ticker):
     today = str(dt.date.today())
-    twenty_months_ago = str(dt.date.today() - relativedelta(months=1))
+    start_date = str(dt.date.today() - relativedelta(months=2))
 
-    df_hourly = yf.download(symbol, interval="1h", start=twenty_months_ago, end=today)
-    df_hourly.insert(0, 'Ticker', str(symbol))
-
-    df_hourly['rsi'] = ta.rsi(df_hourly['Adj Close'], length=14)
+    df_hourly = yf.download(ticker, interval="1h", start=start_date, end=today)
+    df_hourly.insert(0, 'Ticker', str(ticker))
+    figsize = (12, 5)
 
     df_hourly.index = pd.to_datetime(df_hourly.index)
 
     print(df_hourly)
 
-    fig = plt.subplots(1, sharex=True, figsize=(12, 8))
+    img_buf_candlestick_EMA20_EMA50 = create_candlestick_and_RSI_chart(df_hourly, ticker, start_date, today,
+                                                                       figsize)
 
-    # Plot candlestick chart on ax1
-    mpf.plot(df_hourly, type='candle', volume=True,  mav=(5, 20, 50, 200))
+    return img_buf_candlestick_EMA20_EMA50
 
-    # Plot RSI on a separate subplot (ax2)
-    fig_rsi, ax2 = plt.subplots(1, sharex=True, figsize=(8, 5))
 
-    # Plot RSI on ax2
-    ax2.plot(df_hourly.index, df_hourly['rsi'], label='RSI', color='purple')
+def create_candlestick_and_RSI_chart(df_hourly, ticker, start_date, today, figsize):
+    df_hourly['EMA20'] = ta.ema(df_hourly.Close, 20)
+    df_hourly['EMA50'] = ta.ema(df_hourly.Close, 50)
+
+    # EMA = [mpf.make_addplot(df_hourly.EMA20, type='line', color='y', width=0.3),
+    #        mpf.make_addplot(df_hourly.EMA50, type='line', color='g', width=0.6)]
+    df_hourly['RSI'] = ta.rsi(df_hourly.Close, length=14)
+
+    fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(20, 25))
+
+    mpf.plot(df_hourly, ax=ax1, type='candle', style='yahoo')
+
+    ax2.plot(df_hourly.index, df_hourly['RSI'], scalex=True, color='b')
+    ax2.axhline(y=30, color='g', linestyle='--', label='RSI 30 Level')  # Add RSI 30 level line
+    ax2.axhline(y=70, color='r', linestyle='--', label='RSI 70 Level')  # Add RSI 30 level line
+    ax2.set_title('RSI Chart')
+    ax2.set_xlabel('Date')
     ax2.set_ylabel('RSI')
+    ax2.legend()
 
+    ax3.plot(df_hourly.index, df_hourly['Volume'], color='r')
+    ax3.set_title('Volume Chart')
+    ax3.set_xlabel('Date')
+    ax3.set_ylabel('Volume')
+    ax3.legend()
 
-    img_buf_rsi = BytesIO()
-    plt.savefig(img_buf_rsi, format='png')
-    img_buf_rsi.seek(0)
-    plt.close(fig_rsi)
+    plt.tight_layout()
+    img_buf = BytesIO()
+    plt.savefig(img_buf, format='png')
+    plt.close(fig)
 
-    img_buf_candlestick = BytesIO()
-    plt.savefig(img_buf_candlestick, format='png')
-    img_buf_candlestick.seek(0)
+    img_buf.seek(0)
 
-    return img_buf_candlestick, img_buf_rsi
-
-    # date_formatter = DateFormatter("%Y-%m-%d %H:%M:%S")
-    # ax2.xaxis.set_major_formatter(date_formatter)
-
-    # ax2.plot(df_hourly.index, df_hourly['rsi'], label='RSI', color='purple')
-    # ax2.set_ylabel('RSI')
-    # ax2.set_xlabel('Date')
+    return img_buf
