@@ -3,7 +3,6 @@ import pandas as pd
 
 def visualize_predefined_dataframe():
     df = pd.read_csv('database/daily/step_5_-_all_symbols_daily_enriched_19_ta_lib_patterns_last_days_extracted_signals_added_filtered_for_visualization.csv')
-
     df['signal'] = ''
 
     companies = []

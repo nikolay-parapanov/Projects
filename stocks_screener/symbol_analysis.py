@@ -65,7 +65,7 @@ def create_candlestick_and_RSI_chart(df_hourly, ticker, start_date, today, figsi
 
     EMA_RSI = [
         mpf.make_addplot(df_hourly.RSI, type='line', color='b', panel=1,width=0.6),
-        mpf.make_addplot(df_hourly['RSI_oversold_line'], type='line', color='g', panel=1,width=0.7), 
+        mpf.make_addplot(df_hourly['RSI_oversold_line'], type='line', color='g', panel=1,width=0.7),
         mpf.make_addplot(df_hourly['RSI_overbought_line'], type='line', color='r', panel=1,width=0.6),
         mpf.make_addplot(df_hourly.EMA20, type='line', color='y', panel=0,width=0.3),
         mpf.make_addplot(df_hourly.EMA50, type='line', color='g', panel=0, width=0.6)]
