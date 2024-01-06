@@ -4,23 +4,23 @@
 {%endblock%}
 
 {%block header%}
-<title>SPY Scanner</title>
+<title>Single Ticker Screener</title>
 {%endblock%}
 
 {%block body%}
 <br>
-<h1>SPY Scanner</h1>
+<h1>Individual Scanner</h1>
 <br>
 <h2>
     Process Description:
 </h2>
 <ul>
-    <li>data collection (daily for all SPY tickers) </li>
-    <li>enriching the data with 19 pe-defined patterns from TA-lib</li>
-    <li>filter on last day(s), where we have patterns</li>
-    <li>classification of setups type and magnitude (bullish/ bearish signals)</li>
-    <li>filter on setups tickers for visualization</li>
-    <li>visualize</li>
+<!--    <li>data collection (daily for all SPY tickers) </li>-->
+<!--    <li>enriching the data with 19 pe-defined patterns from TA-lib</li>-->
+<!--    <li>filter on last day(s), where we have patterns</li>-->
+<!--    <li>classification of setups type and magnitude (bullish/ bearish signals)</li>-->
+<!--    <li>filter on setups tickers for visualization</li>-->
+<!--    <li>visualize</li>-->
 </ul>
 <br>
 <br>
@@ -28,8 +28,9 @@
 <table class="table table-bordered">
     <tr>
         <th scope="col" class="table-light">Symbol:</th>
-        <th scope="col" class="table-light">Company name:</th>
-        <th scope="col" class="table-light">Signal:</th>
+    </tr>
+    <tr>
+        <th scope="col" class="table-light">Symbol:</th>
     </tr>
     {% for key, value in details.items() %}
     <tr>

@@ -16,7 +16,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/general_daily_scanner')
+@app.route('/spy_scanner')
 def general_daily_scanner_route():
     # This procedure is to perform all of the daily scanning activities at one page (incl. visualization at the end):
 
@@ -30,36 +30,17 @@ def general_daily_scanner_route():
     return render_template('general_daily_scanner.html', details=details)
 
 
-@app.route('/symbol/<ticker>')
+@app.route('/ticker/<ticker>')
 def scanner_for_specific_symbol(ticker):
-    img_candlestick, img_rsi = symbol_analysis.individual_symbol_analysis(ticker)
 
-    # Convert BytesIO objects to PIL Image objects
-    img_candlestick_pil = Image.open(img_candlestick)
-    img_rsi_pil = Image.open(img_rsi)
+    img_candlestick = symbol_analysis.individual_symbol_analysis(ticker)
 
-    # Calculate the total height of the combined image
-    combined_height = img_candlestick_pil.height + img_rsi_pil.height
+    return send_file(img_candlestick, mimetype='image/png')
 
-    # Create a new Image object with the total height
-    combined_image = Image.new('RGB', (img_candlestick_pil.width, combined_height))
+@app.route('/ticker_general/')
+def individual_scanner_general():
 
-    # Paste the candlestick image at the top
-    combined_image.paste(img_candlestick_pil, (0, 0))
-
-    # Paste the RSI image below the candlestick image
-    combined_image.paste(img_rsi_pil, (0, img_candlestick_pil.height))
-
-    # Save the combined image into a BytesIO buffer
-    combined_buffer = io.BytesIO()
-    combined_image.save(combined_buffer, format='PNG')
-
-    # Move the buffer cursor to the beginning
-    combined_buffer.seek(0)
-
-    # Return the combined buffer as a response
-    return send_file(combined_buffer, mimetype='image/png')
-
+    return render_template('single_ticker_scanner_general.html')
 
 @app.route('/collect_data')
 def snapshot():
