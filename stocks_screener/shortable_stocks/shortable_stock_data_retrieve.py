@@ -8,8 +8,8 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=False, slow_mo=50)
     page = browser.new_page()
     page.goto('https://www.shortablestocks.com/login.cgi', timeout=0)
-    page.fill('input[name="Username"]', 'petar.petrof@gmail.com')
-    page.fill('input[name="Password"]', 'slepha2')
+    page.fill('input[name="Username"]', 'X')
+    page.fill('input[name="Password"]', 'X')
     page.click('input[type="submit"]')
     # page.wait_for_load_state("load")
     # print("form was submitted")
@@ -68,6 +68,7 @@ with sync_playwright() as p:
         print(item)
 
     # page.click('button#screen1')
-    shortable_stocks.save_list_to_csv_file.save_list_to_csv_file_code(scroll_pages, 'database/shortable_stocks/shortable_stocks_initial_screener_db.csv' )
+    shortable_stocks.save_list_to_csv_file.save_list_to_csv_file_code(scroll_pages,
+                                                                      '../database/shortable_stocks/shortable_stocks_initial_screener_db.csv')
 
     input("Press Enter to close the browser.")
