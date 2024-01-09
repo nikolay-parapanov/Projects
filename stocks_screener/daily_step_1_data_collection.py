@@ -7,12 +7,12 @@ import datetime as dt
 def data_collection_daily():
 
     today = str(dt.date.today())
-    with open('database/tickers_list/tickers_list.csv') as f:
+    with open('database/tickers_list/finviz.csv') as f:
         companies = f.read().splitlines()
         all_symbols_df = pd.DataFrame()
         for company in companies:
             symbol = company.split(',')[0]
-            current_symbol_df = yf.download(symbol, start='2023-01-01', end=today)
+            current_symbol_df = yf.download(symbol, start='2023-12-01', end=today)
             current_symbol_df.insert(0, 'Ticker' , str(symbol))
             all_symbols_df = pd.concat([all_symbols_df, current_symbol_df])
 
