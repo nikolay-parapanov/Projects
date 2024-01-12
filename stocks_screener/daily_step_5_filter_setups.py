@@ -8,7 +8,7 @@ def filter_setups_for_summary():
 
     for i, row in df.iterrows():
         if row['bull_pattern_count'] != 0 or row['bear_pattern_count'] != 0:
-            print('yes')
+            # print('yes')
             df.at[i, 'filtered'] = 1
 
     df_filtered = df[df['filtered'] == 1]

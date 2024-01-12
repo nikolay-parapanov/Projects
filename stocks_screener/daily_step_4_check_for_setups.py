@@ -29,7 +29,7 @@ def check_for_setups_in_last_days():
         for col in range(start_index, len(column_names)):
             if df.iloc[row, col] == 100:
                 bull_pattern_count += 1
-                print(column_names[col])
+                # print(column_names[col])
                 bull_pattern_names.append(column_names[col])
             if df.iloc[row, col] == -100:
                 bear_pattern_count += 1
