@@ -25,8 +25,8 @@ def visualize_predefined_dataframe():
         details[df.at[i, 'Ticker']].append(df.at[i, 'bear_pattern_names'])
 
 
-    for key, value in details.items():
-        print(key, value)
+    # for key, value in details.items():
+    #     print(key, value)
 
 
     # print(companies)
