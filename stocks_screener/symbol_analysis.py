@@ -61,11 +61,13 @@ def create_candlestick_and_RSI_chart(df_hourly, ticker, start_date, today, figsi
 
     df_hourly['RSI'] = ta.rsi(df_hourly.Close, length=14)
     df_hourly['RSI_oversold_line'] = 30
+    df_hourly['RSI_mid_line'] = 50
     df_hourly['RSI_overbought_line'] = 70
 
     EMA_RSI = [
         mpf.make_addplot(df_hourly.RSI, type='line', color='b', panel=1,width=0.6),
         mpf.make_addplot(df_hourly['RSI_oversold_line'], type='line', color='g', panel=1,width=0.7),
+        mpf.make_addplot(df_hourly['RSI_mid_line'], type='line', color='b', panel=1,width=0.6),
         mpf.make_addplot(df_hourly['RSI_overbought_line'], type='line', color='r', panel=1,width=0.6),
         mpf.make_addplot(df_hourly.EMA20, type='line', color='y', panel=0,width=0.3),
         mpf.make_addplot(df_hourly.EMA50, type='line', color='g', panel=0, width=0.6)]
@@ -85,7 +87,7 @@ def create_candlestick_and_RSI_chart(df_hourly, ticker, start_date, today, figsi
     plotlist_support.sort()
     plotlist_resistance.sort()
 
-    for i in range(5, len(plotlist_support)-1):
+    for i in range(6, len(plotlist_support)-1):
         if (i > len(plotlist_support)-1):
             break
         diff_abs = (plotlist_support[i] - plotlist_support[i - 1])
@@ -93,7 +95,7 @@ def create_candlestick_and_RSI_chart(df_hourly, ticker, start_date, today, figsi
         if ((diff_abs / avrg) <= 0.03):
             plotlist_support.pop(i)
 
-    for i in range(5, len(plotlist_resistance)-1):
+    for i in range(6, len(plotlist_resistance)-1):
         if (i > len(plotlist_resistance))-1:
             break
         diff_abs = (plotlist_resistance[i] - plotlist_resistance[i - 1])
