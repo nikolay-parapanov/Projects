@@ -8,15 +8,53 @@
 {%endblock%}
 
 {%block body%}
-<br>
+<br><br><br>
+<a
+        href="http://127.0.0.1:5000/">Home Page</a>
+<br><br><br>
 <h1>RSI Indicator - Bullish</h1>
 <br>
 <h2>
-    Workflow:</h2>
-<ul>
-    <li><a href="http://127.0.0.1:5000/rsi_indicator/data_retrieve">Data Retrieve</a></li>
+    Data flow:</h2>
 
-    <li><a href="http://127.0.0.1:5000/shortable_stocks/data_retrieve">Data Retrieve</a></li>
+<ul>
+    <br>
+    <li>First we need up-to-date market data for all Finviz 2200 tickers.</li>
+    <li>The last retrieve data is from: {{rsi_indicator_last_retrieved_market_data}}</li>
+    <br>
+    <li>In order to obtain more recent data use the <a
+            href="http://127.0.0.1:5000/rsi_indicator/data_retrieve">Downlaod</a> link. It takes about 10-15 mins.
+    </li>
+    <br>
+    <br>
+    <br>
+    <li>Then the data is enriched with additional RSI column.</li>
+    <li>Last RSI column data is from: {{rsi_calcs_last_data }}.</li>
+    <br>
+    <li>It takes about 5 mins and can be made by clicking on this <a
+            href="http://127.0.0.1:5000/rsi_indicator/recalculate_rsi_data">Recalculate</a> link.
+    </li>
+    <br>
+    <br>
+    <br>
+    <li>Then we will have all tickers where:
+        <ul>
+            <li>For the last 3 days we have RSI between 30-35 AND</li>
+            <li>For the previous 5 days we have RSI less than 30.</li>
+        </ul>
+    </li>
+    <li>The tickers, which meet the above criteria were extracted on {{resi_results_last_data}}.
+        Details below:
+    </li>
+
+    <ul>
+        {%for ticker in result_list%}
+        <li>
+            <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>
+        </li>
+        {%endfor%}
+    </ul>
+
 </ul>
 
 {%endblock%}}
