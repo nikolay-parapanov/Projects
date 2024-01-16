@@ -1,10 +1,10 @@
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 import shortable_stocks.get_tickers_screen_results_current_page_pagination
-import shortable_stocks.save_list_to_csv_file
+import general_functions.save_list_to_csv_file
 
 
-def ss_data_retrieve_code_2():
+def ss_data_retrieve_code():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False, slow_mo=50)
         page = browser.new_page()
@@ -69,8 +69,7 @@ def ss_data_retrieve_code_2():
             print(item)
 
         # page.click('button#screen1')
-        shortable_stocks.save_list_to_csv_file.save_list_to_csv_file_code(scroll_pages,
-                                                                          '../database/shortable_stocks/shortable_stocks_initial_screener_db.csv')
+        general_functions.save_list_to_csv_file.save_list_to_csv_file_code(scroll_pages,
+                                                                          'database/shortable_stocks/shortable_stocks_initial_screener_db.csv')
 
-        input("Press Enter to close the browser.")
     return print('retrieve is done')

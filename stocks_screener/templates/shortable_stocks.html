@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{%block head%}
+<title>Shortable Stocks</title>
+{%endblock%}
+
+
+{%block header%}
+<!--<h1>Shortable Stocks</h1>-->
+{%endblock%}
+
+{%block body%}
+<br><br><br>
+ <a
+            href="http://127.0.0.1:5000/">Home Page</a>
+<br><br><br>
+<h1>Shortable Stocks Data</h1>:
+<br>
+<h2>
+    Data flow:</h2>
+<ul>
+    <li>The last retrieve data is from: {{date_of_shortable_stocks_last_retrieve}}</li>
+    <br>
+    <li>In order to obtain more recent data use the <a href="http://127.0.0.1:5000/shortable_stocks/data_retrieve">Downlaod</a> link. It takes about 3 mins.</li>
+
+    <li>{{len_fl}} Fsher list results: {{fl}}</li>
+    <li>{{len_hau}} Heikin-Ashi - uptrends list results: {{hau}}</li>
+    <li>{{len_had}} Heikin-Ashi - downtrends  list results: {{had}}</li>
+    <li>{{len_cfh}} Cross b/w Fisher and Heikin results: {{cross_fisher_heikin}}</li>
+</ul>
+
+    <h3> Cross between Fisher and Heikin - bullish overview: </h3>
+
+    {%for ticker in fl%}
+<!--    <img src="https://elite.finviz.com/quote.ashx?t={{ticker}}&p=d"/>-->
+<!--    <img src="https://elite.finviz.com/quote.ashx?t=AAPL&p=d"/>-->
+    <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>
+    {%endfor%}
+
+
+
+{%endblock%}
+
+
