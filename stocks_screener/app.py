@@ -5,7 +5,7 @@ import daily_step_1_data_collection, daily_step_2_adding_preselected_patterns_fr
     daily_step_5_filter_setups, daily_step_6_visualization
 import general_functions.get_last_modified_date_and_time_of_file as gf_date_time
 import general_functions.import_data_as_list_from_csv_file as gf_import_list
-import rsi_indicator
+import rsi_indicator.rsi_indicator_data_retrieve as rsi_dr
 import rsi_indicator_flow
 import shortable_stocks.shortable_stocks_fisher_heikin
 import symbol_analysis
@@ -71,7 +71,7 @@ def rsi_indicator_main():
 @app.route('/rsi_indicator/data_retrieve')
 def rsi_indicator_data_retrieve_main():
 
-    rsi_indicator.rsi_indicator_data_retrieve.rsi_indicator_data_retrieve_code()
+    rsi_dr.rsi_indicator_data_retrieve_code()
     return redirect(url_for('rsi_indicator_main'))
 
 @app.route('/rsi_indicator/recalculate_rsi_data')

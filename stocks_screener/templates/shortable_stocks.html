@@ -29,9 +29,30 @@
     <li>{{len_cfh}} Cross b/w Fisher and Heikin results: {{cross_fisher_heikin}}</li>
 </ul>
 
-    <h3> Cross between Fisher and Heikin - bullish overview: </h3>
+<br><br><br>
+
+    <h2> Fisher - bullish overview: </h2>
+<br><br><br>
 
     {%for ticker in fl%}
+<!--    <img src="https://elite.finviz.com/quote.ashx?t={{ticker}}&p=d"/>-->
+<!--    <img src="https://elite.finviz.com/quote.ashx?t=AAPL&p=d"/>-->
+    <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>
+    {%endfor%}
+<br><br><br>
+    <h2> Heikin-Ashi - bullish overview: </h2>
+<br><br><br>
+
+    {%for ticker in hau%}
+<!--    <img src="https://elite.finviz.com/quote.ashx?t={{ticker}}&p=d"/>-->
+<!--    <img src="https://elite.finviz.com/quote.ashx?t=AAPL&p=d"/>-->
+    <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>
+    {%endfor%}
+<br><br><br>
+   <h2> Heikin-Ashi - bearish overview: </h2>
+<br><br><br>
+
+    {%for ticker in had%}
 <!--    <img src="https://elite.finviz.com/quote.ashx?t={{ticker}}&p=d"/>-->
 <!--    <img src="https://elite.finviz.com/quote.ashx?t=AAPL&p=d"/>-->
     <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>
