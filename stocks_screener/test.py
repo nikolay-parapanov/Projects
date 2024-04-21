@@ -22,3 +22,31 @@ def test_code():
     print(df)
 
     return
+
+
+
+'''
+Code snippets: 
+# Calculate volatility as the difference between High and Low prices
+df['Volatility'] = df['High'] - df['Low']
+
+# Shift the volatility by 1 to compare with the previous period
+previous_volatility = df['Volatility'].shift(1)
+
+# Check if the current volatility is less than the volatility of the previous period
+df['volatility_transition'] = (df['Volatility'] < previous_volatility).astype(int)
+
+# Count consecutive occurrences of 1 in volatility_transition
+consecutive_count = df['volatility_transition'].groupby(
+    (df['volatility_transition'] != df['volatility_transition'].shift()).cumsum()).cumcount() + 1
+
+# Add a new column 'volatility_result'
+df['volatility_result'] = 'Not Tightening'
+
+# Check for 6 consecutive rows where volatility_transition is equal to 1
+if (consecutive_count >= 10).any():
+    df.loc[consecutive_count >= 10, 'volatility_result'] = 'Tightening'
+
+# Print the DataFrame with the new columns
+print(df[['Date', 'Ticker', 'Volatility', 'volatility_transition', 'volatility_result']])
+'''

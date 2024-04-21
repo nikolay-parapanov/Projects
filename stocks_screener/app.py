@@ -1,12 +1,11 @@
-import os, datetime
 from flask import Flask, render_template, url_for, send_file, redirect
-import daily_step_1_data_collection, daily_step_2_adding_preselected_patterns_from_talib, daily_step_4_check_for_setups, \
-    daily_step_1_data_collection, daily_step_3_last_data, patterns, test, \
+import daily_step_2_adding_preselected_patterns_from_talib, daily_step_4_check_for_setups, \
+    daily_step_3_last_data, test, \
     daily_step_5_filter_setups, daily_step_6_visualization
 import general_functions.get_last_modified_date_and_time_of_file as gf_date_time
 import general_functions.import_data_as_list_from_csv_file as gf_import_list
 import rsi_indicator.rsi_indicator_data_retrieve as rsi_dr
-import rsi_indicator_flow
+import rsi_indicator.rsi_indicator_main as rsi_main
 import shortable_stocks.shortable_stocks_fisher_heikin
 import symbol_analysis
 from shortable_stocks import shortable_stocks_data_retrieve as ss
@@ -75,9 +74,9 @@ def rsi_indicator_data_retrieve_main():
     return redirect(url_for('rsi_indicator_main'))
 
 @app.route('/rsi_indicator/recalculate_rsi_data')
-def rsi_indicator_racalculation_main():
+def rsi_indicator_recalculation_main():
 
-    rsi_indicator_flow.rsi_indicator_code()
+    rsi_main.rsi_indicator_code()
     return redirect(url_for('rsi_indicator_main'))
 
 @app.route('/ticker/<ticker>')

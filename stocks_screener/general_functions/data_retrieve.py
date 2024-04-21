@@ -12,7 +12,8 @@ def data_collection_daily(ticker_list, saving_file_path):
         all_symbols_df = pd.DataFrame()
         for company in companies:
             symbol = company.split(',')[0]
-            current_symbol_df = yf.download(symbol, start='2023-01-01', end=today)
+            print(symbol)
+            current_symbol_df = yf.download(symbol, start='2023-03-01', end=today)
             current_symbol_df.insert(0, 'Ticker' , str(symbol))
             all_symbols_df = pd.concat([all_symbols_df, current_symbol_df])
 
@@ -21,6 +22,6 @@ def data_collection_daily(ticker_list, saving_file_path):
 
         # # Drop unnecessary columns ("Adj. Close")
         all_symbols_df_dropped = all_symbols_df.drop(all_symbols_df.columns[[5]], axis=1)
-
+        # print(all_symbols_df_dropped)
         all_symbols_df_dropped.to_csv(saving_file_path)
         return all_symbols_df_dropped
