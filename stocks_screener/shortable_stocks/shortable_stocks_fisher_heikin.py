@@ -1,5 +1,5 @@
-from general_functions import import_data_as_list_from_csv_file
-import pandas as pd
+from shortable_stocks import import_data_as_list_from_csv_file
+
 
 def check_if_list_contains_predefined_tickers(predefined_tickers, current_list_to_be_checked):
     ticker_list = []
@@ -21,6 +21,9 @@ def shortable_data_fisher_heikin_code():
     path = 'database/shortable_stocks/shortable_stocks_initial_screener_db.csv'
     imported_list = import_data_as_list_from_csv_file.import_data_as_list_from_csv_file_code(path)
 
+    # print('IMPORTED LIST IS: ..................................................................')
+    # for item in imported_list:
+    #     print(item)
     fisher_list = []
     heikin_ashi_uptrends = []
     heikin_ashi_downtrends = []
@@ -33,12 +36,18 @@ def shortable_data_fisher_heikin_code():
         if list[1] == 'Heikin-Ashi_Downtrends':
             heikin_ashi_downtrends = list[2]
 
-    # print('fisher_list:', len(fisher_list))
-    # print('hau:', heikin_ashi_uptrends)
-    # print('had:', heikin_ashi_downtrends)
+
+
+    fisher_list= fisher_list[0].split(', ')
+    heikin_ashi_uptrends=heikin_ashi_uptrends[0].split(', ')
+    heikin_ashi_downtrends= heikin_ashi_downtrends[0].split(', ')
+
 
     predefined_ticker_path = 'database/tickers_list/finviz_2200.csv'
+    print(predefined_ticker_path)
+
     fisher_list_filtered = check_if_list_contains_predefined_tickers(predefined_ticker_path, fisher_list)
+    print(fisher_list_filtered)
     len_fl = len(fisher_list_filtered)
     heikin_ashi_uptrends_filtered = check_if_list_contains_predefined_tickers(predefined_ticker_path, heikin_ashi_uptrends)
     len_hau = len(heikin_ashi_uptrends_filtered)

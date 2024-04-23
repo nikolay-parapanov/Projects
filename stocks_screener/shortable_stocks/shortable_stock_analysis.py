@@ -1,11 +1,12 @@
 import pandas as pd
 
-from general_functions import import_data_as_list_from_csv_file
+from shortable_stocks import import_data_as_list_from_csv_file
 from shortable_stocks.sort_tickers_by_decending_number_of_occurence import sort_tickers_by_decending_number_of_occurence
 
-path = '../database/shortable_stocks/shortable_stocks_initial_screener_db.csv'
+path = 'database/shortable_stocks/shortable_stocks_initial_screener_db.csv'
 
 imported_list = import_data_as_list_from_csv_file.import_data_as_list_from_csv_file_code(path)
+print(imported_list)
 
 # df_sorted = sort_tickers_by_decending_number_of_occurence(imported_list)
 
