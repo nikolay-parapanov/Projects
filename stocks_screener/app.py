@@ -1,14 +1,15 @@
 from flask import Flask, render_template, url_for, send_file, redirect
 import daily_step_2_adding_preselected_patterns_from_talib, daily_step_4_check_for_setups, \
-    daily_step_3_last_data, test, \
-    daily_step_5_filter_setups, daily_step_6_visualization
+    daily_step_3_last_data, daily_step_5_filter_setups, daily_step_6_visualization
 import general_functions.get_last_modified_date_and_time_of_file as gf_date_time
-import general_functions.import_data_as_list_from_csv_file as gf_import_list
+import rsi_indicator.rsi_results_visualization
+import shortable_stocks.import_data_as_list_from_csv_file as gf_import_list
 import rsi_indicator.rsi_indicator_data_retrieve as rsi_dr
 import rsi_indicator.rsi_indicator_main as rsi_main
 import shortable_stocks.shortable_stocks_fisher_heikin
 import symbol_analysis
 from shortable_stocks import shortable_stocks_data_retrieve as ss
+
 
 app = Flask(__name__)
 
@@ -29,11 +30,12 @@ def shortable_stocks_home_page_main():
                            fl = fisher_list,
                            hau= heikin_ashi_uptrends,
                            had = heikin_ashi_downtrends,
-                           len_fl= len_fl, len_hau = len_hau, len_had= len_had, len_cfh= len_cfh,
-                           cross_fisher_heikin = cross_fisher_heikin )
+                           len_fl= len_fl, len_hau = len_hau, len_had= len_had,
+                           len_cfh=len_cfh, cross_fisher_heikin = cross_fisher_heikin)
 
 @app.route('/shortable_stocks/data_retrieve')
 def shortable_stocks_data_retrieve_main():
+
     ss.ss_data_retrieve_code()
 
     return redirect(url_for('shortable_stocks_home_page_main'))
@@ -60,7 +62,8 @@ def rsi_indicator_main():
     except Exception as e:
             print("An error occurred:", e)
             # Handle the exception as needed
-
+    result_list = rsi_indicator.rsi_results_visualization.rsi_results_visualization_code(file_path3)
+    print(result_list)
     return render_template('rsi_indicator.html',
                            rsi_indicator_last_retrieved_market_data=formatted_modification_time_market_data,
                            rsi_calcs_last_data = formatted_modification_time_rsi_calcs,
@@ -71,12 +74,14 @@ def rsi_indicator_main():
 def rsi_indicator_data_retrieve_main():
 
     rsi_dr.rsi_indicator_data_retrieve_code()
+
     return redirect(url_for('rsi_indicator_main'))
 
 @app.route('/rsi_indicator/recalculate_rsi_data')
 def rsi_indicator_recalculation_main():
 
     rsi_main.rsi_indicator_code()
+
     return redirect(url_for('rsi_indicator_main'))
 
 @app.route('/ticker/<ticker>')
@@ -148,7 +153,7 @@ def visualize1():
 
 
 @app.route('/test')
-def test1():
-    test.test_code()
+def ss_retrieve():
+    shortable_stocks.shortable_stocks_data_retrieve_main()
 
-    return 'test code'
+    return redirect(url_for('shortable_stocks_home_page_main'))

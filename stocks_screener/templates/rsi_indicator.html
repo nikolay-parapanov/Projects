@@ -50,10 +50,14 @@
     <ul>
         {%for ticker in result_list%}
         <li>
+            {{ticker}}
+            <br>
             <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>
         </li>
         {%endfor%}
     </ul>
+
+
 
 </ul>
 

@@ -7,11 +7,13 @@ def rsi_indicator_code():
     df_initial = pd.read_csv('database/daily/rsi/step_1_-_all_symbols_daily_initial_finviz_2200.csv')
     # # # Drop unnecessary columns ("Adj. Close")
     # df_initial = df_initial.drop(df_initial.columns[[6]], axis=1)
+    print("DF INITIAL: .......................................................")
     print(df_initial)
 
     # Calculate RSI
     df_initial = df_initial.assign(RSI='')
     unique_tickers = df_initial["Ticker"].unique()
+    print("LEN UNIQUE TICKERS: ....................................................")
     print(len(unique_tickers))
 
     for ticker in unique_tickers:
@@ -45,13 +47,21 @@ def rsi_indicator_code():
     # Sum 'rsi_flag1' and 'rsi_flag2' for each row and store the result in 'rsi_result'
     df['rsi_result'] = df[['rsi_flag1', 'rsi_flag2']].astype(int).sum(axis=1)
 
-    result_tickers = df["Ticker"].unique()
+    filtered_df = df[df['rsi_result'] == 3]
+    print("FILTERED DF WHERE RSI_RESULT = 3: .......................................")
+    print(filtered_df)
+    filtered_df.to_csv('database/daily/rsi/step_2.1_-_all_symbols_daily_finviz_2200_rsi_added_last_8_rows.csv')
 
+    result_tickers = filtered_df["Ticker"].unique()
+
+    print("DF BEFORE SAVE IN STEP 2 FILE: ..........................................")
     print(df)
     df.to_csv(
         'database/daily/rsi/step_2_-_all_symbols_daily_finviz_2200_rsi_added_last_8_rows.csv')
 
-    # result_tickers.to_csv('database/daily/rsi/step_3_-_rsi_final_filter_as_list.csv')
+    pd.DataFrame(result_tickers, columns=['Ticker']).to_csv('database/daily/rsi/step_3_-_rsi_final_filter_as_list.csv',
+                                                            index=False)
+    print("RESULT TICKERS AS LIST: ...........................................")
     print(result_tickers)
     return result_tickers
 
