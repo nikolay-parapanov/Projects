@@ -57,6 +57,23 @@
         {%endfor%}
     </ul>
 
+        <h1>Stocks Information</h1>
+    <table border="1">
+        <tr>
+            <th>Ticker</th>
+            <th>Name</th>
+            <th>Industry</th>
+            <th>Sub-Industry</th>
+        </tr>
+        {% for ticker, stock_info in stock_dict.items() %}
+        <tr>
+            <td>{{ ticker }}</td>
+            <td>{{ stock_info['name'] }}</td>
+            <td>{{ stock_info['industry'] }}</td>
+            <td>{{ stock_info['sub_industry'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 
 
 </ul>

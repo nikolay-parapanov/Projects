@@ -46,6 +46,7 @@ def rsi_indicator_main():
     file_path1 = 'database/daily/rsi/step_1_-_all_symbols_daily_initial_finviz_2200.csv'
     file_path2 = 'database/daily/rsi/step_2_-_all_symbols_daily_finviz_2200_rsi_added_last_8_rows.csv'
     file_path3 = 'database/daily/rsi/step_3_-_rsi_final_filter_as_list.csv'
+    file_path4 = 'database/daily/rsi/step_2.1_-_all_symbols_daily_finviz_2200_rsi_added_last_8_rows.csv'
 
     formatted_modification_time_market_data = gf_date_time.get_last_modified_date_and_time_of_file_code(file_path1)
     formatted_modification_time_rsi_calcs = gf_date_time.get_last_modified_date_and_time_of_file_code(file_path2)
@@ -62,13 +63,16 @@ def rsi_indicator_main():
     except Exception as e:
             print("An error occurred:", e)
             # Handle the exception as needed
-    result_list = rsi_indicator.rsi_results_visualization.rsi_results_visualization_code(file_path3)
+    result_list , stock_dict = rsi_indicator.rsi_results_visualization.rsi_results_visualization_code(file_path3)
     print(result_list)
+
     return render_template('rsi_indicator.html',
                            rsi_indicator_last_retrieved_market_data=formatted_modification_time_market_data,
                            rsi_calcs_last_data = formatted_modification_time_rsi_calcs,
                            resi_results_last_data = formatted_modification_rsi_results,
-                           result_list = result_list)
+                           result_list = result_list,
+                           stock_dict = stock_dict
+                           )
 
 @app.route('/rsi_indicator/data_retrieve')
 def rsi_indicator_data_retrieve_main():

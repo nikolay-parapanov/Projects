@@ -10,7 +10,7 @@ def ss_data_retrieve_code():
         browser = p.chromium.launch(headless=False, slow_mo=50)
         page = browser.new_page()
         page.goto('https://www.shortablestocks.com/login.cgi', timeout=0)
-        page.fill('input[name="Username"]', 'petar.petrof@gmail.com')
+        page.fill('input[name="Username"]', 'n.parapanoff@gmail.com')
         page.fill('input[name="Password"]', 'slepha2')
         page.click('input[type="submit"]')
         # page.wait_for_load_state("load")
