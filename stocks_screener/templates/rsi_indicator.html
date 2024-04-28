@@ -47,35 +47,80 @@
         Details below:
     </li>
 
+
+    <body>
+<br><br><br>
+<h3>Tickers by Industry / Info /</h3>
+{% for industry, industry_data_list in tickers_by_industry.items() %}
+<h5>{{ industry }}</h5>
+<ul>
+
+    {% for item in industry_data_list %} {{ item }}
+    {% endfor %}
+</ul>
+{% endfor %}
+
+    <br><br><br>
+<br><br><br>
+ <h1>Tickers by Industry / Crossed with Shortable Stocks /</h1>
     <ul>
-        {%for ticker in result_list%}
+        {% for industry, ticker_list in tickers_by_industry_crossed.items() %}
         <li>
-            {{ticker}}
-            <br>
-            <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>
+            <h2>{{ industry }}</h2>
+            <ul>
+                {% for ticker in ticker_list %}
+                <li>{{ ticker }}</li>
+                {% endfor %}
+            </ul>
         </li>
-        {%endfor%}
+        {% endfor %}
     </ul>
 
-        <h1>Stocks Information</h1>
-    <table border="1">
-        <tr>
-            <th>Ticker</th>
-            <th>Name</th>
-            <th>Industry</th>
-            <th>Sub-Industry</th>
-        </tr>
-        {% for ticker, stock_info in stock_dict.items() %}
-        <tr>
-            <td>{{ ticker }}</td>
-            <td>{{ stock_info['name'] }}</td>
-            <td>{{ stock_info['industry'] }}</td>
-            <td>{{ stock_info['sub_industry'] }}</td>
-        </tr>
-        {% endfor %}
-    </table>
 
+    <br><br><br>
 
+ <h1>Tickers by Industry / Crossed with Shortable Stocks + Charts /</h1>
+<ul>
+    {% for industry, ticker_list in tickers_by_industry_crossed.items() %}
+    <li>
+        <h2>{{ industry }}</h2>
+        <ul>
+            {% for ticker in ticker_list %}
+            <li>{{ ticker }}</li>
+            <li>{{ticker[0]}}</li>
+            <li><img src="https://finviz.com/chart.ashx?t={{ticker[0]}}&ty=c&ta=1&p=d&s=l"/></li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
 </ul>
+{%endblock%}
 
-{%endblock%}}
+
+
+
+
+<!--<h3>Tickers by Industry / Charts /</h3>-->
+<!--{% for industry, industry_data_list in tickers_by_industry.items() %}-->
+<!--<h5>{{ industry }}</h5>-->
+<!--<ul>-->
+
+<!--    {% for ticker in industry_data_list %}-->
+<!--    <br>-->
+<!--    <li> {{ticker}}</li>-->
+<!--        <li><img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>-->
+<!--    </li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+<!--{% endfor %}-->
+
+<!--    <ul>-->
+<!--        {%for ticker in result_list%}-->
+<!--        <li>-->
+<!--            {{ticker}}-->
+<!--            <br>-->
+<!--            <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>-->
+<!--        </li>-->
+<!--        {%endfor%}-->
+<!--    </ul>-->
+
