@@ -30,13 +30,13 @@ def rsi_indicator_code():
     print(df)
     for _, group in df.groupby('Ticker').head(5).groupby('Ticker'):
         # Check if any of the first 5 elements in the 'RSI' column are less than 29
-        if (group['RSI'] < 29).any():
+        if (group['RSI'] < 50).any():
             # Set 'rsi_flag1' to 1 for all 5 items for this ticker
             df.loc[df['Ticker'] == group['Ticker'].iloc[0], 'rsi_flag1'] = 1
 
     # Check the last 3 elements in the 'RSI' column for each unique ticker
     for _, group in df.groupby('Ticker').tail(3).groupby('Ticker'):
-        if (group['RSI'].between(30, 35)).any():
+        if (group['RSI'].between(50, 60)).any():
             # Set 'rsi_flag2' to 2 for all 3 items for this ticker
             df.loc[df['Ticker'] == group['Ticker'].iloc[0], 'rsi_flag2'] = 2
 
