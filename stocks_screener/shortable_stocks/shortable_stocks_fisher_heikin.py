@@ -60,5 +60,6 @@ def shortable_data_fisher_heikin_code():
             cross_fisher_heikin.append(ticker)
 
     len_cfh = len(cross_fisher_heikin)
+
     return fisher_list_filtered, heikin_ashi_uptrends_filtered, heikin_ashi_downtrends_filtered, len_fl, len_hau, len_had, len_cfh, cross_fisher_heikin
     # return [], [], heikin_ashi_downtrends_filtered
