@@ -8,6 +8,7 @@ import rsi_indicator.rsi_indicator_data_retrieve as rsi_dr
 import rsi_indicator.rsi_indicator_main as rsi_main
 import shortable_stocks.shortable_stocks_fisher_heikin
 import symbol_analysis
+from shortable_stocks import ss_options_scan as ss_options_scan
 from shortable_stocks import shortable_stocks_data_retrieve as ss
 
 
@@ -32,6 +33,13 @@ def shortable_stocks_home_page_main():
                            had = heikin_ashi_downtrends,
                            len_fl= len_fl, len_hau = len_hau, len_had= len_had,
                            len_cfh=len_cfh, cross_fisher_heikin = cross_fisher_heikin)
+
+
+@app.route('/ss_options')
+def shortable_stocks_ss_options():
+    ss_options_scan.ss_login_and_options_scan()
+    return render_template('shortable_stocks_options.html')
+
 
 @app.route('/shortable_stocks/data_retrieve')
 def shortable_stocks_data_retrieve_main():
@@ -63,7 +71,7 @@ def rsi_indicator_main():
     except Exception as e:
             print("An error occurred:", e)
             # Handle the exception as needed
-    result_list , stock_dict = rsi_indicator.rsi_results_visualization.rsi_results_visualization_code(file_path3)
+    result_list, tickers_by_industry, tickers_by_industry_crossed = rsi_indicator.rsi_results_visualization.rsi_results_visualization_code(file_path3)
     print(result_list)
 
     return render_template('rsi_indicator.html',
@@ -71,7 +79,8 @@ def rsi_indicator_main():
                            rsi_calcs_last_data = formatted_modification_time_rsi_calcs,
                            resi_results_last_data = formatted_modification_rsi_results,
                            result_list = result_list,
-                           stock_dict = stock_dict
+                           tickers_by_industry = tickers_by_industry,
+                           tickers_by_industry_crossed=tickers_by_industry_crossed
                            )
 
 @app.route('/rsi_indicator/data_retrieve')
@@ -87,6 +96,7 @@ def rsi_indicator_recalculation_main():
     rsi_main.rsi_indicator_code()
 
     return redirect(url_for('rsi_indicator_main'))
+
 
 @app.route('/ticker/<ticker>')
 def scanner_for_specific_symbol(ticker):

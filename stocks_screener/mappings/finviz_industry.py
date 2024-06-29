@@ -2226,7 +2226,7 @@ ZWS/ Zurn Elkay Water Solutions Corp/ Industrials/ Pollution & Treatment Control
         stocks_dict[ticker.strip()] = stock_info
 
     # Print the dictionary of stocks
-    for ticker, stock_info in stocks_dict.items():
-        print(ticker, ":", stock_info)
+    # for ticker, stock_info in stocks_dict.items():
+        # print(ticker, ":", stock_info)
 
     return stocks_dict
