@@ -10,25 +10,53 @@
 {%endblock%}
 
 {%block body%}
-<br><br><br>
+<br>
  <a
             href="http://127.0.0.1:5000/">Home Page</a>
-<br><br><br>
-<h1>Shortable Stocks Options Data</h1>:
 <br>
-<h2>
-    Retrieve daily data:</h2>
+<h6>Shortable Stocks Options Data</h6>:
+<h8>Retrieve daily data:</h8>
+<table>
+        <tr>
+            <td><a href="http://127.0.0.1:5000/ss_notable_options_volume">Notable Options Volume</a></td>
+            <td><a href="http://127.0.0.1:5000/ss_notable_options_activity">Notable Options Activity</a></td>
+            <td><a href="http://127.0.0.1:5000/ss_options_volume_leaders">Options Volume Leaders</a></td>
+            <td><a href="http://127.0.0.1:5000/ss_highest_implied_volatility">Highest Implied Volatility</a></td>
+        </tr>
+    </table>
+<br>
+<h8>    Calculations:</h8>
 <ul>
-     <li><a href="http://127.0.0.1:5000/ss_notable_options_volume">Notable Options Volume</a></li>
-     <li><a href="http://127.0.0.1:5000/ss_notable_options_activity">Notable Options Activity</a></li>
-     <li><a href="http://127.0.0.1:5000/ss_options_volume_leaders">Options Volume leaders</a></li>
-     <li><a href="http://127.0.0.1:5000/ss_highest_implied_volatility">Highest Implied Volatility</a></li>
-    <br>
-    <li>...</li>
+    <li><a href="http://127.0.0.1:5000/generate_noa_pivot">Generate NOA Pivot</a></li>
+</ul>
+<h6 class="mt-4 small">Visualize:</h6>
+<ul>
+    <li><a href="http://127.0.0.1:5000/render_noa_pivot_filtered">Visualize filtered NOA for Calls</a></li>
+    </ul>
+<div class="container">
+    <h6 class="mt-4 small">Unique Tickers</h6><ul>
+    <li><a href="http://127.0.0.1:5000/individual_analysis">Individual Analysis</a></li>
+    </ul>
 
-    <li>...</li>
-    <li>...</li>
-    <li>...</li>
+        {% for ticker in tickers %}
+        <a href="http://127.0.0.1:5000/individual_analysis/ticker/{{ ticker }}">{{ ticker }}</a>
+        {% endfor %}
+
+    <h6 class="mt-4 small">Filtered data for Calls</h6>
+    <!-- Render the DataFrame table -->
+    <div class="table-smaller">
+        {{ table|safe }}
+    </div>
+    <h6 class="mt-4 small">Unique Tickers</h6>
+        {% for ticker in tickers %}
+        <div>
+            <h6>{{ticker}}</h6>
+        <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>
+            </div>
+            {% endfor %}
+</div>
+
+
 </ul>
 
 <br><br><br>

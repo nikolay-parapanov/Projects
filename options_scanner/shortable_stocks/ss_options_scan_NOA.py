@@ -5,6 +5,21 @@ import pandas as pd
 from datetime import datetime
 import os
 
+def convert_date_format(date_str):
+    try:
+        # Check if the date_str contains '-' and is in '%Y-%m-%d' format
+        if '-' in date_str:
+            # Parse the date in '%Y-%m-%d' format
+            date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+            # Convert it to '%m/%d/%Y' format
+            return date_obj.strftime('%m/%d/%Y')
+        else:
+            # Return as is if it doesn't match the expected format
+            return date_str
+    except ValueError:
+        # Return as is if there is a parsing error
+        return date_str
+
 def extract_table_data(page):
     html_content = page.content()
 
@@ -29,7 +44,7 @@ def extract_table_data(page):
             option = {headers[i]: cells[i].text.strip() for i in range(len(headers))}
             options_data_notable_options_volume.append(option)
 
-    print("Extracted options data:", options_data_notable_options_volume)
+    # print("Extracted options data:", options_data_notable_options_volume)
 
     return headers, options_data_notable_options_volume
 
@@ -37,18 +52,54 @@ def combine_dataframes(new_df, combined_file_name):
     if os.path.isfile(combined_file_name):
         print("Reading existing data...")
         combined_df = pd.read_csv(combined_file_name)
-        print('COMBINED DF ...................................................')
+        print('NEW DF ...................................................')
+        print(new_df)
+
+        # Convert dates in 'Expiration Date' and 'Report Date' columns if they are in '%Y-%m-%d' format
+        print("Converting dates in 'Expiration Date' and 'Report Date' columns...")
+        combined_df['Expiration Date'] = combined_df['Expiration Date'].apply(lambda x: convert_date_format(str(x)))
+        combined_df['Report Date'] = combined_df['Report Date'].apply(lambda x: convert_date_format(str(x)))
+
+        print('COMBINED DF 1111111111111 ...................................................')
         print(combined_df)
 
-        today_date = new_df['Report Date'].iloc[0]
-        print(f"Filtering out old data with Report Date: {today_date}")
+        # Ensure 'Report Date' is in datetime format
+        combined_df['Report Date'] = pd.to_datetime(combined_df['Report Date'], format='%m/%d/%Y', errors='coerce')
+        # combined_df['Expiration Date'] = pd.to_datetime(combined_df['Expiration Date'], format='%m/%d/%Y', errors='coerce')
+
+        print('COMBINED DF 22222222222222...................................................')
+        print(combined_df)
+
+        today_date_str = new_df['Report Date'].iloc[0]
+        print(f"Filtering out old data with Report Date: {today_date_str}")
+
+        today_date_dt = pd.to_datetime(today_date_str, format='%m/%d/%Y').date()
+
+        combined_df['Report Date'] = pd.to_datetime(combined_df['Report Date'], format='%m/%d/%Y',
+                                                        errors='coerce').dt.date
+        combined_df['Expiration Date'] = pd.to_datetime(combined_df['Expiration Date'], format='%m/%d/%Y',
+                                                    errors='coerce').dt.date
+
+        print('COMBINED DF 222222222...................................................')
+        print(combined_df)
+
+        print("TODAYS DATE TO BE FILTERED OUT FROM COMBINED FILE:")
+        print(today_date_dt)
+
+        print("Report date types before filter out check: !?!?!?!?!?!?!?!?!?!?!?!?!?!?!?!")
+        print("Today date")
+        print(type(today_date_dt))
+        print("First cell")
+        print(type(combined_df.iloc[0, 0]))
+
 
         # Filter out rows with the same Report Date
-        combined_df = combined_df[combined_df['Report Date'] != today_date]
+        combined_df = combined_df[combined_df['Report Date'] != today_date_dt]
         print(f"Filtered data shape: {combined_df.shape}")
 
+
         # Concatenate new data
-        combined_df = pd.concat([combined_df, new_df], ignore_index=True)
+        combined_df = pd.concat([new_df, combined_df], ignore_index=True)
         print(f"Concatenated data shape: {combined_df.shape}")
 
     else:
@@ -121,15 +172,24 @@ def ss_login_and_options_scan():
         # Create a Pandas DataFrame from the options data
         df = pd.DataFrame(all_data)
 
-        # Get the current date and time
-        now = datetime.now()
-        timestamp = now.strftime("%Y%m%d_%H%M%S")
+        print("VERY FIRST DF: ===========================================================")
+        print(df)
 
-        # Get today's date in the format YY-MM-DD
-        today_date = datetime.now().strftime('%y-%m-%d')
+        ##FINAL REWORK
+        # # Convert 'Expiration Date' to the desired format M/D/YYYY in one line
+        # df['Expiration Date'] = pd.to_datetime(df['Expiration Date'], format='%Y-%m-%d').dt.strftime('%m/%d/%Y')
 
-        # Insert the date column at the beginning
-        df.insert(0, 'Report Date', today_date)
+        # Extract the date from the first row of the first column in the raw data
+        raw_date = df.iloc[0, 0][:10]
+
+        # Convert the extracted date to the desired format
+        formatted_date = datetime.strptime(raw_date, '%Y-%m-%d').strftime('%m/%d/%Y')
+
+        # Add date column with the formatted date
+        df.insert(0, 'Report Date', formatted_date)
+
+        print('DF clean download from SS: ____________________________________________________________')
+        print(df)
 
         combined_file_name = 'combined/noa_combined.csv'
 
@@ -137,12 +197,17 @@ def ss_login_and_options_scan():
         combine_dataframes(df, combined_file_name)
 
 
+        # Get the current date and time for timestamp
+        now = datetime.now()
+        timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
+
         # Creating the CSV file name with the current date and time
-        # file_name = f'notable_options_activity_data_{timestamp}.csv'
+        file_name_retrieve_general = f'daily_retrieves/notable_options_activity_data_{timestamp}.csv'
         file_name = f'noa/notable_options_activity.csv'
 
         # Saving options data to CSV
         df.to_csv(file_name, index=False)
+        df.to_csv(file_name_retrieve_general, index=False)
 
         print(f"Options data saved to {file_name}")
 

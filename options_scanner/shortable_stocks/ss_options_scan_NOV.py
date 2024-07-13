@@ -136,11 +136,12 @@ def ss_login_and_options_scan():
         combine_dataframes(df, combined_file_name)
 
         # Creating the CSV file name with the current date and time
-        # file_name = f'notable_options_volume_data_{timestamp}.csv'
+        file_name_retrieve_general = f'daily_retrieves/notable_options_volume_data_{timestamp}.csv'
         file_name = f'nov/notable_options_volume.csv'
 
         # Saving options data to CSV
         df.to_csv(file_name, index=False)
+        df.to_csv(file_name_retrieve_general, index=False)
 
         print(f"Options data saved to {file_name}")
 

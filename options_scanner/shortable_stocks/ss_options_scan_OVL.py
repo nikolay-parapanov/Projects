@@ -110,12 +110,13 @@ def ss_login_and_options_scan():
 
 
         # Creating the CSV file name with the current date and time
-        file_name = f'options_volume_leaders_data_{timestamp}.csv'
+        file_name_retrieve_general = f'daily_retrieves/options_volume_leaders_data_{timestamp}.csv'
 
         # Saving options data to CSV
-        df.to_csv(file_name, index=False)
+        # df.to_csv(file_name, index=False)
+        df.to_csv(file_name_retrieve_general, index=False)
 
-        print(f"Options data saved to {file_name}")
+        print(f"Options data saved to {file_name_retrieve_general}")
 
         # Closing the browser
         # browser.close()

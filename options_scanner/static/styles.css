@@ -1,0 +1,43 @@
+/* static/styles.css */
+
+.table-smaller {
+    font-size: 12px; /* Adjust as needed */
+    font-family: 'Arial', sans-serif; /* Set the desired font family */
+    text-align: right;
+    margin-left: 0;
+    width: 800px;
+    padding: 0px;
+    table-layout: fixed; /* Enforce column width to be fixed */
+}
+
+/* Style for the table headers */
+.table-smaller thead th {
+    font-size: 13px; /* Adjust header font size as needed */
+    padding: 0.3rem 0.1rem; /* Remove padding if needed */
+}
+
+/* Style for the table rows (excluding headers) */
+.table-smaller tbody td {
+    font-size: 12px; /* Set font size for table rows */
+    padding: 0.4rem; /* Remove padding if needed */
+}
+
+.table-smaller tr {
+    height: 12px; /* Adjust to the desired row height */
+}
+ .table-smaller td {
+    line-height: 12px; /* This will also affect the row height */
+        }
+
+/* Set width for the first column */
+.table-smaller th:first-child {
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.container {
+    margin-left: 0;
+}
+
+.container_unique_tickers {
+    width: 900px;
+}

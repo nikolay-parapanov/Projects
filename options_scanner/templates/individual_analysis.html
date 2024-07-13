@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{%block head%}
+<title>Index</title>
+{%endblock%}
+
+
+{%block header%}
+<!--<h1>Shortable Stocks</h1>-->
+{%endblock%}
+
+{%block body%}
+<br>
+ <a
+            href="http://127.0.0.1:5000/">Home Page</a>
+<br>
+<h6><a href="http://127.0.0.1:5000/individual_analysis">Individual Analysis</a></h6>:
+<div class="container_unique_tickers">
+    <h6 class="mt-4 small">Unique Tickers</h6>
+        {% for ticker in tickers %}
+        <a href="http://127.0.0.1:5000/individual_analysis/{{ ticker }}">{{ ticker }}</a>
+        {% endfor %}
+</div>
+<div class="container">
+    <h6 class="mt-4 small">Chart</h6>
+        <div>
+            <h6>{{individual_ticker}}</h6>
+        <img src="https://finviz.com/chart.ashx?t={{individual_ticker}}&ty=c&ta=1&p=d&s=l"/>
+            </div>
+
+    <h6 class="mt-4 small">Filtered data for Calls with Strike Price</h6>
+    <!-- Render the DataFrame table -->
+    <div class="table-smaller">
+        {{ table|safe }}
+    </div>
+    <h6 class="mt-4 small">Filtered data for Calls with Strike Price for today per hour</h6>
+    <!-- Render the DataFrame table -->
+    <div class="table-smaller">
+        {{ table_time|safe }}
+    </div>
+
+</div>
+
+
+</ul>
+
+<br><br><br>
+
+
+{%endblock%}
+
+
