@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{%block head%}
+<title>Index</title>
+{%endblock%}
+
+
+{%block header%}
+<!--<h1>Shortable Stocks</h1>-->
+{%endblock%}
+
+{%block body%}
+<br>
+<h8>Retrieve daily data:</h8>
+<table>
+        <tr>
+            <td><a href="http://127.0.0.1:5000/ss_notable_options_volume">Notable Options Volume</a></td>
+            <td><a href="http://127.0.0.1:5000/ss_notable_options_activity">Notable Options Activity</a></td>
+            <td><a href="http://127.0.0.1:5000/ss_options_volume_leaders">Options Volume Leaders</a></td>
+            <td><a href="http://127.0.0.1:5000/ss_highest_implied_volatility">Highest Implied Volatility</a></td>
+        </tr>
+    </table>
+<br>
+
+<h8>    Current Day Scan:</h8>
+<ul>
+    <li><a href="http://127.0.0.1:5000/current_day_scan">Current Day Scan</a></li>
+</ul>
+
+ <a
+            href="http://127.0.0.1:5000/">Home Page</a>
+<br>
+<li><a href="http://127.0.0.1:5000/render_noa_pivot_filtered">Visualize filtered NOA for Calls</a></li>
+<br>
+<h6><a href="http://127.0.0.1:5000/individual_analysis">Individual Analysis</a></h6>:
+
+<div class="container">
+<!--    <h6 class="mt-4 small">Chart</h6>-->
+<!--        <div>-->
+<!--            <h6>{{individual_ticker}}</h6>-->
+<!--        <img src="https://finviz.com/chart.ashx?t={{individual_ticker}}&ty=c&ta=1&p=d&s=l"/>-->
+<!--            </div>-->
+
+<!--    <h6 class="mt-4 small">Filtered data for Calls with Strike Price</h6>-->
+<!--    &lt;!&ndash; Render the DataFrame table &ndash;&gt;-->
+<!--    <div class="table-smaller">-->
+<!--        {{ table|safe }}-->
+<!--    </div>-->
+    <h6 class="mt-4 small">Filtered data for Calls with Strike Price for today per hour</h6>
+    <!-- Render the DataFrame table -->
+    <div class="table-smaller">
+        {{ table_time|safe }}
+    </div>
+
+</div>
+
+
+</ul>
+
+<br><br><br>
+
+
+{%endblock%}
+
+

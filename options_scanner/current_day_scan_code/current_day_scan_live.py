@@ -36,24 +36,23 @@ def extract_date_and_hour(time_str):
         print(f"Error processing time_str: {time_str}, error: {e}")
         return None
 
-def generate_strike_prices_data_pivot_for_individual_ticker_current_date_by_hour(individual_ticker):
-    ticker = individual_ticker.upper()
+def current_day_scan_live():
     raw_file = 'noa/notable_options_activity.csv'
-    output_file1 = 'individual_analysis_results/strike_prices_for_all_tickers_current_date_by_hour.csv'
+    output_file1 = 'current_day_result/strike_prices_current_date_by_hour.csv'
     print("Reading existing data...")
     df = pd.read_csv(raw_file)
     print("NOA current date:")
     print(df)  # Print only the first few rows for better readability
 
-    unique_tickers_file = 'individual_analysis_results/result_tickers_sorted_filtered_calls_all_tickers.csv'
-
-    # Read unique tickers from the unique_tickers_file
-    unique_tickers_df = pd.read_csv(unique_tickers_file, header=None)
+    unique_tickers_df = df['Stock Symbol'].unique()
 
     # Convert the first (and only) column to a list skipping first value as it is zero (probably index from previous iterations)
-    unique_tickers_list = unique_tickers_df.iloc[:, 0].tolist()
+    unique_tickers_list = unique_tickers_df.tolist()
 
-    unique_tickers_current_prices_df = get_tickers_prices(unique_tickers_list)
+    items_to_exclude = {'TSLA', 'AAPL', 'AMD', 'AMZN', 'NVDA'}
+
+    unique_tickers_list_without_mags = [item for item in unique_tickers_list if item not in items_to_exclude]
+    unique_tickers_current_prices_df = get_tickers_prices(unique_tickers_list_without_mags)
 
     print('Unique tickers list: ........................')
     print(unique_tickers_list)
@@ -72,6 +71,26 @@ def generate_strike_prices_data_pivot_for_individual_ticker_current_date_by_hour
     print("Unique Reporting Dates and Hours:")
     print(unique_report_dates_hours)
 
+    print("Pivot table:")
+    print(df_filtered)  # Print only the first few rows for better readability
+
+    # Inspect the columns
+    print(df_filtered.columns)
+
+    # If 'Stock Symbol' is not found, print the DataFrame to understand its structure
+    print(df_filtered.head())
+
+    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'AAPL']
+    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'TSLA']
+    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'META']
+    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'NVDA']
+    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'GOOG']
+    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'DJT']
+    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'AMD']
+    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'AMZN']
+
+    df_filtered = df_filtered[df_filtered['Expiration Date'] == '2024-07-19']
+
     # Ensure 'Volume' is numeric and handle non-numeric gracefully
     df_filtered['Volume'] = pd.to_numeric(df['Volume'], errors='coerce')
 
@@ -83,8 +102,7 @@ def generate_strike_prices_data_pivot_for_individual_ticker_current_date_by_hour
         fill_value=0  # Replace NaN values with 0
     )
 
-    print("Pivot table:")
-    print(pivot_df)  # Print only the first few rows for better readability
+
 
     # Extract call and put columns
     call_columns = pivot_df.xs('Call', level='Type', axis=1)
@@ -120,6 +138,10 @@ def generate_strike_prices_data_pivot_for_individual_ticker_current_date_by_hour
 
     print("MERGED DF: .....")
     print(final_df_with_prices)
+
+    # Sort by 'Expiration Date' in ascending order and 'Total Call' in descending order
+    final_df_with_prices = final_df_with_prices.sort_values(by=['Expiration Date', 'Total Calls'],
+                                                 ascending=[True, False])
 
     # Check for 'Current Price' column
     if 'Current Price' not in final_df_with_prices.columns:
@@ -157,8 +179,6 @@ def generate_strike_prices_data_pivot_for_individual_ticker_current_date_by_hour
 
     # Apply the formatting function to all numeric columns
     final_df_with_prices = final_df_with_prices.applymap(format_numbers)
-
-    final_df_with_prices = final_df_with_prices[final_df_with_prices['Stock Symbol'] == ticker]
 
     print("FINAL COMPREHENSIVE ++++++++++++++++++++++++++++++++++++++++++++++++")
     print(final_df_with_prices)

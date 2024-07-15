@@ -25,6 +25,10 @@
         </tr>
     </table>
 <br>
+<h8>    Current Day Scan:</h8>
+<ul>
+    <li><a href="http://127.0.0.1:5000/current_day_scan">Current Day Scan</a></li>
+</ul>
 <h8>    Calculations:</h8>
 <ul>
     <li><a href="http://127.0.0.1:5000/generate_noa_pivot">Generate NOA Pivot</a></li>
@@ -39,7 +43,7 @@
     </ul>
 
         {% for ticker in tickers %}
-        <a href="http://127.0.0.1:5000/individual_analysis/ticker/{{ ticker }}">{{ ticker }}</a>
+        {{ ticker }}
         {% endfor %}
 
     <h6 class="mt-4 small">Filtered data for Calls</h6>

@@ -71,8 +71,8 @@ def filter_noa_calls_details():
     # Perform numeric comparisons on the raw DataFrame
     latest_ratio_column = ratio_columns[-2]  # Use the latest ratio column
     filtered_df_01 = final_df_sorted[
-        (final_df_sorted['Total Calls'] > 50000) &
-        (final_df_sorted[latest_ratio_column] < 0.2)
+        (final_df_sorted['Total Calls'] > 30000) &
+        (final_df_sorted[latest_ratio_column] < 0.3)
         ]
     # Format the numbers for output
     filtered_df_01 = filtered_df_01.applymap(format_numbers)

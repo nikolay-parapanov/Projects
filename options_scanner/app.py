@@ -5,6 +5,7 @@ from general.filter_noa_calls import filter_noa_calls_details
 from shortable_stocks import ss_options_scan_NOV, ss_options_scan_NOA, ss_options_scan_OVL, ss_options_scan_HIV
 from general import pivot_generation_noa_calls, filter_noa_calls
 from individual_stock_analysis_code import generate_strike_prices_data, generate_strike_prices_individual_ticker, generate_strike_prices_data_pivot_for_current_date_by_hour_individual_ticker
+from current_day_scan_code import current_day_scan_live
 
 app = Flask(__name__)
 
@@ -86,7 +87,7 @@ def individual_analysis_all_tickers_main():
 
 @app.route('/individual_analysis/<individual_ticker>')
 def individual_analysis_individual_ticker_main(individual_ticker):
-    df, individual_ticker = generate_strike_prices_individual_ticker.generate_strike_prices_data_pivot_for_individual_ticker(
+    df = generate_strike_prices_individual_ticker.generate_strike_prices_data_pivot_for_individual_ticker(
         individual_ticker)
 
     unique_tickers_file = 'individual_analysis_results/result_tickers_sorted_filtered_calls_all_tickers.csv'
@@ -106,3 +107,14 @@ def individual_analysis_individual_ticker_main(individual_ticker):
 
     return render_template('individual_analysis.html', tickers=unique_tickers_list, table=table_html, table_time=table_time_html,
                            individual_ticker=individual_ticker)
+
+@app.route('/current_day_scan')
+def current_day_quick_hourly_scan_main():
+
+    df = current_day_scan_live.current_day_scan_live()
+
+    # Convert DataFrame to HTML table
+    table_time_html = df.to_html(classes='table table-striped', index=False)
+
+
+    return render_template('current_day_scan.html', table_time=table_time_html)

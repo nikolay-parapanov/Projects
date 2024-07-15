@@ -1,9 +1,15 @@
 import csv
+
+import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
 import os
 
 from pandas import to_numeric
+
+from individual_stock_analysis_code.yahoo_finance_data import get_tickers_prices
+
+
 def convert_date_format(date_str):
     try:
         # Check if the date_str contains '-' and is in '%Y-%m-%d' format
@@ -35,8 +41,13 @@ def generate_strike_prices_data_pivot_for_all_tickers():
     # Convert the first (and only) column to a list skipping first value as it is zero (probably index from previous iterations)
     unique_tickers_list = unique_tickers_df.iloc[:, 0].tolist()
 
+    unique_tickers_current_prices_df = get_tickers_prices(unique_tickers_list)
+
     print('Unique tickers list: ........................')
     print(unique_tickers_list)
+
+    print('Unique tickers current price df: ........................')
+    print(unique_tickers_current_prices_df)
 
     # Filter df to include only the rows where 'Stock Symbol' is in unique_tickers_list
     df_filtered = df[df['Stock Symbol'].isin(unique_tickers_list)]
@@ -70,6 +81,7 @@ def generate_strike_prices_data_pivot_for_all_tickers():
     # Ensure column headers are strings formatted as 'YYYY-MM-DD'
     pivot_df.columns = pivot_df.columns.set_levels([col.strftime('%Y-%m-%d') for col in pivot_df.columns.levels[0]],
                                                    level=0)
+
     print("Pivot table:")
     print(pivot_df)  # Print only the first few rows for better readability
 
@@ -109,24 +121,60 @@ def generate_strike_prices_data_pivot_for_all_tickers():
     # Sort by 'Expiration Date' in ascending order and 'Total Call' in descending order
     final_df_sorted = final_df_reset.sort_values(by=['Expiration Date', 'Stock Symbol', 'Strike Price'], ascending=[True, True, True])
 
-
-    # final_df_sorted = final_df_reset
-    # Format the figures with a thousand separator
     def format_numbers(x):
         if isinstance(x, (int, float)):
             return '{:,}'.format(x)
         return x
 
+    # Merge with the current prices DataFrame
+    final_df_with_prices = final_df_sorted.merge(unique_tickers_current_prices_df, on='Stock Symbol', how='left')
+
+    print("MERGED DF: .....")
+    print(final_df_with_prices)
+
+    # Check for 'Current Price' column
+    if 'Current Price' not in final_df_with_prices.columns:
+        print("Column 'Current Price' is missing from the merged DataFrame.")
+        return
+
+    # Calculate 'Diff' column
+    final_df_with_prices['Diff'] = final_df_with_prices.apply(
+        lambda row: row['Strike Price'] - row['Current Price'] if pd.notna(row['Current Price']) else np.nan,
+        axis=1
+    )
+
+    # Calculate 'Diff' as a percentage of 'Strike Price'
+    final_df_with_prices['Diff Percentage'] = final_df_with_prices.apply(
+        lambda row: (row['Diff'] / row['Current Price'] * 100) if pd.notna(row['Diff']) and row[
+            'Strike Price'] != 0 else np.nan,
+        axis=1
+    )
+
+    # Format columns
+    final_df_with_prices['Current Price'] = final_df_with_prices['Current Price'].apply(
+        lambda x: f'{x:.2f}' if pd.notna(x) else 'N/A'
+    )
+    final_df_with_prices['Diff'] = final_df_with_prices['Diff'].apply(
+        lambda x: f'{x:.2f}' if pd.notna(x) else 'N/A'
+    )
+    final_df_with_prices['Diff Percentage'] = final_df_with_prices['Diff Percentage'].apply(
+        lambda x: f'{x:.2f}%' if pd.notna(x) else 'N/A'
+    )
+
     # Identify ratio columns
-    ratio_columns = [col for col in final_df_sorted.columns if '(Put/Call)' in col]
+    ratio_columns = [col for col in final_df_with_prices.columns if '(Put/Call)' in col]
+
     # Format ratio columns with 2 decimal places
-    final_df_sorted[ratio_columns] = final_df_sorted[ratio_columns].applymap(lambda x: f'{x:.2f}')
+    final_df_with_prices[ratio_columns] = final_df_with_prices[ratio_columns].applymap(lambda x: f'{x:.2f}')
 
     # Apply the formatting function to all numeric columns
-    final_df_sorted = final_df_sorted.applymap(format_numbers)
+    final_df_with_prices = final_df_with_prices.applymap(format_numbers)
+
+    print("DIFF DF: .....")
+    print(final_df_with_prices)
 
     print("FINAL COMPREHENSIVE ++++++++++++++++++++++++++++++++++++++++++++++++")
-    print(final_df_sorted)
-    final_df_sorted.to_csv(output_file1, index=False)
+    print(final_df_with_prices)
+    final_df_with_prices.to_csv(output_file1, index=False)
 
     return
