@@ -85,11 +85,10 @@ def current_day_scan_live():
     df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'META']
     df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'NVDA']
     df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'GOOG']
-    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'DJT']
-    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'AMD']
     df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'AMZN']
+    df_filtered = df_filtered[df_filtered['Stock Symbol'] != 'MSFT']
 
-    df_filtered = df_filtered[df_filtered['Expiration Date'] == '2024-07-19']
+    # df_filtered = df_filtered[df_filtered['Expiration Date'] == '2024-07-26']
 
     # Ensure 'Volume' is numeric and handle non-numeric gracefully
     df_filtered['Volume'] = pd.to_numeric(df['Volume'], errors='coerce')

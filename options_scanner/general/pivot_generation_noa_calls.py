@@ -26,17 +26,8 @@ def generate_pivot():
     print("Reading existing data...")
     df = pd.read_csv(raw_file)
 
-
     print("RAW DATA:")
     print(df)  # Print only the first few rows for better readability
-
-    print("Before REP date")
-    print(type(df.iloc[-1, 0]))
-    print(df.iloc[-1, 0])
-
-    print("Before EXP date")
-    print(type(df.iloc[-1, 8]))
-    print(df.iloc[-1, 8])
 
     # Convert dates in 'Expiration Date' and 'Report Date' columns if they are in '%Y-%m-%d' format
     print("Converting dates in 'Expiration Date' and 'Report Date' columns...")
@@ -48,20 +39,15 @@ def generate_pivot():
     df['Expiration Date'] = pd.to_datetime(df['Expiration Date'], format='%m/%d/%Y', errors='coerce')
 
     print('DF with aligned dates: .................')
-
     print(df)
-    print("After REP date")
-    print("After REP date")
-    print(type(df.iloc[0, 0]))
-    print(df.iloc[0, 0])
-    print(type(df.iloc[-1, 0]))
-    print(df.iloc[-1, 0])
 
-    print("After EXP date")
-    print(type(df.iloc[0, 8]))
-    print(df.iloc[0, 8])
-    print(type(df.iloc[-1, 8]))
-    print(df.iloc[-1, 8])
+    df = df[df['Stock Symbol'] != 'AAPL']
+    df = df[df['Stock Symbol'] != 'TSLA']
+    df = df[df['Stock Symbol'] != 'META']
+    df = df[df['Stock Symbol'] != 'NVDA']
+    df = df[df['Stock Symbol'] != 'GOOG']
+    df = df[df['Stock Symbol'] != 'AMZN']
+    df = df[df['Stock Symbol'] != 'MSFT']
 
     # Extract unique reporting dates
     unique_report_dates = df['Report Date'].dropna().dt.date.unique()
