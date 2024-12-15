@@ -70,18 +70,18 @@ def filter_noa_calls_details():
 
     # Perform numeric comparisons on the raw DataFrame
     latest_ratio_column = ratio_columns[-2]  # Use the latest ratio column
-    filtered_df_01 = final_df_sorted[
+    filtered_df_calls = final_df_sorted[
         (final_df_sorted['Total Calls'] > 30000) &
         (final_df_sorted[latest_ratio_column] < 0.3)
         ]
     # Format the numbers for output
-    filtered_df_01 = filtered_df_01.applymap(format_numbers)
+    filtered_df_calls = filtered_df_calls.applymap(format_numbers)
 
     # Convert 'Expiration Date' to string in the '%m-%d' format
-    filtered_df_01['Expiration Date'] = filtered_df_01['Expiration Date'].dt.strftime('%m-%d')
+    filtered_df_calls['Expiration Date'] = filtered_df_calls['Expiration Date'].dt.strftime('%m-%d')
 
     print('DF before filter out of last call column with zeros')
-    print(filtered_df_01)
+    print(filtered_df_calls)
 
     # Identify the last column containing 'Call)'
     call_columns = [col for col in df.columns if "'Call')" in col]
@@ -91,7 +91,7 @@ def filter_noa_calls_details():
 
     last_call_column = call_columns[-1]  # The last column containing 'Call)'
 
-    filtered_df_01[last_call_column] = filtered_df_01[last_call_column].apply(clean_and_convert)
+    filtered_df_calls[last_call_column] = filtered_df_calls[last_call_column].apply(clean_and_convert)
 
     print('ALL Call columns')
     print(call_columns)
@@ -99,22 +99,22 @@ def filter_noa_calls_details():
     print(last_call_column[0])
 
     # Filter out rows with zero values in the last 'Call)' column
-    filtered_df_01 = filtered_df_01[filtered_df_01[last_call_column] != 0]
+    filtered_df_calls = filtered_df_calls[filtered_df_calls[last_call_column] != 0]
 
     # Format the numbers for output
-    filtered_df_01 = filtered_df_01.applymap(format_numbers)
+    filtered_df_calls = filtered_df_calls.applymap(format_numbers)
 
-    print("FINAL COMPREHENSIVE DF SORTED and FILTERED: ++++++++++++++++++++++++++++++++++++++++++++++++")
-    print(filtered_df_01)
+    print("FINAL COMPREHENSIVE DF CALLS SORTED and FILTERED: ++++++++++++++++++++++++++++++++++++++++++++++++")
+    print(filtered_df_calls)
 
     print("LIST FOR INDIVIDUAL STOCK ANALYSIS: .................................")
-    unique_tickers = filtered_df_01['Stock Symbol'].unique()
+    unique_tickers = filtered_df_calls['Stock Symbol'].unique()
     unique_tickers_list = unique_tickers.tolist()
     print(unique_tickers)
     print(len(unique_tickers))
 
     # Save the final filtered data and unique stock symbols to CSV files
-    filtered_df_01.to_csv(result_table_noa_sorted_filtered_calls_all_tickers, index=False)
+    filtered_df_calls.to_csv(result_table_noa_sorted_filtered_calls_all_tickers, index=False)
     pd.Series(unique_tickers).to_csv(result_tickers_sorted_filtered_calls_all_tickers, index=False)
 
-    return unique_tickers_list, filtered_df_01
+    return unique_tickers_list, filtered_df_calls

@@ -18,44 +18,99 @@
 <h8>Retrieve daily data:</h8>
 <table>
         <tr>
-            <td><a href="http://127.0.0.1:5000/ss_notable_options_volume">Notable Options Volume</a></td>
-            <td><a href="http://127.0.0.1:5000/ss_notable_options_activity">Notable Options Activity</a></td>
-            <td><a href="http://127.0.0.1:5000/ss_options_volume_leaders">Options Volume Leaders</a></td>
-            <td><a href="http://127.0.0.1:5000/ss_highest_implied_volatility">Highest Implied Volatility</a></td>
+            <td><a href="http://127.0.0.1:5000/ss_notable_options_volume">Notable Options Volume   / / /  </a></td>
+            <td><a href="http://127.0.0.1:5000/ss_notable_options_activity">Notable Options Activity   / / /  </a></td>
+            <td><a href="http://127.0.0.1:5000/ss_options_volume_leaders">Options Volume Leaders   / / /  </a></td>
+            <td><a href="http://127.0.0.1:5000/ss_highest_implied_volatility">Highest Implied Volatility  fl / / /  </a></td>
         </tr>
     </table>
 <br>
-<h8>    Current Day Scan:</h8>
-<ul>
-    <li><a href="http://127.0.0.1:5000/current_day_scan">Current Day Scan</a></li>
-</ul>
-<h8>    Calculations:</h8>
-<ul>
-    <li><a href="http://127.0.0.1:5000/generate_noa_pivot">Generate NOA Pivot</a></li>
-</ul>
-<h6 class="mt-4 small">Visualize:</h6>
-<ul>
-    <li><a href="http://127.0.0.1:5000/render_noa_pivot_filtered">Visualize filtered NOA for Calls</a></li>
-    </ul>
-<div class="container">
-    <h6 class="mt-4 small">Unique Tickers</h6><ul>
-    <li><a href="http://127.0.0.1:5000/individual_analysis">Individual Analysis</a></li>
-    </ul>
 
-        {% for ticker in tickers %}
-        {{ ticker }}
+<h8>    Patterns scan for Pepi:</h8>
+    <li><a href="http://127.0.0.1:5000/yf_retrieve_period_60_daily">Retrieve yfinance data period 60 daily</a></li>
+    <li><a href="http://127.0.0.1:5000/generate_charts">Generate charts</a></li>
+
+<br>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_general">RSI Divergence General Page</a></li>
+<br>
+
+<h8>    Patterns scan custom:</h8>
+    <li><a href="http://127.0.0.1:5000/yf_retrieve_custom">Custom - Retrieve Yahoo Finance data</a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_calculate_custom_table">Custom - Calculation of table </a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_enrich_split_tables_custom">Custom - Enrich and Split tables</a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_enrich_split_tables_custom_pre_signal">Custom - Enrich and Split tables PRE-SIGNAL</a></li>
+    <li><a href="http://127.0.0.1:5000/generate_tables_from_rsi_divergence_scan_custom">Custom - Generate Tables</a></li>
+    <li><a href="http://127.0.0.1:5000/generate_charts">Generate charts</a></li>
+
+<BR><BR>
+
+<h8>    Patterns scan options favourites:</h8>
+    <li><a href="http://127.0.0.1:5000/yf_retrieve_options_favourites">Options favourites - Retrieve Yahoo Finance data</a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_calculate_options_favourites_table">Options Favourites - Calculation of table </a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_enrich_split_tables_options_favourites">Options Favourites - Enrich and Split tables</a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_enrich_split_tables_options_favourites_pre_signal">Options Favourites - Enrich and Split tables PRE-SIGNAL</a></li>
+    <li><a href="http://127.0.0.1:5000/generate_tables_from_rsi_divergence_scan_options_favourites">Options Favourites - Generate Tables</a></li>
+
+<BR><BR>
+
+<h8>    ALL:</h8>
+    <li><a href="http://127.0.0.1:5000/current_day_scan">Current Day Scan   </a></li>
+    <li><a href="http://127.0.0.1:5000/generate_ss_pivots">Generate Pivots from Shortable Stocks   </a></li>
+    <li><a href="http://127.0.0.1:5000/individual_analysis">Individual Analysis</a></li>
+
+
+<h6 class="mt-4 small">Calls:</h6> <a href="http://127.0.0.1:5000/render_noa_pivot_filtered_calls">Visualize filtered NOA for Calls</a>
+
+</div>
+<div class="container_unique_tickers">
+    <h6 class="mt-4 small">Unique Tickers</h6>
+        {% for ticker in tickers_calls %}
+        <a href="http://127.0.0.1:5000/individual_analysis/{{ ticker }}">{{ ticker }}</a>
         {% endfor %}
 
     <h6 class="mt-4 small">Filtered data for Calls</h6>
     <!-- Render the DataFrame table -->
     <div class="table-smaller">
-        {{ table|safe }}
+        {{ table_calls|safe }}
     </div>
     <h6 class="mt-4 small">Unique Tickers</h6>
-        {% for ticker in tickers %}
+        {% for ticker in tickers_calls %}
         <div>
             <h6>{{ticker}}</h6>
         <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>
+            </div>
+            {% endfor %}
+</div>
+
+
+</ul>
+
+<h6 class="mt-4 small">Visualize Puts:</h6>
+<ul>
+    <li><a href="http://127.0.0.1:5000/render_noa_pivot_filtered_puts">Visualize filtered NOA for Puts</a></li>
+    </ul>
+<div class="container">
+    <h6 class="mt-4 small">Unique Tickers</h6><ul>
+    <li><a href="http://127.0.0.1:5000/individual_analysis">Individual Analysis</a></li>
+    </ul>
+</div>
+<div class="container_unique_tickers">
+    <h6 class="mt-4 small">Unique Tickers</h6>
+        {% for ticker in tickers_puts %}
+        <a href="http://127.0.0.1:5000/individual_analysis/{{ ticker }}">{{ ticker }}</a>
+        {% endfor %}
+
+    <h6 class="mt-4 small">Filtered data for Puts</h6>
+    <!-- Render the DataFrame table -->
+    <div class="table-smaller">
+        {{ table_puts|safe }}
+    </div>
+    <h6 class="mt-4 small">Unique Tickers</h6>
+        {% for ticker in tickers_puts %}
+        <div>
+            <h6>{{ticker}}</h6>
+        <img src="https://finviz.com/chart.ashx?t={{ticker}}&ty=c&ta=1&p=d&s=l"/>
+
             </div>
             {% endfor %}
 </div>

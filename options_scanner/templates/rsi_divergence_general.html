@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{%block head%}
+<title>Index</title>
+{%endblock%}
+
+
+{%block header%}
+<!--<h1>Shortable Stocks</h1>-->
+{%endblock%}
+
+{%block body%}
+<br>
+<a href="http://127.0.0.1:5000/">Home Page</a>
+<br>
+
+<br>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_general">RSI Divergence General Page</a></li>
+<br>
+
+<h8>    Patterns scan custom:</h8>
+    <li><a href="http://127.0.0.1:5000/yf_retrieve_custom">Custom - Retrieve Yahoo Finance data</a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_calculate_custom_table">Custom - Calculation of table </a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_enrich_split_tables_custom">Custom - Enrich and Split tables</a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_enrich_split_tables_custom_pre_signal">Custom - Enrich and Split tables PRE-SIGNAL</a></li>
+    <li><a href="http://127.0.0.1:5000/generate_tables_from_rsi_divergence_scan_custom">Custom - Generate Tables</a></li>
+    <li><a href="http://127.0.0.1:5000/generate_charts">Generate charts</a></li>
+
+<BR><BR>
+
+<h8>    Patterns scan options favourites:</h8>
+    <li><a href="http://127.0.0.1:5000/yf_retrieve_options_favourites">Options favourites - Retrieve Yahoo Finance data</a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_calculate_options_favourites_table">Options Favourites - Calculation of table </a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_enrich_split_tables_options_favourites">Options Favourites - Enrich and Split tables</a></li>
+    <li><a href="http://127.0.0.1:5000/rsi_divergence_enrich_split_tables_options_favourites_pre_signal">Options Favourites - Enrich and Split tables PRE-SIGNAL</a></li>
+    <li><a href="http://127.0.0.1:5000/generate_tables_from_rsi_divergence_scan_options_favourites">Options Favourites - Generate Tables</a></li>
+
+<BR><BR>
+
+<h8>RSI Divergence Table (Last Day Regular):</h8>
+<br>
+<div class="container">
+    <div class="table-smaller">
+        {{ table_rsi_divergence_last_day_regular_html|safe }}
+    </div>
+
+</div>
+
+<h8>RSI Divergence Table (Last Day PRE-SIGNAL):</h8>
+<br>
+<div class="container">
+    <div class="table-smaller">
+        {{ table_rsi_divergence_last_day_pre_signal_html|safe }}
+    </div>
+
+</div>
+
+
+</ul>
+
+<br><br><br>
+
+
+{%endblock%}
+
+

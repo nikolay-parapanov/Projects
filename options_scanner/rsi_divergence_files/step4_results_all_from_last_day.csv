@@ -1,0 +1,7 @@
+,Datetime,Interval,Ticker,Combined_Signals_65,bu_signal,be_signal,Close_SMA65_Diff_Percent,vol_vs_avrg_vol,RSI,Open,High,Low,Close,Volume,Avg_Volume_10,ATR,SMA_20,SMA_50,SMA_200,SMA_65,desc_number,rsi_peak_rsi_value,rsi_peak_high_value,rsi_bottom_rsi_value,rsi_bottom_low_value,be_current_rsi_less_than_peak,be_current_price_close_above_rsi_peak,be_pre_signal_1,be_pre_signal_last_10,be_close_below_SMA65,bu_current_rsi_more_than_bottom,bu_current_price_close_below_rsi_bottom,bu_pre_signal_1,bu_pre_signal_last_13,bu_close_above_SMA65
+3,10/09:30,30m,META,Buy,Buy,0,1.58,3.47,63.29,617.4,624.08,613.0,622.74,2168507,625028.6,3.97,616.53,614.7,580.68,613.08,2,77.07,624.31,39.91,609.58,1,0,0,0,0,1,0,0,2,1
+4,10/10:00,30m,META,Buy,Buy,0,1.76,0.96,65.16,622.61,625.59,622.1,624.3,621128,644097.6,3.94,616.45,615.01,580.98,613.5,1,77.07,624.31,39.91,609.58,1,0,0,0,0,1,0,0,2,1
+56,10/09:30,30m,WMT,Buy,Buy,0,0.45,1.94,56.53,94.05,95.09,93.77,94.92,1749381,902009.5,0.39,94.64,94.87,90.74,94.5,2,71.04,95.98,26.55,93.73,1,0,0,0,0,1,0,0,2,1
+57,10/10:00,30m,WMT,Buy,Buy,0,0.64,0.64,59.67,94.91,95.24,94.78,95.14,570343,895784.9,0.39,94.6,94.89,90.79,94.53,1,59.67,95.24,26.55,93.73,0,0,0,0,0,1,0,0,2,1
+119,10/09:30,30m,TWLO,Buy,Buy,0,1.65,1.34,58.88,110.2,112.31,109.96,111.76,186077,138935.8,0.88,111.1,110.76,104.16,109.95,2,76.29,113.57,40.25,109.64,1,0,0,0,0,1,0,0,2,1
+120,10/10:00,30m,TWLO,Buy,Buy,0,1.13,0.63,54.37,111.78,112.33,111.27,111.27,84150,134536.6,0.89,111.04,110.8,104.23,110.02,1,76.29,113.57,40.25,109.64,1,0,0,0,0,1,0,0,2,1

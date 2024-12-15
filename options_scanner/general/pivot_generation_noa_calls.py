@@ -16,7 +16,7 @@ def convert_date_format(date_str):
             # Return as is if it doesn't match the expected format
             return date_str
     except ValueError:
-        # Return as is if there is a parsing error
+        # Return as is if there isf a parsing error
         return date_str
 
 def generate_pivot():
@@ -40,14 +40,6 @@ def generate_pivot():
 
     print('DF with aligned dates: .................')
     print(df)
-
-    df = df[df['Stock Symbol'] != 'AAPL']
-    df = df[df['Stock Symbol'] != 'TSLA']
-    df = df[df['Stock Symbol'] != 'META']
-    df = df[df['Stock Symbol'] != 'NVDA']
-    df = df[df['Stock Symbol'] != 'GOOG']
-    df = df[df['Stock Symbol'] != 'AMZN']
-    df = df[df['Stock Symbol'] != 'MSFT']
 
     # Extract unique reporting dates
     unique_report_dates = df['Report Date'].dropna().dt.date.unique()

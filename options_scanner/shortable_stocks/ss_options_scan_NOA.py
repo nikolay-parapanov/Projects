@@ -175,10 +175,6 @@ def ss_login_and_options_scan():
         print("VERY FIRST DF: ===========================================================")
         print(df)
 
-        ##FINAL REWORK
-        # # Convert 'Expiration Date' to the desired format M/D/YYYY in one line
-        # df['Expiration Date'] = pd.to_datetime(df['Expiration Date'], format='%Y-%m-%d').dt.strftime('%m/%d/%Y')
-
         # Extract the date from the first row of the first column in the raw data
         raw_date = df.iloc[0, 0][:10]
 
@@ -196,7 +192,6 @@ def ss_login_and_options_scan():
         # Combine new data with existing data
         combine_dataframes(df, combined_file_name)
 
-
         # Get the current date and time for timestamp
         now = datetime.now()
         timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
@@ -210,9 +205,5 @@ def ss_login_and_options_scan():
         df.to_csv(file_name_retrieve_general, index=False)
 
         print(f"Options data saved to {file_name}")
-
-        # Closing the browser
-        # browser.close()
-
 
         return
