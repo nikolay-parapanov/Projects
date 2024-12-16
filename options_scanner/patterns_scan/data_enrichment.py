@@ -26,6 +26,8 @@ def rsi_divergence_signals_cut_by_day(input_file, output_file):
     columns.remove('be_signal')  # Remove 'Combined Signals' from the list
     columns.remove('vol_vs_avrg_vol')  # Remove 'Combined Signals' from the list
     columns.remove('RSI')  # Remove 'Combined Signals' from the list
+    columns.remove('SMA_65_trend')  # Remove 'Combined Signals' from the list
+
     ticker_index = columns.index('Ticker')  # Find the index of 'Ticker'
     # Insert 'Combined Signals' right after 'Ticker'
 
@@ -33,11 +35,10 @@ def rsi_divergence_signals_cut_by_day(input_file, output_file):
     df['Close_SMA65_Diff_Percent'] = ((df['Close'] - df['SMA_65']) / df['SMA_65']) * 100
 
     columns.insert(ticker_index + 1, 'Combined_Signals_65')
-    columns.insert(ticker_index + 2, 'bu_signal')
-    columns.insert(ticker_index + 3, 'be_signal')
-    columns.insert(ticker_index + 4, 'Close_SMA65_Diff_Percent')
-    columns.insert(ticker_index + 5, 'vol_vs_avrg_vol')
-    columns.insert(ticker_index + 6, 'RSI')
+    columns.insert(ticker_index + 2, 'SMA_65_trend')
+    columns.insert(ticker_index + 5, 'Close_SMA65_Diff_Percent')
+    columns.insert(ticker_index + 6, 'vol_vs_avrg_vol')
+    columns.insert(ticker_index + 7, 'RSI')
 
     # Reorder the DataFrame
     df = df[columns]

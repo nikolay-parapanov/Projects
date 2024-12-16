@@ -54,7 +54,7 @@ def data_retrieval_period_custom_last_cut_custom(period, interval, cut_last, tic
         df_current_ticker['SMA_20'] = ta.trend.sma_indicator(df_current_ticker['Close'], window=20)
         df_current_ticker['SMA_50'] = ta.trend.sma_indicator(df_current_ticker['Close'], window=50)
         df_current_ticker['SMA_200'] = ta.trend.sma_indicator(df_current_ticker['Close'], window=200)
-        df_current_ticker['SMA_65'] = ta.trend.sma_indicator(df_current_ticker['Close'], window=65)
+        df_current_ticker['SMA_65'] = ta.trend.sma_indicator(df_current_ticker['Close'], window=33)
 
 
         # Only keep the last 20 rows of data

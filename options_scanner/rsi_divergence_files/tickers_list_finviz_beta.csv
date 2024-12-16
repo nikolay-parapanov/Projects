@@ -1,507 +1,499 @@
 No.,Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume
-1,AA,Alcoa Corp,Basic Materials,Aluminum,USA," 11,858 ",,45.9,0.07%,241
-2,AAOI,Applied Optoelectronics Inc,Technology,Communication Equipment,USA," 2,001 ",,44.39,0.82%,6149
-5,ABR,Arbor Realty Trust Inc,Real Estate,REIT - Mortgage,USA," 2,665 ",10.89,14.13,0.00%,2712
-12,ACHR,Archer Aviation Inc,Industrials,Aerospace & Defense,USA," 3,019 ",,7.1,2.01%,257355
-14,ACLS,Axcelis Technologies Inc,Technology,Semiconductor Equipment & Materials,USA," 2,478 ",11.28,76.23,0.00%,185
-18,ACVA,ACV Auctions Inc,Consumer Cyclical,Auto & Truck Dealerships,USA," 3,787 ",,22.59,0.00%,0
-21,ADEA,Adeia Inc,Technology,Software - Application,USA," 1,474 ",36.89,13.49,0.00%,0
-22,ADNT,Adient plc,Consumer Cyclical,Auto Parts,USA," 1,724 ",88.62,20.32,0.00%,0
-23,ADT,ADT Inc,Industrials,Security & Protection Services,USA," 6,884 ",8.26,7.59,0.00%,0
-24,ADV,Advantage Solutions Inc,Communication Services,Advertising Agencies,USA," 1,145 ",,3.57,0.00%,0
-27,AFRM,Affirm Holdings Inc,Technology,Software - Infrastructure,USA," 22,870 ",,72.82,1.14%,23542
-31,AI,C3.ai Inc,Technology,Software - Application,USA," 4,858 ",,38.24,1.73%,67478
-34,AIR,AAR Corp,Industrials,Aerospace & Defense,USA," 2,524 ",38.79,70.28,0.00%,0
-39,AL,Air Lease Corp,Industrials,Rental & Leasing Services,USA," 5,773 ",11.8,51.83,0.90%,38
-40,ALB,Albemarle Corp,Basic Materials,Specialty Chemicals,USA," 12,014 ",,102.21,-0.39%,2315
-41,ALGM,Allegro Microsystems Inc,Technology,Semiconductors,USA," 3,910 ",,21.25,0.00%,0
-42,ALGN,"Align Technology, Inc",Healthcare,Medical Instruments & Supplies,USA," 17,565 ",40.12,235.29,0.00%,0
-44,ALGT,Allegiant Travel,Industrials,Airlines,USA," 1,525 ",,83.11,0.25%,491
-45,ALK,Alaska Air Group Inc,Industrials,Airlines,USA," 6,907 ",21.88,54.41,0.00%,0
-51,AM,Antero Midstream Corp,Energy,Oil & Gas Midstream,USA," 7,403 ",19.13,15.38,0.00%,0
-52,AMAT,Applied Materials Inc,Technology,Semiconductor Equipment & Materials,USA," 145,672 ",20.53,176.7,-2.46%,51650
-53,AMBA,Ambarella Inc,Technology,Semiconductor Equipment & Materials,USA," 2,934 ",,71.08,0.00%,0
-54,AMC,AMC Entertainment Holdings Inc,Communication Services,Entertainment,USA," 1,837 ",,4.89,-0.41%,71746
-55,AMD,Advanced Micro Devices Inc,Technology,Semiconductors,USA," 233,035 ",128.49,143.6,-0.27%,77181
-56,AMKR,AMKOR Technology Inc,Technology,Semiconductor Equipment & Materials,USA," 6,546 ",17.96,26.54,0.00%,0
-60,AMRC,Ameresco Inc,Industrials,Engineering & Construction,USA," 1,460 ",27.77,27.84,0.00%,0
-61,AMSC,American Superconductor Corp,Industrials,Specialty Industrial Machinery,USA," 1,420 ",,35.98,2.13%,6424
-62,AMWD,American Woodmark Corp,Consumer Cyclical,"Furnishings, Fixtures & Appliances",USA," 1,343 ",13.34,89.2,0.97%,232
-63,ANF,Abercrombie & Fitch Co,Consumer Cyclical,Apparel Retail,USA," 8,250 ",15.99,161.52,0.00%,0
-66,AORT,Artivion Inc,Healthcare,Medical Devices,USA," 1,243 ",,29.65,0.00%,0
-67,AOSL,Alpha & Omega Semiconductor Ltd,Technology,Semiconductors,USA," 1,481 ",,51.02,3.78%,13230
-68,APA,APA Corporation,Energy,Oil & Gas E&P,USA," 8,198 ",3.14,22.16,-0.18%,433
-69,APAM,Artisan Partners Asset Management Inc,Financial,Asset Management,USA," 3,922 ",13.88,48.8,0.00%,0
-70,APG,APi Group Corporation,Industrials,Engineering & Construction,USA," 10,817 ",,38.8,0.78%,3161
-71,APGE,Apogee Therapeutics Inc,Healthcare,Biotechnology,USA," 3,044 ",,52.02,0.00%,0
-72,APLD,Applied Digital Corporation,Technology,Information Technology Services,USA," 2,077 ",,9.83,2.18%,88635
-74,APO,Apollo Global Management Inc,Financial,Asset Management,USA," 98,865 ",18.39,174.73,0.00%,0
-75,APP,Applovin Corp,Technology,Software - Application,USA," 125,783 ",113.41,374.81,0.30%,6513
-76,APPN,Appian Corp,Technology,Software - Infrastructure,USA," 3,009 ",,40.73,0.00%,0
-80,AR,Antero Resources Corp,Energy,Oil & Gas E&P,USA," 9,808 ",219.35,31.52,0.00%,0
-82,ARHS,Arhaus Inc,Consumer Cyclical,Home Improvement Retail,USA," 1,532 ",19.53,10.9,0.00%,0
-83,ARI,Apollo Commercial Real Estate Finance Inc,Real Estate,REIT - Mortgage,USA," 1,259 ",,9.11,0.00%,0
-84,ARIS,Aris Water Solutions Inc,Utilities,Utilities - Regulated Water,USA," 1,541 ",32.81,26.47,0.00%,0
-85,ARLO,Arlo Technologies Inc,Industrials,Building Products & Equipment,USA," 1,304 ",,13,0.00%,0
-86,ARM,Arm Holdings plc. ADR,Technology,Semiconductors,United Kingdom," 147,245 ",231.95,140.1,-0.85%,22748
-87,ARMK,Aramark,Industrials,Specialty Business Services,USA," 10,898 ",41.94,41.29,0.66%,234
-88,AROC,Archrock Inc,Energy,Oil & Gas Equipment & Services,USA," 4,522 ",28.44,25.82,0.00%,0
-92,ARVN,Arvinas Inc,Healthcare,Biotechnology,USA," 1,745 ",,25.39,0.00%,0
-97,ASPN,Aspen Aerogels Inc,Industrials,Building Products & Equipment,USA," 1,177 ",1281.25,14.35,0.07%,4612
-100,ASTS,AST SpaceMobile Inc,Technology,Communication Equipment,USA," 6,589 ",,22.74,0.44%,23743
-103,ATKR,Atkore Inc,Industrials,Electrical Equipment & Parts,USA," 3,246 ",7.36,93.01,-0.68%,14
-105,ATMU,Atmus Filtration Technologies Inc,Industrials,Pollution & Treatment Controls,USA," 3,574 ",19.93,43.01,0.00%,0
-108,ATS,ATS Corporation,Industrials,Specialty Industrial Machinery,Canada," 3,124 ",33.05,31.9,-0.62%,483
-109,ATUS,Altice USA Inc,Communication Services,Telecom Services,USA," 1,148 ",,2.49,0.00%,0
-111,AUR,Aurora Innovation Inc,Technology,Information Technology Services,USA," 10,362 ",,6.03,0.00%,0
-113,AVAH,Aveanna Healthcare Holdings Inc,Healthcare,Medical Care Facilities,USA," 1,074 ",,5.56,0.00%,0
-119,AZEK,AZEK Company Inc,Industrials,Building Products & Equipment,USA," 7,610 ",51.16,53.21,-0.88%,123
-120,AZTA,Azenta Inc,Healthcare,Medical Instruments & Supplies,USA," 2,124 ",,46.6,-0.70%,420
-121,BA,Boeing Co,Industrials,Aerospace & Defense,USA," 118,782 ",,158.89,0.39%,17917
-125,BBUC,Brookfield Business Corp,Financial,Asset Management,USA," 2,697 ",,27.27,0.00%,0
-127,BBWI,Bath & Body Works Inc,Consumer Cyclical,Specialty Retail,USA," 8,252 ",9.29,38.1,0.00%,0
-128,BCC,Boise Cascade Co,Basic Materials,Building Materials,USA," 5,642 ",14.39,146.9,0.00%,0
-129,BCRX,Biocryst Pharmaceuticals Inc,Healthcare,Biotechnology,USA," 1,518 ",,7.33,0.00%,429
-131,BE,Bloom Energy Corp,Industrials,Electrical Equipment & Parts,USA," 6,007 ",,26.28,0.00%,0
-132,BEAM,Beam Therapeutics Inc,Healthcare,Biotechnology,USA," 2,129 ",,25.71,-1.19%,158
-133,BECN,Beacon Roofing Supply Inc,Industrials,Industrial Distribution,USA," 7,032 ",19.43,113.62,0.00%,0
-136,BFH,Bread Financial Holdings Inc,Financial,Credit Services,USA," 3,077 ",9.9,61.89,1.28%,4
-144,BHVN,Biohaven Ltd,Healthcare,Biotechnology,USA," 4,658 ",,46.06,0.00%,0
-146,BILL,BILL Holdings Inc,Technology,Software - Application,USA," 9,604 ",,92.8,0.26%,1149
-148,BIRK,Birkenstock Holding Plc,Consumer Cyclical,Footwear & Accessories,United Kingdom," 9,814 ",82.61,52.25,0.00%,0
-151,BLBD,Blue Bird Corp,Industrials,Farm & Heavy Construction Machinery,USA," 1,331 ",12.98,41.25,0.00%,0
-152,BLD,TopBuild Corp,Industrials,Engineering & Construction,USA," 11,373 ",19.46,385.5,-0.16%,397
-154,BLDR,Builders Firstsource Inc,Industrials,Building Products & Equipment,USA," 20,370 ",17.3,177,-0.07%,81
-155,BLFS,Biolife Solutions Inc,Healthcare,Medical Instruments & Supplies,USA," 1,224 ",,26.38,0.00%,0
-157,BLMN,Bloomin Brands Inc,Consumer Cyclical,Restaurants,USA," 1,082 ",,12.75,-1.32%,3536
-160,BN,Brookfield Corporation,Financial,Asset Management,Canada," 91,564 ",129.15,60.7,0.00%,0
-164,BOOT,Boot Barn Holdings Inc,Consumer Cyclical,Apparel Retail,USA," 4,449 ",29.22,145.74,0.00%,0
-165,BRDG,Bridge Investment Group Holdings Inc,Financial,Asset Management,USA," 2,559 ",,9.83,0.00%,0
-167,BROS,Dutch Bros Inc,Consumer Cyclical,Restaurants,USA," 8,326 ",184.05,54,-0.41%,886
-170,BRX,Brixmor Property Group Inc,Real Estate,REIT - Retail,USA," 9,041 ",27.62,29.93,0.00%,0
-176,BTE,Baytex Energy Corp,Energy,Oil & Gas E&P,Canada," 2,102 ",,2.67,0.00%,0
-177,BURL,Burlington Stores Inc,Consumer Cyclical,Apparel Retail,USA," 18,473 ",39.86,291,0.08%,162
-179,BWIN,The Baldwin Insurance Group Inc,Financial,Insurance Brokers,USA," 5,779 ",,49.15,0.00%,0
-180,BX,Blackstone Inc,Financial,Asset Management,USA," 225,075 ",63.79,185.57,0.04%,696
-181,BXC,Bluelinx Hldgs Inc,Industrials,Industrial Distribution,USA," 1,078 ",37.31,128.63,0.00%,0
-182,BXMT,Blackstone Mortgage Trust Inc,Real Estate,REIT - Mortgage,USA," 3,252 ",,18.8,0.00%,0
-183,BYD,Boyd Gaming Corp,Consumer Cyclical,Resorts & Casinos,USA," 6,604 ",14.28,74.72,0.00%,0
-188,BZH,Beazer Homes USA Inc,Consumer Cyclical,Residential Construction,USA," 1,060 ",7.53,34.13,0.00%,0
-191,CAE,Cae Inc,Industrials,Aerospace & Defense,Canada," 7,423 ",,23.3,0.00%,0
-192,CAKE,Cheesecake Factory Inc,Consumer Cyclical,Restaurants,USA," 2,639 ",19.65,51.7,1.04%,846
-194,CALX,Calix Inc,Technology,Software - Infrastructure,USA," 2,236 ",,33.71,0.00%,0
-196,CAR,Avis Budget Group Inc,Industrials,Rental & Leasing Services,USA," 3,566 ",9.27,101.47,0.00%,0
-197,CARG,CarGurus Inc,Consumer Cyclical,Auto & Truck Dealerships,USA," 4,022 ",,38.78,0.00%,0
-199,CARS,Cars.com,Consumer Cyclical,Auto & Truck Dealerships,USA," 1,301 ",34.76,20.1,0.00%,0
-200,CAVA,Cava Group Inc,Consumer Cyclical,Restaurants,USA," 16,951 ",324.93,147.94,0.23%,556
-203,CC,Chemours Company,Basic Materials,Specialty Chemicals,USA," 3,179 ",46.51,21.28,0.00%,0
-205,CCL,Carnival Corp,Consumer Cyclical,Travel Services,USA," 33,815 ",24.03,26.99,0.78%,121982
-207,CCS,Century Communities Inc,Real Estate,Real Estate - Development,USA," 2,761 ",8.79,88.12,0.00%,0
-209,CDE,Coeur Mining Inc,Basic Materials,Gold,USA," 2,687 ",,6.73,0.75%,1275
-212,CDNA,Caredx Inc,Healthcare,Diagnostics & Research,USA," 1,390 ",,25.92,0.00%,0
-216,CEIX,Consol Energy Inc,Energy,Thermal Coal,USA," 3,645 ",9.11,124.01,-0.24%,1323
-217,CELH,Celsius Holdings Inc,Consumer Defensive,Beverages - Non-Alcoholic,USA," 6,816 ",40.24,29,0.10%,2962
-220,CENX,Century Aluminum Co,Basic Materials,Aluminum,USA," 2,221 ",7.79,23.93,0.72%,409
-221,CERT,Certara Inc,Healthcare,Health Information Services,USA," 1,751 ",,10.88,0.00%,0
-223,CG,Carlyle Group Inc,Financial,Asset Management,USA," 18,671 ",175.99,52.2,-0.89%,34
-225,CHEF,Chefs' Warehouse Inc,Consumer Defensive,Food Distribution,USA," 1,865 ",41.68,47.14,0.00%,0
-227,CHX,ChampionX Corp,Energy,Oil & Gas Equipment & Services,USA," 5,728 ",18.57,30.07,0.00%,0
-228,CIM,Chimera Investment Corp,Real Estate,REIT - Mortgage,USA," 1,192 ",4.45,14.74,0.00%,0
-232,CLDX,Celldex Therapeutics Inc,Healthcare,Biotechnology,USA," 1,797 ",,27.08,1.88%,4
-234,CLF,Cleveland-Cliffs Inc,Basic Materials,Steel,USA," 6,145 ",,12.44,0.00%,0
-235,CLMT,Calumet Inc,Energy,Oil & Gas E&P,USA," 1,935 ",,22.52,0.00%,0
-237,CLOV,Clover Health Investments Corp,Healthcare,Healthcare Plans,USA," 1,719 ",,3.43,0.00%,0
-238,CLS,"Celestica, Inc",Technology,Electronic Components,Canada," 10,429 ",28.34,89.63,0.11%,2614
-245,CNH,CNH Industrial NV,Industrials,Farm & Heavy Construction Machinery,United Kingdom," 15,225 ",8.94,12.19,-0.41%,2441
-246,CNK,Cinemark Holdings Inc,Communication Services,Entertainment,USA," 4,324 ",22.72,35.34,0.00%,0
-247,CNS,Cohen & Steers Inc,Financial,Asset Management,USA," 5,177 ",38.22,102.39,0.98%,689
-248,CNTA,Centessa Pharmaceuticals plc ADR,Healthcare,Biotechnology,United Kingdom," 2,259 ",,17.16,0.00%,0
-254,CODI,Compass Diversified Holdings,Industrials,Conglomerates,USA," 1,796 ",,23.74,0.00%,0
-255,COGT,Cogent Biosciences Inc,Healthcare,Biotechnology,USA," 1,016 ",,9.2,-0.11%,5
-256,COHR,Coherent Corp,Technology,Scientific & Technical Instruments,USA," 17,400 ",,112.5,0.43%,1201
-257,COIN,Coinbase Global Inc,Financial,Financial Data & Stock Exchanges,USA," 86,721 ",59.21,346.4,4.67%,625968
-258,COMM,CommScope Holding Company Inc,Technology,Communication Equipment,USA," 1,157 ",,5.36,0.00%,0
-259,COMP,Compass Inc,Real Estate,Real Estate Services,USA," 3,735 ",,7.1,-0.28%,222
-260,COTY,Coty Inc,Consumer Defensive,Household & Personal Products,USA," 6,672 ",45.52,7.67,0.00%,0
-262,CPRI,Capri Holdings Ltd,Consumer Cyclical,Luxury Goods,United Kingdom," 2,713 ",,23.01,0.00%,0
-274,CROX,Crocs Inc,Consumer Cyclical,Footwear & Accessories,USA," 6,602 ",8.22,113.28,0.00%,0
-275,CRS,Carpenter Technology Corp,Industrials,Metal Fabrication,USA," 9,719 ",43.42,194.99,0.31%,12
-283,CUBI,Customers Bancorp Inc,Financial,Banks - Regional,USA," 1,735 ",8.99,55.34,0.00%,0
-285,CUK,Carnival plc ADR,Consumer Cyclical,Travel Services,United Kingdom," 3,554 ",21.85,24.54,1.15%,50844
-287,CVE,Cenovus Energy Inc,Energy,Oil & Gas Integrated,Canada," 28,367 ",10.77,15.53,0.19%,2528
-290,CVI,CVR Energy Inc,Energy,Oil & Gas Refining & Marketing,USA," 1,853 ",26.46,18.43,0.00%,269
-291,CVNA,Carvana Co,Consumer Cyclical,Auto & Truck Dealerships,USA," 53,963 ",30940.48,259.9,-0.09%,950
-293,CWH,Camping World Holdings Inc,Consumer Cyclical,Auto & Truck Dealerships,USA," 2,373 ",,23.83,0.00%,0
-297,CZR,Caesars Entertainment Inc,Consumer Cyclical,Resorts & Casinos,USA," 8,255 ",,38.85,0.58%,51
-298,DAN,Dana Inc,Consumer Cyclical,Auto Parts,USA," 1,792 ",,12.36,0.00%,84
-299,DASH,DoorDash Inc,Communication Services,Internet Content & Information,USA," 73,475 ",,176.88,0.00%,0
-301,DAVE,Dave Inc,Technology,Software - Application,USA," 1,110 ",27.91,87,-0.83%,316
-302,DBD,Diebold Nixdorf Inc,Technology,Software - Application,USA," 1,766 ",0.82,47,0.53%,8
-304,DBRG,DigitalBridge Group Inc,Real Estate,Real Estate Services,USA," 2,430 ",17.08,13.04,0.00%,0
-307,DFH,Dream Finders Homes Inc,Consumer Cyclical,Residential Construction,USA," 3,008 ",11.02,32.18,0.00%,0
-309,DHI,D.R. Horton Inc,Consumer Cyclical,Residential Construction,USA," 51,821 ",11.24,161.35,0.00%,645
-311,DJT,Trump Media & Technology Group Corp,Communication Services,Internet Content & Information,USA," 7,824 ",,36.07,2.30%,568299
-312,DKL,Delek Logistics Partners LP,Energy,Oil & Gas Refining & Marketing,USA," 2,029 ",13.95,39.42,0.00%,0
-313,DKNG,DraftKings Inc,Consumer Cyclical,Gambling,USA," 39,426 ",,44.77,0.00%,2605
-314,DKS,"Dicks Sporting Goods, Inc",Consumer Cyclical,Specialty Retail,USA," 17,191 ",15.08,211,-0.29%,230
-316,DLX,Deluxe Corp,Industrials,Conglomerates,USA," 1,048 ",19.13,23.68,0.00%,0
-318,DNN,Denison Mines Corp,Energy,Uranium,Canada," 1,991 ",50.68,2.23,-0.89%,15047
-319,DNOW,Dnow Inc,Industrials,Industrial Distribution,USA," 1,606 ",8.04,15.17,0.00%,0
-321,DOCN,DigitalOcean Holdings Inc,Technology,Software - Infrastructure,USA," 3,687 ",47.05,39.95,0.00%,0
-323,DOOO,BRP Inc,Consumer Cyclical,Recreational Vehicles,Canada," 3,537 ",20.15,48.45,0.00%,0
-326,DRH,Diamondrock Hospitality Co,Real Estate,REIT - Hotel & Motel,USA," 2,000 ",33.55,9.59,0.00%,0
-330,DUO,Fangdd Network Group Ltd,Real Estate,Real Estate Services,China,,,0.56,0.00%,0
-331,DVN,Devon Energy Corp,Energy,Oil & Gas E&P,USA,23766.64,6.7,36.18,-0.30%,23359
-332,DXC,DXC Technology Co,Technology,Information Technology Services,USA,4073.05,285.9,22.5,0.00%,0
-333,DXPE,"DXP Enterprises, Inc",Industrials,Industrial Distribution,USA,1165.19,19.14,74.24,0.00%,0
-336,EAT,"Brinker International, Inc",Consumer Cyclical,Restaurants,USA,6019.56,33.12,135.49,5.14%,6893
-340,ECPG,"Encore Capital Group, Inc",Financial,Mortgage Finance,USA,1167.98,,49.3,-0.50%,217
-343,EFC,Ellington Financial Inc,Real Estate,REIT - Mortgage,USA,1106.07,9.52,12.2,0.00%,0
-345,EFX,"Equifax, Inc",Industrials,Consulting Services,USA,32774.15,58.67,264.41,0.31%,20
-346,EFXT,Enerflex Ltd,Energy,Oil & Gas Equipment & Services,Canada,1144.98,,9.23,0.00%,0
-352,ENLC,Enlink Midstream LLC,Energy,Oil & Gas Midstream,USA,6984.08,66.32,15.28,0.00%,0
-353,ENOV,Enovis Corp,Industrials,Specialty Industrial Machinery,USA,2682.58,,48.01,-1.25%,189
-354,ENPH,Enphase Energy Inc,Technology,Solar,USA,9889.81,166.93,73.2,0.11%,525
-355,ENVX,Enovix Corporation,Industrials,Electrical Equipment & Parts,USA,1919.74,,10.19,1.19%,5828
-358,EPR,EPR Properties,Real Estate,REIT - Specialty,USA,3410.19,19.44,45.03,0.00%,0
-361,ERO,Ero Copper Corp,Basic Materials,Copper,Canada,1531.94,83.31,14.83,0.00%,10
-362,ET,Energy Transfer LP,Energy,Oil & Gas Midstream,USA,64814.74,13.93,18.93,-0.26%,3698
-363,ETSY,Etsy Inc,Consumer Cyclical,Internet Retail,USA,6660.68,30.22,59.21,0.25%,314
-364,EVGO,EVgo Inc,Consumer Cyclical,Specialty Retail,USA,1882.57,,6.21,1.14%,10784
-366,EVRI,Everi Holdings Inc,Consumer Cyclical,Gambling,USA,1162.6,90.65,13.48,0.00%,0
-369,EXK,Endeavour Silver Corp,Basic Materials,Other Precious Metals & Mining,Canada,1053.35,,4.28,0.00%,0
-370,EXPE,Expedia Group Inc,Consumer Cyclical,Travel Services,USA,24180.38,24.29,188.4,0.05%,114
-371,EXPI,eXp World Holdings Inc,Real Estate,Real Estate Services,USA,2092.91,,13.63,0.00%,0
-372,EXTR,Extreme Networks Inc,Technology,Communication Equipment,USA,2379.75,,18.01,0.00%,0
-374,F,Ford Motor Co,Consumer Cyclical,Auto Manufacturers,USA,42206.95,12.11,10.62,-1.12%,573932
-375,FANG,Diamondback Energy Inc,Energy,Oil & Gas E&P,USA,49962.27,9.8,171.11,0.07%,189
-381,FCX,Freeport-McMoRan Inc,Basic Materials,Copper,USA,61802.26,31.29,43.01,-0.07%,7883
-386,FG,F&G Annuities & Life Inc,Financial,Insurance - Life,USA,5892.35,,46.73,0.00%,0
-391,FLNC,Fluence Energy Inc,Utilities,Utilities - Renewable,USA,3095.35,322.45,17.09,0.06%,5011
-393,FLR,Fluor Corporation,Industrials,Engineering & Construction,USA,9613.46,37.54,56.05,0.00%,0
-396,FND,Floor & Decor Holdings Inc,Consumer Cyclical,Home Improvement Retail,USA,11603.5,59.91,108.21,0.00%,0
-397,FOR,Forestar Group Inc,Real Estate,Real Estate - Development,USA,1503.37,7.41,29.67,1.30%,10
-400,FOUR,Shift4 Payments Inc,Technology,Software - Infrastructure,USA,9099.37,54.75,100.99,1.03%,41345
-401,FOXF,Fox Factory Holding Corp,Consumer Cyclical,Auto Parts,USA,1318.03,123.42,31.62,0.00%,0
-403,FSM,Fortuna Mining Corp,Basic Materials,Gold,Canada,1547.85,67.86,4.94,0.00%,0
-404,FTAI,FTAI Aviation Ltd,Industrials,Rental & Leasing Services,USA,16860.2,,164.41,-0.32%,1743
-408,FTI,TechnipFMC plc,Energy,Oil & Gas Equipment & Services,USA,13302.73,20.58,31.27,0.00%,0
-411,FUN,Six Flags Entertainment Corp,Consumer Cyclical,Leisure,USA,4846.47,,48.33,0.00%,0
-413,GAP,"Gap, Inc",Consumer Cyclical,Apparel Retail,USA,9699.58,11.96,25.72,-1.08%,5341
-414,GATO,Gatos Silver Inc,Basic Materials,Other Precious Metals & Mining,Canada,1095.54,32.79,15.77,-0.13%,893
-418,GCT,GigaCloud Technology Inc,Technology,Software - Infrastructure,USA,1044.77,8.05,25.5,0.71%,3083
-422,GEL,Genesis Energy L.P,Energy,Oil & Gas Midstream,USA,1394.87,,11.39,0.00%,0
-423,GENI,Genius Sports Limited,Communication Services,Internet Content & Information,United Kingdom,2287.22,,9.96,0.10%,1623
-425,GETY,Getty Images Holdings Inc,Communication Services,Internet Content & Information,USA,1208.56,22.49,2.94,0.00%,0
-427,GFS,GlobalFoundries Inc,Technology,Semiconductors,USA,24653.32,33.27,44.38,0.00%,0
-428,GIII,G-III Apparel Group Ltd,Consumer Cyclical,Apparel Manufacturing,USA,1377.98,7.83,31.4,-0.98%,14
-432,GMS,GMS Inc,Industrials,Building Products & Equipment,USA,3967.81,16.65,101,-1.26%,65
-443,GRBK,Green Brick Partners Inc,Consumer Cyclical,Residential Construction,USA,3106.42,9.06,69.81,0.00%,26
-449,GT,Goodyear Tire & Rubber Co,Consumer Cyclical,Auto Parts,USA,3079.98,,10.81,0.00%,0
-452,GTLS,Chart Industries Inc,Industrials,Specialty Industrial Machinery,USA,8176.48,53.8,190.99,0.00%,0
-456,GXO,GXO Logistics Inc,Industrials,Integrated Freight & Logistics,USA,6075.69,56.96,50.85,0.00%,0
-458,HAL,Halliburton Co,Energy,Oil & Gas Equipment & Services,USA,26882.16,10.68,30.6,0.00%,5644
-459,HASI,HA Sustainable Infrastructure Capital Inc,Real Estate,Real Estate Services,USA,3663.39,17.35,30.92,0.00%,0
-460,HBI,Hanesbrands Inc,Consumer Cyclical,Apparel Manufacturing,USA,3024.42,,8.58,0.00%,0
-461,HBM,Hudbay Minerals Inc,Basic Materials,Copper,Canada,3128.3,38.26,8.91,0.00%,0
-462,HCA,HCA Healthcare Inc,Healthcare,Medical Care Facilities,USA,82952.26,14.7,327.49,1.05%,805
-464,HEES,H&E Equipment Services Inc,Industrials,Rental & Leasing Services,USA,2162.24,14.97,59.06,0.00%,0
-466,HGV,Hilton Grand Vacations Inc,Consumer Cyclical,Resorts & Casinos,USA,4135.54,47.52,41.99,0.00%,0
-468,HL,Hecla Mining Co,Basic Materials,Other Precious Metals & Mining,USA,3592.77,,5.64,0.00%,0
-469,HLMN,Hillman Solutions Corp,Industrials,Tools & Accessories,USA,2256.86,277.97,11.48,0.00%,0
-470,HLX,Helix Energy Solutions Group Inc,Energy,Oil & Gas Equipment & Services,USA,1615.34,280.95,10.62,0.00%,0
-475,HOV,"Hovnanian Enterprises, Inc",Consumer Cyclical,Residential Construction,USA,1166.6,5.92,189.96,0.00%,0
-477,HRI,Herc Holdings Inc,Industrials,Rental & Leasing Services,USA,6477.67,18.65,228.05,-0.54%,27
-482,HTZ,Hertz Global Holdings Inc,Industrials,Rental & Leasing Services,USA,1361.7,,4.44,0.00%,0
-483,HUBS,HubSpot Inc,Technology,Software - Application,USA,39099.69,,757.4,0.00%,0
-490,IAG,Iamgold Corp,Basic Materials,Gold,Canada,3238.7,4.43,5.67,0.00%,0
-491,IBP,Installed Building Products Inc,Consumer Cyclical,Residential Construction,USA,6271.39,24.76,222.85,0.00%,0
-492,ICHR,Ichor Holdings Ltd,Technology,Semiconductor Equipment & Materials,USA,1179.99,,34.98,0.00%,0
-495,IGT,International Game Technology PLC,Consumer Cyclical,Gambling,United Kingdom,4021.82,32.88,19.91,0.00%,0
-504,INFN,Infinera Corp,Technology,Communication Equipment,USA,1574.74,,6.65,0.15%,9
-508,INOD,Innodata Inc,Technology,Information Technology Services,USA,1335.17,77.61,46.04,0.83%,23104
-511,IONQ,IonQ Inc,Technology,Computer Hardware,USA,7201.54,,33.28,-0.42%,209893
-512,IOT,Samsara Inc,Technology,Software - Infrastructure,USA,30850.23,,55.45,-0.70%,23477
-523,JANX,Janux Therapeutics Inc,Healthcare,Biotechnology,USA,3586.1,,68.33,2.24%,3315
-524,JBLU,Jetblue Airways Corp,Industrials,Airlines,USA,2296.32,,6.62,0.91%,16808
-527,JOBY,Joby Aviation Inc,Industrials,Airports & Air Services,USA,6373.16,,8.33,2.71%,228564
-529,JWN,"Nordstrom, Inc",Consumer Cyclical,Department Stores,USA,3939.42,15.3,23.99,0.00%,0
-533,KAR,Openlane Inc,Consumer Cyclical,Auto & Truck Dealerships,USA,2127.27,105.34,19.91,-1.09%,270
-534,KBH,KB Home,Consumer Cyclical,Residential Construction,USA,5844.02,10.22,79.69,0.00%,0
-535,KC,Kingsoft Cloud Holdings Ltd ADR,Technology,Software - Application,China,2351.71,,9.27,13.60%,97990
-536,KD,Kyndryl Holdings Inc,Technology,Information Technology Services,USA,8094.64,,34.85,0.11%,827
-537,KFY,Korn Ferry,Industrials,Staffing & Employment Services,USA,3996.5,21.91,76.84,-2.30%,1731
-540,KKR,KKR & Co. Inc,Financial,Asset Management,USA,141041.87,49.12,158.79,0.76%,388
-542,KMT,Kennametal Inc,Industrials,Tools & Accessories,USA,2195.76,22.14,28.25,0.00%,0
-543,KMX,Carmax Inc,Consumer Cyclical,Auto & Truck Dealerships,USA,12956.32,31.57,83.63,0.00%,0
-544,KNTK,Kinetik Holdings Inc,Energy,Oil & Gas Midstream,USA,8992.23,21.07,57.08,0.00%,0
-550,KOS,Kosmos Energy Ltd,Energy,Oil & Gas E&P,USA,1731.86,8.09,3.67,0.00%,0
-553,KRUS,Kura Sushi USA Inc,Consumer Cyclical,Restaurants,USA,1242.18,,103.02,-0.64%,556
-554,KSS,Kohl's Corp,Consumer Cyclical,Department Stores,USA,1701.95,6.9,15.3,0.00%,0
-557,KYMR,Kymera Therapeutics Inc,Healthcare,Biotechnology,USA,2980.5,,46.02,0.00%,0
-559,LAD,"Lithia Motors, Inc",Consumer Cyclical,Auto & Truck Dealerships,USA,10154.08,13.01,381.2,-0.33%,300
-560,LADR,Ladder Capital Corp,Real Estate,REIT - Mortgage,USA,1501.02,15.37,11.76,0.00%,0
-561,LAMR,Lamar Advertising Co,Real Estate,REIT - Specialty,USA,13566.5,26.53,132.54,0.00%,0
-566,LBRT,Liberty Energy Inc,Energy,Oil & Gas Equipment & Services,USA,2993.78,8.77,18.32,0.00%,0
-567,LC,LendingClub Corp,Financial,Banks - Regional,USA,1790.56,34.36,15.93,0.31%,9785
-571,LEN,Lennar Corp,Consumer Cyclical,Residential Construction,USA,44930.52,11.04,166.69,-0.42%,126
-574,LGIH,LGI Homes Inc,Consumer Cyclical,Residential Construction,USA,2609.77,13.3,110.99,1.82%,2
-579,LMND,Lemonade Inc,Financial,Insurance - Property & Casualty,USA,3304.6,,46.28,0.35%,7741
-580,LNC,Lincoln National Corp,Financial,Insurance - Life,USA,5948.38,24.78,34.92,0.00%,0
-581,LNW,Light & Wonder Inc,Consumer Cyclical,Gambling,USA,8725.7,30.74,98.81,-1.07%,6
-582,LOB,Live Oak Bancshares Inc,Financial,Banks - Regional,USA,2165.92,26.09,47.93,1.96%,5
-590,LPX,Louisiana-Pacific Corp,Industrials,Building Products & Equipment,USA,8316.2,20.38,118.4,0.55%,360
-594,LSPD,Lightspeed Commerce Inc,Technology,Software - Application,Canada,2620.62,,17.25,0.00%,0
-596,LTH,Life Time Group Holdings Inc,Consumer Cyclical,Leisure,USA,5095.67,35.77,24.62,0.00%,0
-604,LYFT,Lyft Inc,Technology,Software - Application,USA,7159.74,,17.26,0.12%,1446
-605,M,Macy's Inc,Consumer Cyclical,Department Stores,USA,4643.23,25.75,16.74,0.00%,0
-606,MAC,Macerich Co,Real Estate,REIT - Retail,USA,5552.9,,21.48,0.00%,0
-608,MANH,"Manhattan Associates, Inc",Technology,Software - Application,USA,18627.96,86.67,305,0.55%,58
-609,MAR,"Marriott International, Inc",Consumer Cyclical,Lodging,USA,81183.8,30.55,292.14,0.87%,137
-617,MCRI,"Monarch Casino & Resort, Inc",Consumer Cyclical,Resorts & Casinos,USA,1586.97,19.1,86.3,-0.76%,278
-619,MCW,Mister Car Wash Inc,Consumer Cyclical,Auto & Truck Dealerships,USA,2545.77,35.38,7.9,0.00%,0
-620,MD,Pediatrix Medical Group Inc,Healthcare,Medical Care Facilities,USA,1278.76,,14.89,0.00%,0
-621,MDXG,Mimedx Group Inc,Healthcare,Biotechnology,USA,1409.21,16.39,9.59,0.00%,0
-623,MELI,MercadoLibre Inc,Consumer Cyclical,Internet Retail,USA,100757.49,70.12,1987.43,0.00%,0
-625,MFA,MFA Financial Inc,Real Estate,REIT - Mortgage,USA,1118.82,6.87,10.96,0.00%,0
-626,MFIC,MidCap Financial Investment Corporation,Financial,Asset Management,USA,1330.74,9.21,14.19,0.00%,0
-629,MGA,Magna International Inc,Consumer Cyclical,Auto Parts,Canada,13160.17,12.21,45.8,0.00%,0
-630,MGM,MGM Resorts International,Consumer Cyclical,Resorts & Casinos,USA,11171.22,13.42,37.52,0.00%,0
-631,MGNI,Magnite Inc,Communication Services,Advertising Agencies,USA,2504.29,154.92,17.8,1.54%,6787
-636,MGY,Magnolia Oil & Gas Corp,Energy,Oil & Gas E&P,USA,5216.7,13.12,26.54,0.00%,0
-637,MHO,MI Homes Inc,Consumer Cyclical,Residential Construction,USA,4412.39,8.69,162.19,-0.01%,752
-638,MIDD,Middleby Corp,Industrials,Specialty Industrial Machinery,USA,7719.31,19.77,143.5,0.33%,774
-642,MKSI,"MKS Instruments, Inc",Technology,Scientific & Technical Instruments,USA,7841.67,251.12,116.52,-0.27%,480
-648,MOD,Modine Manufacturing Co,Consumer Cyclical,Auto Parts,USA,7342.56,45.9,139.85,-0.54%,579
-649,MODG,Topgolf Callaway Brands Corp,Consumer Cyclical,Leisure,USA,1522.06,,8.28,0.00%,0
-651,MP,MP Materials Corporation,Basic Materials,Other Industrial Metals & Mining,USA,3476.32,,21.3,0.80%,8592
-653,MQ,Marqeta Inc,Technology,Software - Infrastructure,USA,1944.27,163.29,3.87,0.00%,0
-654,MRC,MRC Global Inc,Energy,Oil & Gas Equipment & Services,USA,1200.22,16.18,14.08,0.00%,0
-655,MRNA,Moderna Inc,Healthcare,Biotechnology,USA,16066.15,,41.75,0.29%,19013
-658,MSTR,Microstrategy Inc,Technology,Software - Application,USA,98967.09,,440.49,8.50%,1551983
-660,MTDR,Matador Resources Co,Energy,Oil & Gas E&P,USA,7179.42,7.62,57.54,0.00%,0
-661,MTH,Meritage Homes Corp,Consumer Cyclical,Residential Construction,USA,6712.76,8.4,185.54,0.67%,77
-663,MTSI,MACOM Technology Solutions Holdings Inc,Technology,Semiconductors,USA,10149.7,134.66,140.19,-1.59%,1549
-665,MTZ,Mastec Inc,Industrials,Engineering & Construction,USA,11336.15,127.83,143.07,0.00%,0
-667,MUR,Murphy Oil Corp,Energy,Oil & Gas E&P,USA,4592.61,10.18,31.49,0.00%,0
-670,MXL,MaxLinear Inc,Technology,Semiconductors,USA,1645.06,,19.5,0.93%,4730
-671,MYGN,"Myriad Genetics, Inc",Healthcare,Diagnostics & Research,USA,1511.18,,16.6,0.00%,0
-676,NCLH,Norwegian Cruise Line Holdings Ltd,Consumer Cyclical,Travel Services,USA,12206.31,26.94,27.76,0.29%,28368
-679,NFE,New Fortress Energy Inc,Utilities,Utilities - Regulated Gas,USA,2903.89,12.79,11.55,1.76%,3600
-681,NGVT,Ingevity Corp,Basic Materials,Specialty Chemicals,USA,1708.77,,47.01,-1.09%,248
-683,NIO,NIO Inc ADR,Consumer Cyclical,Auto Manufacturers,China,8926.76,,4.64,0.87%,310267
-685,NLY,Annaly Capital Management Inc,Real Estate,REIT - Mortgage,USA,11003.56,,19.63,0.00%,0
-686,NMRA,Neumora Therapeutics Inc,Healthcare,Biotechnology,USA,1578.45,,9.77,0.00%,0
-687,NMRK,Newmark Group Inc,Real Estate,Real Estate Services,USA,2598.63,50.47,15.19,0.00%,0
-689,NOG,Northern Oil and Gas Inc,Energy,Oil & Gas E&P,USA,4165.7,5.01,41.73,0.00%,0
-691,NOV,NOV Inc,Energy,Oil & Gas Equipment & Services,USA,6163.09,5.86,15.84,0.00%,0
-697,NRIX,Nurix Therapeutics Inc,Healthcare,Biotechnology,USA,1474.81,,20.82,0.00%,0
-699,NSSC,NAPCO Security Technologies Inc,Industrials,Security & Protection Services,USA,1496.71,29.99,40.8,0.00%,0
-700,NTLA,Intellia Therapeutics Inc,Healthcare,Biotechnology,USA,1488.01,,14.61,0.83%,2403
-701,NTRA,Natera Inc,Healthcare,Diagnostics & Research,USA,23044.23,,174.55,0.32%,1777
-703,NUE,Nucor Corp,Basic Materials,Steel,USA,35059.92,14.43,149.31,0.00%,0
-705,NVAX,"Novavax, Inc",Healthcare,Biotechnology,USA,1327.94,,8.29,-0.12%,15009
-706,NVDA,NVIDIA Corp,Technology,Semiconductors,USA,3557662.41,57.22,145.27,0.09%,1563051
-711,NXE,NexGen Energy Ltd,Energy,Uranium,Canada,4706.45,47.9,8.33,0.00%,0
-713,NXT,Nextracker Inc,Technology,Solar,USA,5565.78,10.41,38.24,0.03%,381
-720,OII,"Oceaneering International, Inc",Energy,Oil & Gas Equipment & Services,USA,2903.45,21.66,28.73,0.00%,0
-722,OKE,Oneok Inc,Energy,Oil & Gas Midstream,USA,63356.23,22.7,108.44,-0.28%,299
-724,OLPX,Olaplex Holdings Inc,Consumer Cyclical,Specialty Retail,USA,1365.62,32.34,2.06,0.00%,0
-727,OMF,OneMain Holdings Inc,Financial,Credit Services,USA,6832.92,12.55,57.25,0.00%,0
-730,ON,ON Semiconductor Corp,Technology,Semiconductors,USA,28081.34,16.37,65.95,-0.03%,5959
-736,OPEN,Opendoor Technologies Inc,Real Estate,Real Estate Services,USA,1573.15,,2.2,0.46%,172926
-737,OPK,Opko Health Inc,Healthcare,Diagnostics & Research,USA,1071.49,,1.57,0.64%,10002
-742,OSCR,Oscar Health Inc,Healthcare,Healthcare Plans,USA,4223.35,,17.08,0.71%,10863
-745,OUT,Outfront Media Inc,Real Estate,REIT - Specialty,USA,3168.67,14.12,19.09,0.00%,0
-746,OVV,Ovintiv Inc,Energy,Oil & Gas E&P,USA,11058.59,5.64,42.48,-0.31%,62
-747,OXM,"Oxford Industries, Inc",Consumer Cyclical,Apparel Manufacturing,USA,1286.86,45.06,81.99,0.86%,4
-748,OXY,Occidental Petroleum Corp,Energy,Oil & Gas E&P,USA,45941.28,12.75,48.96,0.12%,89188
-749,PAA,Plains All American Pipeline LP,Energy,Oil & Gas Midstream,USA,12778.63,16.16,18.16,0.00%,0
-752,PAGP,Plains GP Holdings LP,Energy,Oil & Gas Midstream,USA,15121.18,23.19,19.57,0.00%,0
-753,PAR,Par Technology Corp,Technology,Software - Application,USA,2889.16,,79.58,0.00%,0
-754,PARA,Paramount Global,Communication Services,Entertainment,USA,7836.87,,11.02,0.00%,0
-756,PATK,"Patrick Industries, Inc",Consumer Cyclical,"Furnishings, Fixtures & Appliances",USA,3048.83,19.55,136.11,-1.37%,1081
-757,PAY,Paymentus Holdings Inc,Technology,Software - Infrastructure,USA,4663.11,117.68,37.41,0.27%,125
-758,PBF,PBF Energy Inc,Energy,Oil & Gas Refining & Marketing,USA,3603.36,,31.3,0.00%,0
-759,PBI,"Pitney Bowes, Inc",Industrials,Integrated Freight & Logistics,USA,1435.44,,7.9,0.00%,0
-760,PCT,PureCycle Technologies Inc,Industrials,Pollution & Treatment Controls,USA,2236.31,,12.89,0.00%,0
-761,PDFS,PDF Solutions Inc,Technology,Software - Application,USA,1235.69,283.04,31.87,0.00%,0
-765,PEB,Pebblebrook Hotel Trust,Real Estate,REIT - Hotel & Motel,USA,1752.31,,14.64,0.00%,0
-766,PENG,Penguin Solutions Inc,Technology,Information Technology Services,USA,1047.68,,19.66,0.00%,0
-767,PENN,PENN Entertainment Inc,Consumer Cyclical,Resorts & Casinos,USA,3319.69,,21.75,-0.73%,40
-770,PFSI,PennyMac Financial Services Inc,Financial,Mortgage Finance,USA,5414.87,33.57,105.64,0.00%,0
-773,PHM,PulteGroup Inc,Consumer Cyclical,Residential Construction,USA,26517.13,9.53,129.3,0.00%,1370
-775,PI,Impinj Inc,Technology,Communication Equipment,USA,5362.38,223.88,189.56,0.00%,0
-776,PII,Polaris Inc,Consumer Cyclical,Recreational Vehicles,USA,3655.19,18.35,65.54,0.00%,0
-778,PK,Park Hotels & Resorts Inc,Real Estate,REIT - Hotel & Motel,USA,3265.32,10.03,15.82,0.00%,0
-780,PLAY,Dave & Buster's Entertainment Inc,Communication Services,Entertainment,USA,1471.05,13.67,37.43,0.00%,0
-784,PLNT,Planet Fitness Inc,Consumer Cyclical,Leisure,USA,8374.57,53.22,98.91,-0.55%,117
-785,PLSE,Pulse Biosciences Inc,Healthcare,Medical Instruments & Supplies,USA,1181.74,,19.21,-2.88%,1
-786,PLTR,Palantir Technologies Inc,Technology,Software - Infrastructure,USA,159917.07,355.44,70.2,0.50%,512654
-787,PLUG,Plug Power Inc,Industrials,Electrical Equipment & Parts,USA,1913.51,,2.1,-1.41%,351148
-789,PNTG,Pennant Group Inc,Healthcare,Medical Care Facilities,USA,1064.46,45.05,30.99,0.00%,137
-790,PR,Permian Resources Corp,Energy,Oil & Gas E&P,USA,12098.67,9.16,15.06,-0.59%,1024
-791,PRAX,Praxis Precision Medicines Inc,Healthcare,Biotechnology,USA,1386.83,,74.41,0.28%,328
-793,PRG,PROG Holdings Inc,Industrials,Rental & Leasing Services,USA,1988.68,13.21,47.87,0.00%,0
-794,PRKS,United Parks & Resorts Inc,Consumer Cyclical,Leisure,USA,3266.11,14.91,59.38,0.00%,0
-801,PSFE,Paysafe Limited,Technology,Software - Infrastructure,United Kingdom,1192.37,,19.62,0.00%,0
-804,PTEN,Patterson-UTI Energy Inc,Energy,Oil & Gas Drilling,USA,3193.74,,8.19,0.00%,5728
-805,PTGX,Protagonist Therapeutics Inc,Healthcare,Biotechnology,USA,2418.49,15.22,40.58,0.00%,0
-807,PTON,Peloton Interactive Inc,Consumer Cyclical,Leisure,USA,3604.79,,9.45,-0.94%,46241
-811,PVH,PVH Corp,Consumer Cyclical,Apparel Manufacturing,USA,5901.23,8.39,105.73,-6.32%,1052
-818,QS,QuantumScape Corp,Consumer Cyclical,Auto Parts,USA,2721.22,,5.31,8.37%,410406
-820,QTWO,Q2 Holdings Inc,Technology,Software - Application,USA,6704.51,,111,0.75%,258
-824,QXO,QXO Inc,Technology,Software - Application,USA,7140.46,,17.44,0.00%,0
-826,RBC,RBC Bearings Inc,Industrials,Tools & Accessories,USA,10670.07,49.5,339.71,0.00%,0
-827,RBLX,Roblox Corporation,Communication Services,Electronic Gaming & Multimedia,USA,35961.11,,54.8,0.48%,8911
-830,RCL,Royal Caribbean Group,Consumer Cyclical,Travel Services,USA,67329.05,26.3,250.41,0.27%,938
-832,RDFN,Redfin Corp,Real Estate,Real Estate Services,USA,1198.89,,9.67,0.42%,3929
-834,RDNT,Radnet Inc,Healthcare,Diagnostics & Research,USA,5952.49,,80.41,-0.56%,968
-841,RES,"RPC, Inc",Energy,Oil & Gas Equipment & Services,USA,1365.07,11.55,6.35,0.00%,0
-842,REVG,REV Group Inc,Industrials,Farm & Heavy Construction Machinery,USA,1688.91,7.76,32.48,0.00%,0
-843,REZI,Resideo Technologies Inc,Industrials,Industrial Distribution,USA,4050.54,23.28,27.56,0.00%,0
-847,RH,RH,Consumer Cyclical,Specialty Retail,USA,6950.79,220.52,376.07,0.00%,0
-848,RHP,Ryman Hospitality Properties Inc,Real Estate,REIT - Hotel & Motel,USA,7046.17,20.95,117.63,-0.43%,25
-850,RITM,Rithm Capital Corporation,Real Estate,REIT - Mortgage,USA,5795.02,11.3,11.15,0.00%,0
-851,RIVN,Rivian Automotive Inc,Consumer Cyclical,Auto Manufacturers,USA,12287.85,,12.04,0.66%,160175
-852,RKLB,Rocket Lab USA Inc,Industrials,Aerospace & Defense,USA,11647.93,,23.3,0.82%,256886
-853,RKT,Rocket Companies Inc,Financial,Mortgage Finance,USA,27427.33,,13.75,0.00%,0
-854,RL,Ralph Lauren Corp,Consumer Cyclical,Apparel Manufacturing,USA,14383.83,22.05,231.56,-0.56%,389
-856,RLJ,RLJ Lodging Trust,Real Estate,REIT - Hotel & Motel,USA,1633.25,36.63,10.6,0.00%,0
-859,ROKU,Roku Inc,Communication Services,Entertainment,USA,12125.58,,83.51,0.69%,12800
-860,ROOT,Root Inc,Financial,Insurance - Property & Casualty,USA,1374.1,,91,0.61%,429
-863,RRC,Range Resources Corp,Energy,Oil & Gas E&P,USA,8395.16,17.67,34.79,0.00%,0
-865,RRR,Red Rock Resorts Inc,Consumer Cyclical,Resorts & Casinos,USA,5269.33,21.65,49.89,0.00%,0
-866,RSI,Rush Street Interactive Inc,Consumer Cyclical,Gambling,USA,3227.45,,14.3,0.00%,0
-867,RUN,Sunrun Inc,Technology,Solar,USA,2411.64,,10.75,0.37%,11202
-868,RVLV,Revolve Group Inc,Consumer Cyclical,Internet Retail,USA,2545.96,63.26,35.98,0.84%,259
-875,RYTM,Rhythm Pharmaceuticals Inc,Healthcare,Biotechnology,USA,3748.88,,61,1.04%,468
-876,SABR,Sabre Corp,Technology,Software - Infrastructure,USA,1481.68,,3.84,0.00%,0
-878,SAFE,Safehold Inc,Real Estate,REIT - Diversified,USA,1516.59,12.52,21.23,0.00%,0
-879,SAH,"Sonic Automotive, Inc",Consumer Cyclical,Auto & Truck Dealerships,USA,2334.5,12.14,68.28,0.00%,0
-880,SAIA,Saia Inc,Industrials,Trucking,USA,14480.75,38.88,544.49,0.39%,1681
-884,SBGI,Sinclair Inc,Communication Services,Broadcasting,USA,1169,,17.6,0.00%,0
-885,SBH,Sally Beauty Holdings Inc,Consumer Cyclical,Specialty Retail,USA,1413.09,9.64,13.87,0.00%,0
-890,SDGR,Schrodinger Inc,Healthcare,Health Information Services,USA,1618.27,,22.23,0.00%,0
-893,SEMR,SEMrush Holdings Inc,Technology,Software - Application,USA,2080.23,177.69,14.18,0.00%,0
-895,SEZL,Sezzle Inc,Financial,Credit Services,USA,2067.73,39.19,368.58,0.01%,121
-897,SG,Sweetgreen Inc,Consumer Cyclical,Restaurants,USA,4660.5,,40.29,-0.49%,4933
-902,SGRY,Surgery Partners Inc,Healthcare,Medical Care Facilities,USA,2862.6,,22.52,0.00%,0
-903,SHAK,Shake Shack Inc,Consumer Cyclical,Restaurants,USA,5668.57,735.96,133.43,0.00%,480
-904,SHC,Sotera Health Co,Healthcare,Diagnostics & Research,USA,3761.41,53.51,13.28,0.00%,0
-906,SHOP,Shopify Inc,Technology,Software - Application,Canada,146821.32,106.92,113.63,0.18%,14173
-910,SITE,SiteOne Landscape Supply Inc,Industrials,Industrial Distribution,USA,6664.36,47.56,147.7,-0.57%,6
-911,SITM,SiTime Corp,Technology,Semiconductors,USA,5163.7,,221.03,-1.07%,456
-914,SKT,Tanger Inc,Real Estate,REIT - Retail,USA,4084.56,42.66,36.9,0.00%,0
-915,SKY,Champion Homes Inc,Consumer Cyclical,Residential Construction,USA,5883.83,39.72,102.5,-1.15%,185
-919,SKYW,Skywest Inc,Industrials,Airlines,USA,4585.27,19.42,113.7,0.33%,229
-921,SLB,Schlumberger Ltd,Energy,Oil & Gas Equipment & Services,USA,60298.99,13.74,42.7,-0.09%,8092
-925,SLG,SL Green Realty Corp,Real Estate,REIT - Office,USA,5707.05,,74.88,0.66%,616
-929,SM,SM Energy Co,Energy,Oil & Gas E&P,USA,4797.56,5.86,41.93,0.00%,0
-931,SMG,Scotts Miracle-Gro Company,Basic Materials,Agricultural Inputs,USA,4359.99,,75.95,0.00%,0
-933,SMTC,Semtech Corp,Technology,Semiconductors,USA,5027.62,,66.43,-3.86%,3839
-942,SOFI,SoFi Technologies Inc,Financial,Credit Services,USA,17264.69,134.49,15.91,-2.51%,861750
-947,SONO,Sonos Inc,Technology,Consumer Electronics,USA,1783.84,,14.65,0.00%,0
-948,SOUN,SoundHound AI Inc,Technology,Software - Application,USA,3874.98,,10.48,3.25%,748591
-951,SPG,"Simon Property Group, Inc",Real Estate,REIT - Retail,USA,68110.85,23.69,181.4,-0.06%,76
-954,SPR,Spirit Aerosystems Holdings Inc,Industrials,Aerospace & Defense,USA,3852.26,,32.95,0.00%,0
-956,SQ,Block Inc,Technology,Software - Infrastructure,USA,61888.43,56.1,99.85,0.94%,76191
-964,STR,Sitio Royalties Corp,Energy,Oil & Gas E&P,USA,3530.81,,23.09,0.00%,0
-967,STWD,Starwood Property Trust Inc,Real Estate,REIT - Mortgage,USA,6729.7,16.97,19.96,0.00%,0
-975,SYF,Synchrony Financial,Financial,Credit Services,USA,26086.07,8.74,67,0.27%,470
-976,SYM,Symbotic Inc,Industrials,Specialty Industrial Machinery,USA,15158.89,,25.87,-1.00%,23382
-978,SYRE,Spyre Therapeutics Inc,Healthcare,Biotechnology,USA,1643.19,3.04,27.99,0.00%,0
-980,TALO,Talos Energy Inc,Energy,Oil & Gas E&P,USA,1911.19,19.94,10.62,0.00%,0
-982,TASK,TaskUs Inc,Technology,Information Technology Services,USA,1372.66,26.5,15.37,2.40%,8
-986,TEX,Terex Corp,Industrials,Farm & Heavy Construction Machinery,USA,3681.35,8.03,55.11,-0.95%,13
-987,TFII,TFI International Inc,Industrials,Trucking,Canada,13228.52,28.39,156.31,2.56%,24
-989,TGI,Triumph Group Inc,Industrials,Aerospace & Defense,USA,1494.41,,19.32,0.00%,0
-990,TGTX,TG Therapeutics Inc,Healthcare,Biotechnology,USA,5273.94,,33.88,0.00%,0
-992,THC,Tenet Healthcare Corp,Healthcare,Medical Care Facilities,USA,13436.26,4.52,141.29,-0.16%,568
-993,THO,"Thor Industries, Inc",Consumer Cyclical,Recreational Vehicles,USA,5575.74,21.24,105,0.00%,0
-996,TILE,Interface Inc,Industrials,Building Products & Equipment,USA,1541.55,18.41,26.44,0.00%,0
-999,TLRY,Tilray Brands Inc,Healthcare,Drug Manufacturers - Specialty & Generic,Canada,1156.21,,1.28,0.00%,54964
-1002,TMDX,Transmedics Group Inc,Healthcare,Medical Devices,USA,2413.08,77.03,71.9,-0.43%,4275
-1003,TMHC,Taylor Morrison Home Corp,Consumer Cyclical,Residential Construction,USA,7286.91,9.31,70.42,0.00%,0
-1006,TNL,Travel+Leisure Co,Consumer Cyclical,Travel Services,USA,3774.59,10.15,55.18,0.00%,0
-1010,TOL,Toll Brothers Inc,Consumer Cyclical,Residential Construction,USA,15818.27,10.79,156.66,0.47%,72
-1012,TOST,Toast Inc,Technology,Software - Infrastructure,USA,21413.6,,37.7,-1.15%,19453
-1014,TPC,Tutor Perini Corp,Industrials,Engineering & Construction,USA,1419.93,,27.08,0.00%,0
-1015,TPH,Tri Pointe Homes Inc,Consumer Cyclical,Residential Construction,USA,3930.78,8.71,42,-0.52%,16
-1017,TPL,Texas Pacific Land Corporation,Energy,Oil & Gas E&P,USA,31935.13,71.31,1390,0.15%,189
-1018,TPR,Tapestry Inc,Consumer Cyclical,Luxury Goods,USA,14797.77,18.37,63.5,-0.52%,555
-1020,TPX,Tempur Sealy International Inc,Consumer Cyclical,"Furnishings, Fixtures & Appliances",USA,9724.56,25.61,56,0.00%,0
-1022,TRGP,Targa Resources Corp,Energy,Oil & Gas Midstream,USA,42620.49,35.21,195.45,0.00%,0
-1023,TRMB,Trimble Inc,Technology,Scientific & Technical Instruments,USA,18576.87,12.71,76.07,1.05%,56
-1025,TROX,Tronox Holdings plc,Basic Materials,Chemicals,USA,1888.78,,11.96,0.00%,0
-1027,TRU,TransUnion,Financial,Financial Data & Stock Exchanges,USA,19630.33,87.98,100.72,0.00%,0
-1029,TRUP,Trupanion Inc,Financial,Insurance - Specialty,USA,2359.38,,55.72,0.00%,0
-1033,TSLA,Tesla Inc,Consumer Cyclical,Auto Manufacturers,USA,1153920.21,98.47,359.47,0.43%,960227
-1038,TWO,Two Harbors Investment Corp,Real Estate,REIT - Mortgage,USA,1215.82,,11.73,0.00%,0
-1039,TWST,Twist Bioscience Corp,Healthcare,Diagnostics & Research,USA,3112.06,,52.43,0.00%,0
-1040,TXG,10x Genomics Inc,Healthcare,Health Information Services,USA,1935.66,,15.99,0.00%,0
-1042,U,Unity Software Inc,Technology,Software - Application,USA,10683.32,,26.52,0.68%,61098
-1043,UA,Under Armour Inc,Consumer Cyclical,Apparel Manufacturing,USA,4165.27,,9.06,0.00%,0
-1044,UAA,Under Armour Inc,Consumer Cyclical,Apparel Manufacturing,USA,4173.46,,10.19,0.20%,2502
-1047,UCTT,Ultra Clean Hldgs Inc,Technology,Semiconductor Equipment & Materials,USA,1803.75,542.41,40.03,0.00%,0
-1048,UDMY,Udemy Inc,Consumer Defensive,Education & Training Services,USA,1246,,8.54,0.00%,0
-1049,UE,Urban Edge Properties,Real Estate,REIT - Retail,USA,3005.59,10.21,22.81,0.00%,0
-1050,UEC,Uranium Energy Corp,Energy,Uranium,USA,3344.73,,8.13,-0.73%,15850
-1052,UHAL-B,U-Haul Holding Company,Industrials,Rental & Leasing Services,USA,12983.48,28.85,65.51,-0.85%,10
-1053,ULCC,Frontier Group Holdings Inc,Industrials,Airlines,USA,1354.49,,6.01,0.00%,0
-1056,UP,Wheels Up Experience Inc,Industrials,Airports & Air Services,USA,1500.29,,2.15,1.90%,1151
-1057,UPBD,Upbound Group Inc,Technology,Software - Application,USA,1864.71,23.54,34.09,0.00%,0
-1058,UPST,Upstart Holdings Inc,Financial,Credit Services,USA,6803.79,,74.58,-0.07%,19934
-1059,UPWK,Upwork Inc,Communication Services,Internet Content & Information,USA,2332.49,28.01,17.45,0.00%,0
-1060,URBN,"Urban Outfitters, Inc",Consumer Cyclical,Apparel Retail,USA,4848.28,15.04,52.55,0.00%,0
-1061,URI,"United Rentals, Inc",Industrials,Rental & Leasing Services,USA,56975.98,22.68,868.24,0.00%,0
-1063,USFD,US Foods Holding Corp,Consumer Defensive,Food Distribution,USA,16769.26,30.93,71.99,0.00%,0
-1066,UUUU,Energy Fuels Inc,Energy,Uranium,USA,1350.64,,6.87,-0.15%,7256
-1067,UWMC,UWM Holdings Corporation,Financial,Mortgage Finance,USA,10416.25,,6.34,0.00%,0
-1068,VAC,Marriott Vacations Worldwide Corp,Consumer Cyclical,Resorts & Casinos,USA,3376.26,18.39,96.71,-0.58%,221
-1071,VCEL,Vericel Corp,Healthcare,Biotechnology,USA,2870.19,930.4,58.15,0.00%,0
-1072,VCYT,Veracyte Inc,Healthcare,Diagnostics & Research,USA,3325.51,,42.91,-2.68%,6513
-1075,VET,Vermilion Energy Inc,Energy,Oil & Gas E&P,Canada,1549.45,,9.99,0.00%,0
-1076,VFC,VF Corp,Consumer Cyclical,Apparel Manufacturing,USA,8066.69,,20.72,-0.34%,48
-1081,VMEO,Vimeo Inc,Technology,Software - Application,USA,1119.49,34.19,6.75,0.00%,0
-1083,VNO,Vornado Realty Trust,Real Estate,REIT - Office,USA,9089.47,,43.77,0.00%,0
-1084,VNOM,Viper Energy Inc,Energy,Oil & Gas Midstream,USA,9806.67,22.28,52.05,0.00%,0
-1089,VRN,Veren Inc,Energy,Oil & Gas E&P,Canada,3139.25,3.66,5.1,0.00%,0
-1090,VRT,Vertiv Holdings Co,Industrials,Electrical Equipment & Parts,USA,49694.49,88.1,132.4,1.16%,11903
-1092,VSCO,Victoria's Secret & Co,Consumer Cyclical,Apparel Retail,USA,3431.56,25.38,43.7,-0.46%,1912
-1093,VSEC,VSE Corp,Industrials,Aerospace & Defense,USA,2386.13,149.11,116.9,0.00%,0
-1094,VSTS,Vestis Corp,Industrials,Rental & Leasing Services,USA,2151.83,102.83,16.36,0.00%,0
-1095,VTLE,Vital Energy Inc,Energy,Oil & Gas E&P,USA,1194.95,2.2,31.32,1.00%,142
-1100,VYX,NCR Voyix Corp,Technology,Information Technology Services,USA,2085.88,,14.29,0.00%,0
-1101,VZIO,VIZIO Holding Corp,Technology,Consumer Electronics,USA,2298.71,1418.75,11.35,0.00%,0
-1103,W,Wayfair Inc,Consumer Cyclical,Internet Retail,USA,6234.62,,49.75,0.12%,1156
-1105,WBD,Warner Bros. Discovery Inc,Communication Services,Entertainment,USA,26126.21,,10.65,0.00%,13787
-1106,WCC,"Wesco International, Inc",Industrials,Industrial Distribution,USA,10390.8,16.97,212.05,0.47%,549
-1107,WD,Walker & Dunlop Inc,Financial,Mortgage Finance,USA,3682.58,38.93,109.06,0.00%,0
-1108,WEAV,Weave Communications Inc,Healthcare,Health Information Services,USA,1027.53,,14.12,0.00%,0
-1109,WES,Western Midstream Partners LP,Energy,Oil & Gas Midstream,USA,15229.83,10.24,40.02,0.00%,0
-1110,WEX,WEX Inc,Technology,Software - Infrastructure,USA,7300.24,23.25,183.5,-0.22%,222
-1111,WFG,"West Fraser Timber Co., Ltd",Basic Materials,Lumber & Wood Production,Canada,7608.5,,94.81,0.00%,0
-1112,WFRD,Weatherford International plc,Energy,Oil & Gas Equipment & Services,USA,6179.05,11.91,85.05,0.29%,193
-1113,WGO,"Winnebago Industries, Inc",Consumer Cyclical,Recreational Vehicles,USA,1637.06,218.82,56.61,0.00%,0
-1114,WGS,GeneDx Holdings Corp,Healthcare,Health Information Services,USA,2187.55,,79.63,0.00%,0
-1115,WHD,Cactus Inc,Energy,Oil & Gas Equipment & Services,USA,5259.71,23.4,66.09,0.00%,0
-1116,WING,Wingstop Inc,Consumer Cyclical,Restaurants,USA,9902.67,99.07,338.99,0.52%,599
-1119,WOOF,Petco Health and Wellness Co Inc,Consumer Cyclical,Specialty Retail,USA,1421.18,,5.18,2.57%,32597
-1121,WRBY,Warby Parker Inc,Healthcare,Medical Instruments & Supplies,USA,2850.78,,23.69,0.00%,0
-1123,WS,Worthington Steel Inc,Basic Materials,Steel,USA,2274.26,17.74,44.79,0.97%,170
-1124,WSM,"Williams-Sonoma, Inc",Consumer Cyclical,Specialty Retail,USA,22899.05,22,186.02,-0.52%,95
-1125,WTTR,Select Water Solutions Inc,Energy,Oil & Gas Equipment & Services,USA,1740.73,24.86,14.59,0.00%,0
-1128,WWW,"Wolverine World Wide, Inc",Consumer Cyclical,Footwear & Accessories,USA,1920.01,,23.98,0.00%,0
-1129,WYNN,Wynn Resorts Ltd,Consumer Cyclical,Resorts & Casinos,USA,10406.07,11.45,94.76,-0.03%,173
-1131,X,United States Steel Corp,Basic Materials,Steel,USA,8691.6,25.25,38.6,0.55%,14180
-1135,XHR,Xenia Hotels & Resorts Inc,Real Estate,REIT - Hotel & Motel,USA,1646.38,69.55,16.17,0.00%,0
-1137,XPEL,XPEL Inc,Consumer Cyclical,Auto Parts,USA,1266.54,26.07,45.81,0.00%,0
-1138,XPEV,XPeng Inc ADR,Consumer Cyclical,Auto Manufacturers,China,9880.98,,12.78,0.00%,33262
-1139,XPO,XPO Inc,Industrials,Trucking,USA,18158.7,50.6,156,0.56%,834
-1140,XRX,Xerox Holdings Corp,Technology,Information Technology Services,USA,1093.25,,8.79,0.00%,0
-1143,YETI,YETI Holdings Inc,Consumer Cyclical,Leisure,USA,3622.05,18.36,42.7,0.00%,0
-1145,Z,Zillow Group Inc,Communication Services,Internet Content & Information,USA,19093.54,,82.49,0.00%,0
-1146,ZBRA,Zebra Technologies Corp,Technology,Communication Equipment,USA,21174.12,55.71,410.51,-0.35%,587
-1147,ZG,Zillow Group Inc,Communication Services,Internet Content & Information,USA,19093.54,,79.31,0.00%,0
-1152,ZUO,Zuora Inc,Technology,Software - Infrastructure,USA,1532.34,,9.98,0.00%,0
+1,AA,Alcoa Corp,Basic Materials,Aluminum,USA,9979.29,,39.12,-1.26%,3602623
+2,AAOI,Applied Optoelectronics Inc,Technology,Communication Equipment,USA,1812.89,,36.43,10.39%,4420083
+3,ABR,Arbor Realty Trust Inc,Real Estate,REIT - Mortgage,USA,2759.78,11.14,14.45,1.26%,1700250
+4,ACHR,Archer Aviation Inc,Industrials,Aerospace & Defense,USA,4175.15,,8.39,17.02%,84219576
+5,ACLS,Axcelis Technologies Inc,Technology,Semiconductor Equipment & Materials,USA,2435.42,11.14,75.29,-0.49%,490249
+6,ACVA,ACV Auctions Inc,Consumer Cyclical,Auto & Truck Dealerships,USA,3299.08,,20.3,-3.06%,952239
+7,ADEA,Adeia Inc,Technology,Software - Application,USA,1580.02,39.32,14.38,0.56%,905491
+8,ADNT,Adient plc,Consumer Cyclical,Auto Parts,USA,1599.79,82.69,18.96,-0.58%,720329
+9,ADT,ADT Inc,Industrials,Security & Protection Services,USA,6476.53,7.84,7.2,-0.83%,3202284
+10,ADV,Advantage Solutions Inc,Communication Services,Advertising Agencies,USA,1100.22,,3.45,-0.58%,261394
+11,AFRM,Affirm Holdings Inc,Technology,Software - Infrastructure,USA,22826.91,,70.7,2.81%,8352301
+12,AI,C3.ai Inc,Technology,Software - Application,USA,5254.03,,39.46,3.16%,12272862
+13,AIR,AAR Corp,Industrials,Aerospace & Defense,USA,2253.33,34.89,63.22,-0.74%,269392
+14,AL,Air Lease Corp,Industrials,Rental & Leasing Services,USA,5509.82,11.25,49.42,0.10%,569356
+15,ALB,Albemarle Corp,Basic Materials,Specialty Chemicals,USA,11237.89,,99.38,-3.79%,1643917
+16,ALGM,Allegro Microsystems Inc,Technology,Semiconductors,USA,4114.98,,22,1.66%,1912573
+17,ALGN,"Align Technology, Inc",Healthcare,Medical Instruments & Supplies,USA,17547.98,40.13,235.39,-0.14%,519180
+18,ALGT,Allegiant Travel,Industrials,Airlines,USA,1513.89,,84.9,-2.79%,774666
+19,ALK,Alaska Air Group Inc,Industrials,Airlines,USA,7836.46,25.17,62.57,-1.34%,3724012
+20,AM,Antero Midstream Corp,Energy,Oil & Gas Midstream,USA,7296.96,18.79,15.11,0.33%,2265798
+21,AMAT,Applied Materials Inc,Technology,Semiconductor Equipment & Materials,USA,139835.78,19.67,169.35,0.16%,7051664
+22,AMBA,Ambarella Inc,Technology,Semiconductor Equipment & Materials,USA,3001.47,,72.53,-0.77%,512057
+23,AMC,AMC Entertainment Holdings Inc,Communication Services,Entertainment,USA,1546.45,,4.18,-3.02%,18338910
+24,AMD,Advanced Micro Devices Inc,Technology,Semiconductors,USA,200131.52,113.53,126.91,-2.83%,67544736
+25,AMKR,AMKOR Technology Inc,Technology,Semiconductor Equipment & Materials,USA,6585.29,17.96,26.54,0.61%,1451912
+26,AMRC,Ameresco Inc,Industrials,Engineering & Construction,USA,1302.73,24.94,25,-0.64%,224993
+27,AMWD,American Woodmark Corp,Consumer Cyclical,"Furnishings, Fixtures & Appliances",USA,1266.96,12.6,84.25,-0.11%,159579
+28,ANF,Abercrombie & Fitch Co,Consumer Cyclical,Apparel Retail,USA,7451.66,14.12,142.62,3.72%,1242792
+29,AORT,Artivion Inc,Healthcare,Medical Devices,USA,1189.31,,28.93,-1.93%,201425
+30,AOSL,Alpha & Omega Semiconductor Ltd,Technology,Semiconductors,USA,1257.12,,45.2,-4.20%,744709
+31,APA,APA Corporation,Energy,Oil & Gas E&P,USA,8427.51,3.24,22.86,-0.35%,4064586
+32,APAM,Artisan Partners Asset Management Inc,Financial,Asset Management,USA,3712.1,13.36,46.96,-1.63%,262231
+33,APG,APi Group Corporation,Industrials,Engineering & Construction,USA,10333.8,,37.63,-1.49%,1675645
+34,APGE,Apogee Therapeutics Inc,Healthcare,Biotechnology,USA,2614.42,,44.5,0.41%,692234
+35,APLD,Applied Digital Corporation,Technology,Information Technology Services,USA,1852,,8.9,-1.49%,10821438
+36,APO,Apollo Global Management Inc,Financial,Asset Management,USA,99838.31,18.57,176.43,0.01%,3166777
+37,APP,Applovin Corp,Technology,Software - Application,USA,108308.67,98.18,324.47,-0.53%,4704074
+38,APPN,Appian Corp,Technology,Software - Infrastructure,USA,2603.84,,36.82,-4.29%,307115
+39,AR,Antero Resources Corp,Energy,Oil & Gas E&P,USA,9865.14,225.26,32.37,-2.06%,2926701
+40,ARHS,Arhaus Inc,Consumer Cyclical,Home Improvement Retail,USA,1445.59,18.9,10.55,-2.50%,1094050
+41,ARI,Apollo Commercial Real Estate Finance Inc,Real Estate,REIT - Mortgage,USA,1253.37,,9.16,-0.97%,1196560
+42,ARIS,Aris Water Solutions Inc,Utilities,Utilities - Regulated Water,USA,1503.4,31.99,25.81,0.04%,441795
+43,ARLO,Arlo Technologies Inc,Industrials,Building Products & Equipment,USA,1175.85,,12.39,-5.42%,517760
+44,ARM,Arm Holdings plc. ADR,Technology,Semiconductors,United Kingdom,159657.41,251.51,151.91,2.64%,8140439
+45,ARMK,Aramark,Industrials,Specialty Business Services,USA,10579.77,40.81,40.17,-0.57%,1292578
+46,AROC,Archrock Inc,Energy,Oil & Gas Equipment & Services,USA,4576.9,28.62,25.99,0.54%,678948
+47,ARVN,Arvinas Inc,Healthcare,Biotechnology,USA,1323.62,,19.5,-1.22%,1704072
+48,ASPN,Aspen Aerogels Inc,Industrials,Building Products & Equipment,USA,1077.28,1173.21,13.14,-0.08%,1058666
+49,ASTS,AST SpaceMobile Inc,Technology,Communication Equipment,USA,6846.72,,23.48,0.64%,4759791
+50,ATKR,Atkore Inc,Industrials,Electrical Equipment & Parts,USA,2894.97,6.72,84.84,-2.24%,485074
+51,ATMU,Atmus Filtration Technologies Inc,Industrials,Pollution & Treatment Controls,USA,3358.11,18.87,40.72,-0.76%,449977
+52,ATS,ATS Corporation,Industrials,Specialty Industrial Machinery,Canada,3074.02,32.53,31.39,1.26%,83370
+53,ATUS,Altice USA Inc,Communication Services,Telecom Services,USA,1269.14,,2.68,2.68%,2337013
+54,AUR,Aurora Innovation Inc,Technology,Information Technology Services,USA,11342.75,,6.97,-5.30%,12618950
+55,AVNT,Avient Corp,Basic Materials,Specialty Chemicals,USA,4269.76,29.22,47.52,-1.66%,449799
+56,AZEK,AZEK Company Inc,Industrials,Building Products & Equipment,USA,7588.95,51.45,53.51,-0.83%,1299439
+57,AZTA,Azenta Inc,Healthcare,Medical Instruments & Supplies,USA,2003.02,,44.93,-2.20%,561708
+58,BA,Boeing Co,Industrials,Aerospace & Defense,USA,128262.73,,169.65,1.13%,9754901
+59,BBU,Brookfield Business Partners L.P,Industrials,Conglomerates,Canada,1758.95,2.93,23.68,-2.51%,30585
+60,BBUC,Brookfield Business Corp,Financial,Asset Management,USA,2541.47,,25.7,-1.42%,33833
+61,BBWI,Bath & Body Works Inc,Consumer Cyclical,Specialty Retail,USA,8459.26,9.32,38.22,2.19%,3182032
+62,BC,Brunswick Corp,Consumer Cyclical,Recreational Vehicles,USA,4766.32,18.29,73.59,-1.84%,598402
+63,BCC,Boise Cascade Co,Basic Materials,Building Materials,USA,5099.03,13.35,136.26,-2.56%,175880
+64,BCRX,Biocryst Pharmaceuticals Inc,Healthcare,Biotechnology,USA,1545.34,,7.53,-0.92%,1597453
+65,BE,Bloom Energy Corp,Industrials,Electrical Equipment & Parts,USA,6033.15,,25.59,3.14%,4808764
+66,BEAM,Beam Therapeutics Inc,Healthcare,Biotechnology,USA,2302.05,,27.93,-0.46%,879040
+67,BECN,Beacon Roofing Supply Inc,Industrials,Industrial Distribution,USA,6484.24,18.19,106.35,-1.48%,394031
+68,BFH,Bread Financial Holdings Inc,Financial,Credit Services,USA,3208.04,10.44,65.27,-1.14%,665755
+69,BHVN,Biohaven Ltd,Healthcare,Biotechnology,USA,3726.47,,38.47,-4.21%,956523
+70,BILL,BILL Holdings Inc,Technology,Software - Application,USA,8891.73,,87.84,-2.19%,1189020
+71,BIRK,Birkenstock Holding Plc,Consumer Cyclical,Footwear & Accessories,United Kingdom,10625.56,87.05,55.06,2.74%,1737832
+72,BLBD,Blue Bird Corp,Industrials,Farm & Heavy Construction Machinery,USA,1462.64,13.76,43.71,3.70%,622482
+73,BLD,TopBuild Corp,Industrials,Engineering & Construction,USA,9790.29,17.37,344.27,-3.61%,267755
+74,BLDR,Builders Firstsource Inc,Industrials,Building Products & Equipment,USA,18676.66,16.27,166.43,-2.49%,1407009
+75,BLFS,Biolife Solutions Inc,Healthcare,Medical Instruments & Supplies,USA,1237.61,,26.7,-0.07%,365400
+76,BLMN,Bloomin Brands Inc,Consumer Cyclical,Restaurants,USA,1025.97,,12.27,-1.45%,1401654
+77,BN,Brookfield Corporation,Financial,Asset Management,Canada,88517.02,124.85,58.68,-0.96%,2037045
+78,BOOT,Boot Barn Holdings Inc,Consumer Cyclical,Apparel Retail,USA,4343.26,28.97,144.49,-1.53%,522013
+79,BRDG,Bridge Investment Group Holdings Inc,Financial,Asset Management,USA,2366.79,,9.21,-1.29%,130094
+80,BROS,Dutch Bros Inc,Consumer Cyclical,Restaurants,USA,7955.41,177.44,52.06,-0.89%,1888195
+81,BRX,Brixmor Property Group Inc,Real Estate,REIT - Retail,USA,8729.64,26.65,28.88,0.07%,1831715
+82,BTE,Baytex Energy Corp,Energy,Oil & Gas E&P,Canada,1968.33,,2.5,-1.19%,6836012
+83,BURL,Burlington Stores Inc,Consumer Cyclical,Apparel Retail,USA,18412.04,39.72,289.97,0.02%,460946
+84,BWIN,The Baldwin Insurance Group Inc,Financial,Insurance Brokers,USA,4720.53,,40.96,-1.99%,673045
+85,BX,Blackstone Inc,Financial,Asset Management,USA,226273.84,64.77,188.42,-0.99%,3658236
+86,BXMT,Blackstone Mortgage Trust Inc,Real Estate,REIT - Mortgage,USA,3338.68,,19.29,0.05%,1243857
+87,BYD,Boyd Gaming Corp,Consumer Cyclical,Resorts & Casinos,USA,6670.15,14.32,74.95,0.69%,508034
+88,CAE,Cae Inc,Industrials,Aerospace & Defense,Canada,7416.78,,23.28,-0.72%,197470
+89,CAKE,Cheesecake Factory Inc,Consumer Cyclical,Restaurants,USA,2540.76,18.95,49.87,-0.18%,870050
+90,CALX,Calix Inc,Technology,Software - Infrastructure,USA,2309.28,,35.11,-0.82%,628110
+91,CAR,Avis Budget Group Inc,Industrials,Rental & Leasing Services,USA,3108,8.42,92.19,-4.06%,432011
+92,CARG,CarGurus Inc,Consumer Cyclical,Auto & Truck Dealerships,USA,3897.37,,37.67,-0.24%,388168
+93,CARS,Cars.com,Consumer Cyclical,Auto & Truck Dealerships,USA,1159.5,31.72,18.34,-2.34%,338602
+94,CAVA,Cava Group Inc,Consumer Cyclical,Restaurants,USA,14063.96,272.46,124.05,-1.05%,2470396
+95,CC,Chemours Company,Basic Materials,Specialty Chemicals,USA,2791.99,41.62,19.04,-1.86%,1100666
+96,CCL,Carnival Corp,Consumer Cyclical,Travel Services,USA,32139.46,23.06,25.9,-1.07%,13799141
+97,CCS,Century Communities Inc,Real Estate,Real Estate - Development,USA,2530.44,8.25,82.74,-2.41%,401289
+98,CDE,Coeur Mining Inc,Basic Materials,Gold,USA,2493.58,,6.56,-4.79%,9462010
+99,CDNA,Caredx Inc,Healthcare,Diagnostics & Research,USA,1192.68,,22.86,-2.72%,779623
+100,CEIX,Consol Energy Inc,Energy,Thermal Coal,USA,3379.19,8.56,116.48,-1.30%,301696
+101,CELH,Celsius Holdings Inc,Consumer Defensive,Beverages - Non-Alcoholic,USA,7424.94,44.11,31.79,-0.63%,8033604
+102,CENX,Century Aluminum Co,Basic Materials,Aluminum,USA,1886.98,6.8,20.87,-2.57%,620535
+103,CERT,Certara Inc,Healthcare,Health Information Services,USA,1808.54,,11.47,-2.05%,1828939
+104,CG,Carlyle Group Inc,Financial,Asset Management,USA,18675.78,177.48,52.64,-0.81%,1261164
+105,CHEF,Chefs' Warehouse Inc,Consumer Defensive,Food Distribution,USA,1929.47,43.1,48.75,0.06%,337681
+106,CHX,ChampionX Corp,Energy,Oil & Gas Equipment & Services,USA,5308.1,17.6,28.49,-2.20%,1277316
+107,CIM,Chimera Investment Corp,Real Estate,REIT - Mortgage,USA,1228.56,4.55,15.08,0.73%,457179
+108,CLDX,Celldex Therapeutics Inc,Healthcare,Biotechnology,USA,1619.52,,25.41,-3.93%,1040099
+109,CLF,Cleveland-Cliffs Inc,Basic Materials,Steel,USA,4698.05,,10.21,-6.84%,25976738
+110,CLMT,Calumet Inc,Energy,Oil & Gas E&P,USA,1798.77,,21.38,-2.06%,699423
+111,CLOV,Clover Health Investments Corp,Healthcare,Healthcare Plans,USA,1615.59,,3.11,3.67%,4402341
+112,CLS,"Celestica, Inc",Technology,Electronic Components,Canada,11542.91,31.37,99.2,9.00%,4118795
+113,CNH,CNH Industrial NV,Industrials,Farm & Heavy Construction Machinery,United Kingdom,14850.93,8.66,11.82,0.60%,5883543
+114,CNK,Cinemark Holdings Inc,Communication Services,Entertainment,USA,3831.59,20.68,32.16,-2.63%,1828850
+115,CNS,Cohen & Steers Inc,Financial,Asset Management,USA,4926.65,36.97,99.04,-1.61%,179887
+116,CNTA,Centessa Pharmaceuticals plc ADR,Healthcare,Biotechnology,United Kingdom,2181.61,,16.57,-1.78%,873593
+117,CODI,Compass Diversified Holdings,Industrials,Conglomerates,USA,1777.13,,23.62,-0.55%,127582
+118,COHR,Coherent Corp,Technology,Scientific & Technical Instruments,USA,16899.05,,106.64,2.46%,2093491
+119,COIN,Coinbase Global Inc,Financial,Financial Data & Stock Exchanges,USA,77162.41,53.09,310.58,-0.76%,5832592
+120,COMM,CommScope Holding Company Inc,Technology,Communication Equipment,USA,1236.98,,5.74,-0.17%,3459967
+121,COMP,Compass Inc,Real Estate,Real Estate Services,USA,3494.37,,6.77,-1.88%,3158432
+122,COTY,Coty Inc,Consumer Defensive,Household & Personal Products,USA,6550.44,44.51,7.5,0.40%,3696489
+123,CPRI,Capri Holdings Ltd,Consumer Cyclical,Luxury Goods,United Kingdom,2489.1,,21.36,-1.16%,2791141
+124,CROX,Crocs Inc,Consumer Cyclical,Footwear & Accessories,USA,6440.94,8.11,111.72,-1.08%,1095839
+125,CRS,Carpenter Technology Corp,Industrials,Metal Fabrication,USA,8526.64,38.77,174.09,-1.74%,585451
+126,CUBI,Customers Bancorp Inc,Financial,Banks - Regional,USA,1693.32,8.69,53.51,0.94%,214480
+127,CUK,Carnival plc ADR,Consumer Cyclical,Travel Services,United Kingdom,3404.48,20.93,23.51,-1.26%,1448955
+128,CVE,Cenovus Energy Inc,Energy,Oil & Gas Integrated,Canada,27855.95,10.58,15.25,0.93%,10866331
+129,CVI,CVR Energy Inc,Energy,Oil & Gas Refining & Marketing,USA,1887.06,27.15,18.91,-0.73%,1166026
+130,CVNA,Carvana Co,Consumer Cyclical,Auto & Truck Dealerships,USA,51643.94,29553.57,248.25,0.19%,1233211
+131,CWH,Camping World Holdings Inc,Consumer Cyclical,Auto & Truck Dealerships,USA,2195.36,,22.59,-2.42%,710723
+132,CZR,Caesars Entertainment Inc,Consumer Cyclical,Resorts & Casinos,USA,7697.51,,37.01,-2.12%,2394022
+133,DAN,Dana Inc,Consumer Cyclical,Auto Parts,USA,1861.83,,12.68,1.28%,1894064
+134,DASH,DoorDash Inc,Communication Services,Internet Content & Information,USA,72347.45,,175.09,-0.53%,2305444
+135,DAVE,Dave Inc,Technology,Software - Application,USA,1247.49,29.42,91.7,6.64%,369677
+136,DBD,Diebold Nixdorf Inc,Technology,Software - Application,USA,1843.46,0.85,48.41,1.34%,183350
+137,DBRG,DigitalBridge Group Inc,Real Estate,Real Estate Services,USA,2260.18,16.05,12.25,-0.97%,1112443
+138,DFH,Dream Finders Homes Inc,Consumer Cyclical,Residential Construction,USA,2608.46,9.84,28.74,-2.91%,672148
+139,DHI,D.R. Horton Inc,Consumer Cyclical,Residential Construction,USA,47707.12,10.44,149.87,-0.89%,4895541
+140,DJT,Trump Media & Technology Group Corp,Communication Services,Internet Content & Information,USA,8022.78,,36.59,1.08%,10797339
+141,DKL,Delek Logistics Partners LP,Energy,Oil & Gas Refining & Marketing,USA,2087.06,14.1,39.86,1.74%,165081
+142,DKNG,DraftKings Inc,Consumer Cyclical,Gambling,USA,33773.46,,39.88,-3.83%,10980103
+143,DKS,"Dicks Sporting Goods, Inc",Consumer Cyclical,Specialty Retail,USA,18577.41,15.96,223.39,2.07%,1027927
+144,DLX,Deluxe Corp,Industrials,Conglomerates,USA,1012.46,18.84,23.32,-1.93%,329280
+145,DNN,Denison Mines Corp,Energy,Uranium,Canada,1856.65,47.27,2.08,-3.26%,12740364
+146,DNOW,Dnow Inc,Industrials,Industrial Distribution,USA,1511.62,7.65,14.42,-0.96%,582953
+147,DOCN,DigitalOcean Holdings Inc,Technology,Software - Infrastructure,USA,3407.89,44.91,38.13,-3.15%,591396
+148,DOOO,BRP Inc,Consumer Cyclical,Recreational Vehicles,Canada,3775.35,27.53,51.71,0.37%,105404
+149,DRH,Diamondrock Hospitality Co,Real Estate,REIT - Hotel & Motel,USA,2004.55,33.76,9.65,-0.41%,1908878
+150,DVN,Devon Energy Corp,Energy,Oil & Gas E&P,USA,22092.75,6.28,33.88,-0.73%,10477198
+151,DXC,DXC Technology Co,Technology,Information Technology Services,USA,3838.29,272.68,21.46,-1.20%,1678918
+152,DXPE,"DXP Enterprises, Inc",Industrials,Industrial Distribution,USA,1234.12,20.53,79.6,-1.22%,221022
+153,EAT,"Brinker International, Inc",Consumer Cyclical,Restaurants,USA,5697.96,31.25,127.85,0.31%,573989
+154,ECPG,"Encore Capital Group, Inc",Financial,Mortgage Finance,USA,1170.36,,49.23,0.35%,87162
+155,EFC,Ellington Financial Inc,Real Estate,REIT - Mortgage,USA,1120.58,9.63,12.35,0.08%,712183
+156,EFX,"Equifax, Inc",Industrials,Consulting Services,USA,33012.27,58.98,265.81,0.20%,816277
+157,EFXT,Enerflex Ltd,Energy,Oil & Gas Equipment & Services,Canada,1175.99,,9.48,-0.11%,211034
+158,ENLC,Enlink Midstream LLC,Energy,Oil & Gas Midstream,USA,6664.24,63.54,14.64,-0.41%,2296397
+159,ENOV,Enovis Corp,Industrials,Specialty Industrial Machinery,USA,2535.23,,46.14,-1.66%,496454
+160,ENPH,Enphase Energy Inc,Technology,Solar,USA,10091.06,168.39,73.84,1.15%,1925151
+161,ENVX,Enovix Corporation,Industrials,Electrical Equipment & Parts,USA,1669.47,,8.98,-1.32%,3029670
+162,EPR,EPR Properties,Real Estate,REIT - Specialty,USA,3445.26,19.48,45.12,0.83%,529135
+163,ERO,Ero Copper Corp,Basic Materials,Copper,Canada,1414.18,76.91,13.69,-4.47%,579566
+164,ET,Energy Transfer LP,Energy,Oil & Gas Midstream,USA,64614.46,14.01,19.04,-0.88%,10819203
+165,ETSY,Etsy Inc,Consumer Cyclical,Internet Retail,USA,6680.11,30.1,58.98,0.68%,2822994
+166,EVGO,EVgo Inc,Consumer Cyclical,Specialty Retail,USA,1807.61,,6.09,-2.09%,12583452
+167,EVRI,Everi Holdings Inc,Consumer Cyclical,Gambling,USA,1160.88,90.52,13.46,0.00%,478563
+168,EXPE,Expedia Group Inc,Consumer Cyclical,Travel Services,USA,23288.87,23.59,183,-0.85%,871897
+169,EXPI,eXp World Holdings Inc,Real Estate,Real Estate Services,USA,1971.6,,12.86,-0.16%,1117340
+170,EXTR,Extreme Networks Inc,Technology,Communication Equipment,USA,2399.57,,18.17,-0.06%,591080
+171,F,Ford Motor Co,Consumer Cyclical,Auto Manufacturers,USA,41292.86,11.85,10.39,0.00%,40560680
+172,FANG,Diamondback Energy Inc,Energy,Oil & Gas E&P,USA,48019.84,9.35,163.34,0.68%,1718361
+173,FCX,Freeport-McMoRan Inc,Basic Materials,Copper,USA,59065.92,30.26,41.59,-1.16%,9669335
+174,FG,F&G Annuities & Life Inc,Financial,Insurance - Life,USA,5735.46,,44.64,1.89%,67040
+175,FLNC,Fluence Energy Inc,Utilities,Utilities - Renewable,USA,3128.06,323.96,17.17,0.59%,3408647
+176,FLR,Fluor Corporation,Industrials,Engineering & Construction,USA,9239.73,36.59,54.64,-1.41%,1631496
+177,FND,Floor & Decor Holdings Inc,Consumer Cyclical,Home Improvement Retail,USA,11693.42,61.16,110.47,-1.29%,1050200
+178,FOR,Forestar Group Inc,Real Estate,Real Estate - Development,USA,1384.78,6.95,27.84,-1.83%,135081
+179,FOUR,Shift4 Payments Inc,Technology,Software - Infrastructure,USA,9297.36,55.22,101.85,1.31%,1471074
+180,FOXF,Fox Factory Holding Corp,Consumer Cyclical,Auto Parts,USA,1270.2,122.17,31.3,-2.64%,757191
+181,FSM,Fortuna Mining Corp,Basic Materials,Gold,Canada,1475.78,64.7,4.71,-3.88%,7552442
+182,FTAI,FTAI Aviation Ltd,Industrials,Rental & Leasing Services,USA,13171.84,,131.72,-2.49%,2343598
+183,FTI,TechnipFMC plc,Energy,Oil & Gas Equipment & Services,USA,13239.12,20.4,31,0.39%,2355630
+184,FUN,Six Flags Entertainment Corp,Consumer Cyclical,Leisure,USA,4573.25,,46.1,-1.07%,1023405
+185,GAP,"Gap, Inc",Consumer Cyclical,Apparel Retail,USA,9201.96,11.29,24.29,0.45%,4814365
+186,GATO,Gatos Silver Inc,Basic Materials,Other Precious Metals & Mining,Canada,1033.07,31.75,15.27,-2.61%,390456
+187,GEL,Genesis Energy L.P,Energy,Oil & Gas Midstream,USA,1258.86,,10.59,-2.93%,630091
+188,GENI,Genius Sports Limited,Communication Services,Internet Content & Information,United Kingdom,2105.8,,9.15,0.22%,1735090
+189,GETY,Getty Images Holdings Inc,Communication Services,Internet Content & Information,USA,1089.41,20.43,2.67,-0.74%,435196
+190,GFS,GlobalFoundries Inc,Technology,Semiconductors,USA,24320.15,32.9,43.88,-0.23%,1031245
+191,GIII,G-III Apparel Group Ltd,Consumer Cyclical,Apparel Manufacturing,USA,1650.61,9.44,36.1,4.18%,624210
+192,GMS,GMS Inc,Industrials,Building Products & Equipment,USA,3481.71,16.72,91,-1.43%,336731
+193,GRBK,Green Brick Partners Inc,Consumer Cyclical,Residential Construction,USA,2793.73,8.34,64.22,-2.24%,289997
+194,GT,Goodyear Tire & Rubber Co,Consumer Cyclical,Auto Parts,USA,2846.39,,10.03,-0.40%,2392059
+195,GTLS,Chart Industries Inc,Industrials,Specialty Industrial Machinery,USA,8471.45,55.73,197.87,0.01%,853764
+196,GXO,GXO Logistics Inc,Industrials,Integrated Freight & Logistics,USA,5754.58,54.33,48.51,-0.72%,1043830
+197,HAL,Halliburton Co,Energy,Oil & Gas Equipment & Services,USA,25012.3,10.01,28.68,-0.73%,6643939
+198,HASI,HA Sustainable Infrastructure Capital Inc,Real Estate,Real Estate Services,USA,3491.9,16.7,29.75,-0.93%,1233873
+199,HBI,Hanesbrands Inc,Consumer Cyclical,Apparel Manufacturing,USA,3063.21,,8.71,-0.23%,3143253
+200,HBM,Hudbay Minerals Inc,Basic Materials,Copper,Canada,3040.53,37.18,8.66,-5.36%,8582012
+201,HCA,HCA Healthcare Inc,Healthcare,Medical Care Facilities,USA,80012,14.09,313.93,0.62%,1324512
+202,HEES,H&E Equipment Services Inc,Industrials,Rental & Leasing Services,USA,2041.07,14.17,55.89,-0.25%,177838
+203,HGV,Hilton Grand Vacations Inc,Consumer Cyclical,Resorts & Casinos,USA,3945.61,45.62,40.31,-0.62%,718031
+204,HL,Hecla Mining Co,Basic Materials,Other Precious Metals & Mining,USA,3359.01,,5.4,-2.35%,7944594
+205,HLMN,Hillman Solutions Corp,Industrials,Tools & Accessories,USA,2103.67,261.26,10.79,-0.83%,1110468
+206,HLX,Helix Energy Solutions Group Inc,Energy,Oil & Gas Equipment & Services,USA,1348.52,244.44,9.24,-4.05%,1954675
+207,HRI,Herc Holdings Inc,Industrials,Rental & Leasing Services,USA,5879.56,16.99,207.81,-0.39%,304519
+208,HSAI,Hesai Group ADR,Consumer Cyclical,Auto Parts,China,1094.25,,11.23,1.63%,1204420
+209,HTZ,Hertz Global Holdings Inc,Industrials,Rental & Leasing Services,USA,1276.09,,4.22,-1.40%,2721394
+210,HUBS,HubSpot Inc,Technology,Software - Application,USA,36624.2,,721.86,-1.72%,340579
+211,IAG,Iamgold Corp,Basic Materials,Gold,Canada,3050.21,4.17,5.34,-3.96%,5811727
+212,IBP,Installed Building Products Inc,Consumer Cyclical,Residential Construction,USA,5388.77,22.05,198.5,-3.53%,387535
+213,ICHR,Ichor Holdings Ltd,Technology,Semiconductor Equipment & Materials,USA,1058.55,,32.35,-3.00%,151667
+214,IGT,International Game Technology PLC,Consumer Cyclical,Gambling,United Kingdom,3759.31,30.88,18.7,-0.48%,753966
+215,INFN,Infinera Corp,Technology,Communication Equipment,USA,1562.9,,6.59,0.15%,1187793
+216,IONQ,IonQ Inc,Technology,Computer Hardware,USA,8257.89,,33.83,12.80%,24677316
+217,IOT,Samsara Inc,Technology,Software - Infrastructure,USA,25690.29,,46.08,-0.75%,3923336
+218,JANX,Janux Therapeutics Inc,Healthcare,Biotechnology,USA,3509.73,,61.11,-0.63%,907040
+219,JBLU,Jetblue Airways Corp,Industrials,Airlines,USA,2374.55,,7.04,-2.76%,13720109
+220,JOBY,Joby Aviation Inc,Industrials,Airports & Air Services,USA,6069.39,,7.78,1.97%,15531669
+221,JWN,"Nordstrom, Inc",Consumer Cyclical,Department Stores,USA,3936.32,14.78,23.18,2.98%,1437270
+222,KAR,Openlane Inc,Consumer Cyclical,Auto & Truck Dealerships,USA,2182.93,108.84,20.57,-0.68%,582289
+223,KBH,KB Home,Consumer Cyclical,Residential Construction,USA,5087.25,9.16,71.42,-2.87%,1404640
+224,KC,Kingsoft Cloud Holdings Ltd ADR,Technology,Software - Application,China,2323.8,,9.16,-4.88%,2790315
+225,KD,Kyndryl Holdings Inc,Technology,Information Technology Services,USA,8096.02,,35.31,-1.29%,1286840
+226,KFY,Korn Ferry,Industrials,Staffing & Employment Services,USA,3605.17,14.98,70.11,-0.31%,362706
+227,KKR,KKR & Co. Inc,Financial,Asset Management,USA,135848.18,47.75,154.34,-0.91%,2612607
+228,KMT,Kennametal Inc,Industrials,Tools & Accessories,USA,2052.19,20.91,26.68,-1.04%,501423
+229,KMX,Carmax Inc,Consumer Cyclical,Auto & Truck Dealerships,USA,13283.69,32.56,86.26,-0.60%,1331248
+230,KNTK,Kinetik Holdings Inc,Energy,Oil & Gas Midstream,USA,8743.45,20.97,56.81,-2.30%,383841
+231,KOS,Kosmos Energy Ltd,Energy,Oil & Gas E&P,USA,1357.28,6.64,3.01,-4.44%,22846332
+232,KRUS,Kura Sushi USA Inc,Consumer Cyclical,Restaurants,USA,1130.79,,96.93,-3.27%,85820
+233,KSS,Kohl's Corp,Consumer Cyclical,Department Stores,USA,1619.99,6.47,14.35,1.41%,7360020
+234,KYMR,Kymera Therapeutics Inc,Healthcare,Biotechnology,USA,2725.97,,42.13,-0.09%,426034
+235,LAD,"Lithia Motors, Inc",Consumer Cyclical,Auto & Truck Dealerships,USA,10144.5,12.99,380.57,0.07%,268770
+236,LADR,Ladder Capital Corp,Real Estate,REIT - Mortgage,USA,1493.57,15.48,11.84,-1.17%,739968
+237,LAMR,Lamar Advertising Co,Real Estate,REIT - Specialty,USA,13208.25,25.82,129,0.03%,311307
+238,LBRT,Liberty Energy Inc,Energy,Oil & Gas Equipment & Services,USA,3067.66,9.08,18.97,-1.04%,2347548
+239,LC,LendingClub Corp,Financial,Banks - Regional,USA,1887.6,35.72,16.56,1.41%,985171
+240,LEN,Lennar Corp,Consumer Cyclical,Residential Construction,USA,41369.15,10.22,154.39,-0.69%,2760570
+241,LGIH,LGI Homes Inc,Consumer Cyclical,Residential Construction,USA,2289.58,11.96,99.85,-2.48%,306546
+242,LMND,Lemonade Inc,Financial,Insurance - Property & Casualty,USA,3119.08,,41.91,4.23%,1767630
+243,LNC,Lincoln National Corp,Financial,Insurance - Life,USA,5636.76,23.38,32.95,0.43%,933839
+244,LNW,Light & Wonder Inc,Consumer Cyclical,Gambling,USA,7930.53,28.5,91.59,-1.95%,319458
+245,LOB,Live Oak Bancshares Inc,Financial,Banks - Regional,USA,1983.45,24.06,44.19,-0.67%,133096
+246,LPX,Louisiana-Pacific Corp,Industrials,Building Products & Equipment,USA,7746.47,19.42,112.83,-2.25%,388574
+247,LSPD,Lightspeed Commerce Inc,Technology,Software - Application,Canada,2465.66,,16.23,-1.81%,530083
+248,LTH,Life Time Group Holdings Inc,Consumer Cyclical,Leisure,USA,4631.27,33.05,22.75,-1.64%,1267536
+249,LYFT,Lyft Inc,Technology,Software - Application,USA,5585.07,,14.14,-4.78%,16070750
+250,M,Macy's Inc,Consumer Cyclical,Department Stores,USA,4668.12,27.85,16.56,1.53%,7830541
+251,MAC,Macerich Co,Real Estate,REIT - Retail,USA,5690.4,,21.5,2.38%,1124612
+252,MANH,"Manhattan Associates, Inc",Technology,Software - Application,USA,17528.31,84.73,298.17,-3.75%,305803
+253,MAR,"Marriott International, Inc",Consumer Cyclical,Lodging,USA,78977.08,30.02,287.08,-1.00%,797449
+254,MCRI,"Monarch Casino & Resort, Inc",Consumer Cyclical,Resorts & Casinos,USA,1598.4,19.31,87.24,-0.37%,124010
+255,MCW,Mister Car Wash Inc,Consumer Cyclical,Auto & Truck Dealerships,USA,2429.83,33.95,7.58,-0.52%,1335427
+256,MD,Pediatrix Medical Group Inc,Healthcare,Medical Care Facilities,USA,1199.81,,14.07,-0.71%,323416
+257,MDXG,Mimedx Group Inc,Healthcare,Biotechnology,USA,1306.11,15.65,9.16,-2.97%,504740
+258,MELI,MercadoLibre Inc,Consumer Cyclical,Internet Retail,USA,90146.34,64.35,1823.86,-2.51%,411336
+259,MFA,MFA Financial Inc,Real Estate,REIT - Mortgage,USA,1106.58,6.78,10.82,0.19%,795666
+260,MFIC,MidCap Financial Investment Corporation,Financial,Asset Management,USA,1285.73,8.9,13.71,0.29%,412888
+261,MGA,Magna International Inc,Consumer Cyclical,Auto Parts,Canada,12729.16,11.81,44.3,-1.34%,1076711
+262,MGM,MGM Resorts International,Consumer Cyclical,Resorts & Casinos,USA,10631.78,12.96,36.25,-1.49%,2843383
+263,MGNI,Magnite Inc,Communication Services,Advertising Agencies,USA,2321.4,143.34,16.47,0.18%,1523619
+264,MGY,Magnolia Oil & Gas Corp,Energy,Oil & Gas E&P,USA,4909.14,12.53,25.34,-1.44%,4122087
+265,MHO,MI Homes Inc,Consumer Cyclical,Residential Construction,USA,4033.37,8.14,151.87,-2.38%,291998
+266,MIDD,Middleby Corp,Industrials,Specialty Industrial Machinery,USA,7340.53,19.12,138.75,-1.65%,462111
+267,MKSI,"MKS Instruments, Inc",Technology,Scientific & Technical Instruments,USA,7551.02,242.56,112.55,-0.31%,578315
+268,MOD,Modine Manufacturing Co,Consumer Cyclical,Auto Parts,USA,7142.29,43.34,132.07,3.00%,699403
+269,MODG,Topgolf Callaway Brands Corp,Consumer Cyclical,Leisure,USA,1439.53,,7.92,-1.12%,2003051
+270,MP,MP Materials Corporation,Basic Materials,Other Industrial Metals & Mining,USA,3124.22,,19.37,-1.17%,2252623
+271,MQ,Marqeta Inc,Technology,Software - Infrastructure,USA,2014.62,169.62,4.02,-0.25%,4011364
+272,MRC,MRC Global Inc,Energy,Oil & Gas Equipment & Services,USA,1110.94,15.19,13.22,-1.42%,365019
+273,MRNA,Moderna Inc,Healthcare,Biotechnology,USA,15724.77,,41.83,-2.31%,4862132
+274,MSTR,Microstrategy Inc,Technology,Software - Application,USA,95676.17,,408.67,4.20%,21536882
+275,MTDR,Matador Resources Co,Energy,Oil & Gas E&P,USA,7039.84,7.51,56.69,-0.47%,930951
+276,MTH,Meritage Homes Corp,Consumer Cyclical,Residential Construction,USA,5783.98,7.62,168.43,-5.08%,741755
+277,MTSI,MACOM Technology Solutions Holdings Inc,Technology,Semiconductors,USA,10254.52,133.55,139.04,1.87%,657320
+278,MTZ,Mastec Inc,Industrials,Engineering & Construction,USA,10945.59,123.11,137.78,0.26%,474412
+279,MUR,Murphy Oil Corp,Energy,Oil & Gas E&P,USA,4391.5,9.79,30.29,-0.59%,970660
+280,MXL,MaxLinear Inc,Technology,Semiconductors,USA,1841.67,,20.68,5.56%,2194388
+281,MYGN,"Myriad Genetics, Inc",Healthcare,Diagnostics & Research,USA,1307.3,,14.43,-0.48%,1148550
+282,NCLH,Norwegian Cruise Line Holdings Ltd,Consumer Cyclical,Travel Services,USA,11779.78,26,26.8,-0.04%,7171363
+283,NFE,New Fortress Energy Inc,Utilities,Utilities - Regulated Gas,USA,3137.29,14.17,12.8,-2.51%,3895697
+284,NGVT,Ingevity Corp,Basic Materials,Specialty Chemicals,USA,1622.68,,45.83,-2.59%,291528
+285,NIO,NIO Inc ADR,Consumer Cyclical,Auto Manufacturers,China,8676.65,,4.51,-1.74%,31903260
+286,NLY,Annaly Capital Management Inc,Real Estate,REIT - Mortgage,USA,11098.86,,19.78,0.10%,5760361
+287,NMRA,Neumora Therapeutics Inc,Healthcare,Biotechnology,USA,1626.34,,10.32,-2.46%,860290
+288,NMRK,Newmark Group Inc,Real Estate,Real Estate Services,USA,2413.81,48.11,14.48,-2.56%,697605
+289,NOG,Northern Oil and Gas Inc,Energy,Oil & Gas E&P,USA,4014.57,4.89,40.71,-1.21%,1047075
+290,NOV,NOV Inc,Energy,Oil & Gas Equipment & Services,USA,5778.27,5.54,14.97,-0.80%,4663468
+291,NRIX,Nurix Therapeutics Inc,Healthcare,Biotechnology,USA,1415.6,,20.27,-1.41%,739206
+292,NSSC,NAPCO Security Technologies Inc,Industrials,Security & Protection Services,USA,1320.2,27.2,37,-2.73%,450020
+293,NTLA,Intellia Therapeutics Inc,Healthcare,Biotechnology,USA,1249.9,,12.9,-4.87%,3187759
+294,NTRA,Natera Inc,Healthcare,Diagnostics & Research,USA,22001.28,,166.55,0.06%,1211176
+295,NUE,Nucor Corp,Basic Materials,Steel,USA,28031.68,12.1,125.25,-4.69%,2790702
+296,NVAX,"Novavax, Inc",Healthcare,Biotechnology,USA,1473.85,,9.11,1.00%,3221919
+297,NVDA,NVIDIA Corp,Technology,Semiconductors,USA,3213811.07,52.88,134.25,-2.25%,231514880
+298,NXE,NexGen Energy Ltd,Energy,Uranium,Canada,4237.5,43.13,7.5,-3.72%,6386697
+299,NXT,Nextracker Inc,Technology,Solar,USA,5200.72,9.65,35.47,0.74%,1411073
+300,OII,"Oceaneering International, Inc",Energy,Oil & Gas Equipment & Services,USA,2589.4,19.5,25.87,-0.96%,778167
+301,OKE,Oneok Inc,Energy,Oil & Gas Midstream,USA,60523.68,21.78,104.03,-0.42%,1801787
+302,OLPX,Olaplex Holdings Inc,Consumer Cyclical,Specialty Retail,USA,1419.17,32.97,2.1,1.94%,2036974
+303,OMF,OneMain Holdings Inc,Financial,Credit Services,USA,6652.71,12.21,55.68,0.11%,1042863
+304,ON,ON Semiconductor Corp,Technology,Semiconductors,USA,27604.32,16.37,65.96,-1.71%,7179648
+305,OPEN,Opendoor Technologies Inc,Real Estate,Real Estate Services,USA,1344.91,,1.92,-2.04%,26196556
+306,OPK,Opko Health Inc,Healthcare,Diagnostics & Research,USA,1071.67,,1.59,-1.24%,3051900
+307,OSCR,Oscar Health Inc,Healthcare,Healthcare Plans,USA,3382.64,,13.66,0.15%,4261075
+308,OUT,Outfront Media Inc,Real Estate,REIT - Specialty,USA,3127.17,13.92,18.82,0.11%,1703103
+309,OVV,Ovintiv Inc,Energy,Oil & Gas E&P,USA,10344.02,5.37,40.51,-1.91%,2403231
+310,OXM,"Oxford Industries, Inc",Consumer Cyclical,Apparel Manufacturing,USA,1358.04,92.04,81.54,6.08%,628990
+311,OXY,Occidental Petroleum Corp,Energy,Oil & Gas E&P,USA,44192.46,12.41,47.64,-1.14%,10414890
+312,PAA,Plains All American Pipeline LP,Energy,Oil & Gas Midstream,USA,12435.24,15.89,17.86,-1.05%,6649539
+313,PAGP,Plains GP Holdings LP,Energy,Oil & Gas Midstream,USA,14635.85,22.67,19.13,-0.98%,571950
+314,PAR,Par Technology Corp,Technology,Software - Application,USA,2697.25,,75.63,-1.77%,176574
+315,PARA,Paramount Global,Communication Services,Entertainment,USA,7682.22,,11.22,-3.53%,5618791
+316,PATK,"Patrick Industries, Inc",Consumer Cyclical,"Furnishings, Fixtures & Appliances",USA,2983.74,19.34,89.73,-1.03%,381232
+317,PAY,Paymentus Holdings Inc,Technology,Software - Infrastructure,USA,4206.97,108.05,34.35,-1.74%,317066
+318,PBF,PBF Energy Inc,Energy,Oil & Gas Refining & Marketing,USA,3316.37,,29.26,-1.55%,1432300
+319,PBI,"Pitney Bowes, Inc",Industrials,Integrated Freight & Logistics,USA,1362.04,,7.71,-2.77%,2029106
+320,PCT,PureCycle Technologies Inc,Industrials,Pollution & Treatment Controls,USA,1987.78,,11.75,-2.49%,2433464
+321,PDFS,PDF Solutions Inc,Technology,Software - Application,USA,1162.46,268.03,30.18,-0.66%,98437
+322,PEB,Pebblebrook Hotel Trust,Real Estate,REIT - Hotel & Motel,USA,1729.59,,14.49,-0.28%,1006338
+323,PENG,Penguin Solutions Inc,Technology,Information Technology Services,USA,1063.69,,19.87,0.46%,817235
+324,PENN,PENN Entertainment Inc,Consumer Cyclical,Resorts & Casinos,USA,3296.86,,20.79,3.90%,5282843
+325,PFSI,PennyMac Financial Services Inc,Financial,Mortgage Finance,USA,5322.29,33.19,104.45,-0.59%,160390
+326,PHM,PulteGroup Inc,Consumer Cyclical,Residential Construction,USA,23829.05,8.73,118.42,-1.88%,2174743
+327,PI,Impinj Inc,Technology,Communication Equipment,USA,4060.94,178.32,150.98,-4.92%,746938
+328,PII,Polaris Inc,Consumer Cyclical,Recreational Vehicles,USA,3434.74,17.67,63.1,-2.40%,960981
+329,PK,Park Hotels & Resorts Inc,Real Estate,REIT - Hotel & Motel,USA,3131.32,9.69,15.28,-0.71%,4191506
+330,PLAY,Dave & Buster's Entertainment Inc,Communication Services,Entertainment,USA,1140.66,13.57,27.48,7.81%,3767649
+331,PLNT,Planet Fitness Inc,Consumer Cyclical,Leisure,USA,8502.43,53.99,100.34,0.08%,753293
+332,PLSE,Pulse Biosciences Inc,Healthcare,Medical Instruments & Supplies,USA,1118.08,,17.65,2.98%,314745
+333,PLTR,Palantir Technologies Inc,Technology,Software - Infrastructure,USA,180083.32,385.16,76.07,3.92%,76172784
+334,PLUG,Plug Power Inc,Industrials,Electrical Equipment & Parts,USA,2241.89,,2.43,1.25%,31130204
+335,PR,Permian Resources Corp,Energy,Oil & Gas E&P,USA,11729.47,8.92,14.68,-0.54%,4620246
+336,PRAX,Praxis Precision Medicines Inc,Healthcare,Biotechnology,USA,1292.89,,70.18,-1.15%,186848
+337,PRG,PROG Holdings Inc,Industrials,Rental & Leasing Services,USA,1717.34,12.18,44.13,-6.33%,453470
+338,PRKS,United Parks & Resorts Inc,Consumer Cyclical,Leisure,USA,3080.22,14.02,55.85,0.27%,458495
+339,PSFE,Paysafe Limited,Technology,Software - Infrastructure,United Kingdom,1114.89,,18.65,-1.64%,376145
+340,PTEN,Patterson-UTI Energy Inc,Energy,Oil & Gas Drilling,USA,3049.97,,7.72,1.31%,6560875
+341,PTGX,Protagonist Therapeutics Inc,Healthcare,Biotechnology,USA,2490.73,15.41,41.08,1.73%,530558
+342,PTON,Peloton Interactive Inc,Consumer Cyclical,Leisure,USA,3744.27,,9.58,2.46%,8696340
+343,PVH,PVH Corp,Consumer Cyclical,Apparel Manufacturing,USA,6113.36,8.83,108.52,1.26%,734111
+344,QBTS,D-Wave Quantum Inc,Technology,Computer Hardware,USA,1859.13,,5,27.88%,81275232
+345,QS,QuantumScape Corp,Consumer Cyclical,Auto Parts,USA,2485.65,,4.89,-0.81%,8436824
+346,QTWO,Q2 Holdings Inc,Technology,Software - Application,USA,6300.19,,105.1,-0.76%,470315
+347,QXO,QXO Inc,Technology,Software - Application,USA,6670.19,,16.14,0.94%,912957
+348,RBC,RBC Bearings Inc,Industrials,Tools & Accessories,USA,10192.93,47.73,327.58,-0.93%,150671
+349,RCL,Royal Caribbean Group,Consumer Cyclical,Travel Services,USA,66195.54,25.75,245.17,0.42%,1931702
+350,RDFN,Redfin Corp,Real Estate,Real Estate Services,USA,1092.86,,9.02,-2.28%,4551492
+351,RDNT,Radnet Inc,Healthcare,Diagnostics & Research,USA,5790.38,,78.34,-0.15%,298336
+352,RES,"RPC, Inc",Energy,Oil & Gas Equipment & Services,USA,1298.56,11.1,6.1,-0.97%,1805213
+353,REVG,REV Group Inc,Industrials,Farm & Heavy Construction Machinery,USA,1903.6,7.86,35.23,3.65%,790876
+354,REZI,Resideo Technologies Inc,Industrials,Industrial Distribution,USA,3822.91,22.12,26.19,-0.68%,881943
+355,RGTI,Rigetti Computing Inc,Technology,Computer Hardware,USA,2080.65,,7.16,19.93%,124453912
+356,RH,RH,Consumer Cyclical,Specialty Retail,USA,9704.41,128.01,446.04,16.95%,3056518
+357,RHP,Ryman Hospitality Properties Inc,Real Estate,REIT - Hotel & Motel,USA,6643.01,20.17,113.24,-2.07%,594283
+358,RITM,Rithm Capital Corporation,Real Estate,REIT - Mortgage,USA,5758.71,11.27,11.12,-0.36%,3043983
+359,RIVN,Rivian Automotive Inc,Consumer Cyclical,Auto Manufacturers,USA,14842.62,,14.37,1.20%,32045960
+360,RKLB,Rocket Lab USA Inc,Industrials,Aerospace & Defense,USA,13202.62,,24.42,8.15%,18758536
+361,RKT,Rocket Companies Inc,Financial,Mortgage Finance,USA,23383.62,,12.11,-3.20%,2404304
+362,RL,Ralph Lauren Corp,Consumer Cyclical,Apparel Manufacturing,USA,14215.4,21.66,227.45,0.61%,443564
+363,RLJ,RLJ Lodging Trust,Real Estate,REIT - Hotel & Motel,USA,1576.49,35.8,10.36,-1.24%,1740415
+364,ROKU,Roku Inc,Communication Services,Entertainment,USA,12210.45,,82.99,1.33%,2019540
+365,ROOT,Root Inc,Financial,Insurance - Property & Casualty,USA,1152.43,,76.29,0.04%,350587
+366,RRC,Range Resources Corp,Energy,Oil & Gas E&P,USA,8360.02,17.95,35.35,-2.00%,1404051
+367,RRR,Red Rock Resorts Inc,Consumer Cyclical,Resorts & Casinos,USA,5178.95,21.47,49.49,-0.92%,419445
+368,RSI,Rush Street Interactive Inc,Consumer Cyclical,Gambling,USA,3040.29,,13.57,-0.73%,1135677
+369,RUN,Sunrun Inc,Technology,Solar,USA,2254.71,,10.12,-0.69%,5758211
+370,RVLV,Revolve Group Inc,Consumer Cyclical,Internet Retail,USA,2550.91,65.21,37.09,-2.80%,1003690
+371,RYTM,Rhythm Pharmaceuticals Inc,Healthcare,Biotechnology,USA,3368.06,,55.24,-0.79%,519567
+372,SABR,Sabre Corp,Technology,Software - Infrastructure,USA,1532.33,,3.9,1.83%,16289169
+373,SAFE,Safehold Inc,Real Estate,REIT - Diversified,USA,1454.46,12.05,20.43,-0.34%,271085
+374,SAH,"Sonic Automotive, Inc",Consumer Cyclical,Auto & Truck Dealerships,USA,2238.32,11.83,66.52,-1.58%,99688
+375,SAIA,Saia Inc,Industrials,Trucking,USA,14182.09,37.75,528.65,0.87%,254017
+376,SBGI,Sinclair Inc,Communication Services,Broadcasting,USA,1134.54,,17.22,-0.81%,286176
+377,SBH,Sally Beauty Holdings Inc,Consumer Cyclical,Specialty Retail,USA,1265.65,8.67,12.47,-0.95%,1547034
+378,SDGR,Schrodinger Inc,Healthcare,Health Information Services,USA,1499.08,,20.83,-1.14%,457154
+379,SEMR,SEMrush Holdings Inc,Technology,Software - Application,USA,1876.36,166.67,13.3,-3.83%,508035
+380,SEZL,Sezzle Inc,Financial,Credit Services,USA,1733.55,32.86,309.01,-2.17%,58978
+381,SG,Sweetgreen Inc,Consumer Cyclical,Restaurants,USA,3639.68,,34.46,-8.69%,5154445
+382,SGRY,Surgery Partners Inc,Healthcare,Medical Care Facilities,USA,2602.09,,20.36,0.54%,2573112
+383,SHAK,Shake Shack Inc,Consumer Cyclical,Restaurants,USA,5455.67,725.81,131.59,-2.41%,533337
+384,SHC,Sotera Health Co,Healthcare,Diagnostics & Research,USA,3655.1,52.98,13.15,-1.87%,811641
+385,SHOP,Shopify Inc,Technology,Software - Application,Canada,148113.42,107.86,114.63,-0.59%,4667226
+386,SITE,SiteOne Landscape Supply Inc,Industrials,Industrial Distribution,USA,6208.59,45.49,141.29,-2.61%,259149
+387,SITM,SiTime Corp,Technology,Semiconductors,USA,5786.7,,252.61,-1.94%,285584
+388,SKT,Tanger Inc,Real Estate,REIT - Retail,USA,3936.23,41.08,35.53,0.08%,511094
+389,SKY,Champion Homes Inc,Consumer Cyclical,Residential Construction,USA,5896.37,40.83,105.37,-2.52%,637922
+390,SKYW,Skywest Inc,Industrials,Airlines,USA,4273.28,18.21,106.6,-0.60%,247045
+391,SLB,Schlumberger Ltd,Energy,Oil & Gas Equipment & Services,USA,55580.77,12.95,40.22,-2.14%,10763107
+392,SLG,SL Green Realty Corp,Real Estate,REIT - Office,USA,5815.01,,74.63,2.23%,816820
+393,SM,SM Energy Co,Energy,Oil & Gas E&P,USA,4607.71,5.65,40.43,-0.39%,857028
+394,SMG,Scotts Miracle-Gro Company,Basic Materials,Agricultural Inputs,USA,4363.41,,75.16,1.13%,679257
+395,SMTC,Semtech Corp,Technology,Semiconductors,USA,5667.63,,65.15,0.95%,2039799
+396,SOFI,SoFi Technologies Inc,Financial,Credit Services,USA,18021.8,137.36,16.25,2.20%,41622264
+397,SONO,Sonos Inc,Technology,Consumer Electronics,USA,1783.89,,14.57,0.55%,1236511
+398,SOUN,SoundHound AI Inc,Technology,Software - Application,USA,7734.41,,16.91,23.70%,159555440
+399,SPG,"Simon Property Group, Inc",Real Estate,REIT - Retail,USA,68348.34,23.45,179.6,1.35%,1462367
+400,SPR,Spirit Aerosystems Holdings Inc,Industrials,Aerospace & Defense,USA,3911.55,,32.97,1.48%,1532204
+401,SQ,Block Inc,Technology,Software - Infrastructure,USA,55720.17,51.68,91.98,-2.26%,8351614
+402,STR,Sitio Royalties Corp,Energy,Oil & Gas E&P,USA,3246.39,,21.23,-1.62%,768050
+403,STWD,Starwood Property Trust Inc,Real Estate,REIT - Mortgage,USA,6756.84,17.12,20.14,-0.49%,1341511
+404,SYF,Synchrony Financial,Financial,Credit Services,USA,26317.04,8.88,68.06,-0.69%,2035754
+405,SYM,Symbotic Inc,Industrials,Specialty Industrial Machinery,USA,15702.15,,26.87,-0.52%,2062683
+406,SYRE,Spyre Therapeutics Inc,Healthcare,Biotechnology,USA,1427.83,2.62,24.12,0.84%,422875
+407,TALO,Talos Energy Inc,Energy,Oil & Gas E&P,USA,1785.24,18.7,9.96,-0.40%,1457327
+408,TASK,TaskUs Inc,Technology,Information Technology Services,USA,1905.67,31.82,18.46,15.59%,929658
+409,TEX,Terex Corp,Industrials,Farm & Heavy Construction Machinery,USA,3238.7,7.22,49.55,-2.15%,794540
+410,TFII,TFI International Inc,Industrials,Trucking,Canada,12935.7,27.77,152.85,0.22%,197088
+411,TGI,Triumph Group Inc,Industrials,Aerospace & Defense,USA,1410.24,,18.42,-1.02%,380208
+412,TGTX,TG Therapeutics Inc,Healthcare,Biotechnology,USA,5200.41,,32.02,4.33%,2117001
+413,THC,Tenet Healthcare Corp,Healthcare,Medical Care Facilities,USA,13130.37,4.37,136.71,1.00%,1009359
+414,THO,"Thor Industries, Inc",Consumer Cyclical,Recreational Vehicles,USA,5539.78,26.73,104.61,-0.49%,547103
+415,TILE,Interface Inc,Industrials,Building Products & Equipment,USA,1511.9,18.2,26.13,-0.76%,710473
+416,TLRY,Tilray Brands Inc,Healthcare,Drug Manufacturers - Specialty & Generic,Canada,1057.14,,1.19,-1.65%,48548000
+417,TMDX,Transmedics Group Inc,Healthcare,Medical Devices,USA,2109.07,68.85,64.26,-2.21%,1241911
+418,TMHC,Taylor Morrison Home Corp,Consumer Cyclical,Residential Construction,USA,6452.82,8.56,64.72,-3.65%,673652
+419,TNL,Travel+Leisure Co,Consumer Cyclical,Travel Services,USA,3607.9,9.77,53.15,-0.77%,376001
+420,TOL,Toll Brothers Inc,Consumer Cyclical,Residential Construction,USA,13065.12,8.9,133.85,-3.33%,2505619
+421,TOST,Toast Inc,Technology,Software - Infrastructure,USA,20848.61,,38.13,-3.74%,6649984
+422,TPC,Tutor Perini Corp,Industrials,Engineering & Construction,USA,1380.64,,26.2,0.50%,279786
+423,TPH,Tri Pointe Homes Inc,Consumer Cyclical,Residential Construction,USA,3557.12,8.09,39.03,-2.62%,599938
+424,TPL,Texas Pacific Land Corporation,Energy,Oil & Gas E&P,USA,27546.23,61.51,1198.97,0.18%,125654
+425,TPR,Tapestry Inc,Consumer Cyclical,Luxury Goods,USA,15137.43,18.29,63.2,2.78%,3724470
+426,TPX,Tempur Sealy International Inc,Consumer Cyclical,"Furnishings, Fixtures & Appliances",USA,10251.31,26.46,57.86,2.03%,1703692
+427,TRGP,Targa Resources Corp,Energy,Oil & Gas Midstream,USA,40052.76,33.26,184.62,-0.51%,996896
+428,TRMB,Trimble Inc,Technology,Scientific & Technical Instruments,USA,17664,12.3,73.59,-1.71%,1086890
+429,TROX,Tronox Holdings plc,Basic Materials,Chemicals,USA,1667.74,,10.62,-0.56%,952393
+430,TRU,TransUnion,Financial,Financial Data & Stock Exchanges,USA,18975.8,85.98,98.43,-1.09%,927992
+431,TRUP,Trupanion Inc,Financial,Insurance - Specialty,USA,2204.34,,52.73,-1.27%,319675
+432,TSLA,Tesla Inc,Consumer Cyclical,Auto Manufacturers,USA,1461046.48,119.5,436.23,4.34%,89000160
+433,TWO,Two Harbors Investment Corp,Real Estate,REIT - Mortgage,USA,1223.09,,11.84,-0.34%,1219410
+434,TWST,Twist Bioscience Corp,Healthcare,Diagnostics & Research,USA,2825.97,,47.5,0.23%,814078
+435,TXG,10x Genomics Inc,Healthcare,Health Information Services,USA,1633.89,,14.2,-4.98%,2987558
+436,U,Unity Software Inc,Technology,Software - Application,USA,9212.17,,24.44,-6.43%,11376719
+437,UA,Under Armour Inc,Consumer Cyclical,Apparel Manufacturing,USA,3347.08,,8,-8.05%,5657087
+438,UAA,Under Armour Inc,Consumer Cyclical,Apparel Manufacturing,USA,3343.9,,8.81,-8.13%,16982340
+439,UCTT,Ultra Clean Hldgs Inc,Technology,Semiconductor Equipment & Materials,USA,1682.54,505.56,37.31,0.08%,203636
+440,UDMY,Udemy Inc,Consumer Defensive,Education & Training Services,USA,1109.55,,7.94,-4.22%,501301
+441,UE,Urban Edge Properties,Real Estate,REIT - Retail,USA,2925.31,10,22.33,-0.58%,1237914
+442,UEC,Uranium Energy Corp,Energy,Uranium,USA,3211.66,,7.88,-3.67%,5586124
+443,UHAL-B,U-Haul Holding Company,Industrials,Rental & Leasing Services,USA,13142.39,29.36,66.68,-0.46%,169932
+444,ULCC,Frontier Group Holdings Inc,Industrials,Airlines,USA,1384.79,,6.31,-2.62%,5090296
+445,UP,Wheels Up Experience Inc,Industrials,Airports & Air Services,USA,1479.49,,2.1,0.96%,979027
+446,UPBD,Upbound Group Inc,Technology,Software - Application,USA,1651.44,21.99,31.85,-5.21%,860452
+447,UPST,Upstart Holdings Inc,Financial,Credit Services,USA,8442.84,,84.46,9.57%,13372810
+448,UPWK,Upwork Inc,Communication Services,Internet Content & Information,USA,2240.4,27.11,16.89,-0.76%,878344
+449,URBN,"Urban Outfitters, Inc",Consumer Cyclical,Apparel Retail,USA,4901.64,15.02,52.44,1.29%,1556807
+450,URI,"United Rentals, Inc",Industrials,Rental & Leasing Services,USA,50603.17,20.34,778.82,-0.99%,384315
+451,USFD,US Foods Holding Corp,Consumer Defensive,Food Distribution,USA,16316.01,29.86,69.5,0.78%,1648842
+452,UUUU,Energy Fuels Inc,Energy,Uranium,USA,1173.7,,5.97,-3.08%,3468635
+453,UWMC,UWM Holdings Corporation,Financial,Mortgage Finance,USA,9267.37,,6.02,-3.68%,4346730
+454,VAC,Marriott Vacations Worldwide Corp,Consumer Cyclical,Resorts & Casinos,USA,3290.41,17.98,94.55,-0.32%,283724
+455,VCEL,Vericel Corp,Healthcare,Biotechnology,USA,2859.52,919.52,57.47,0.81%,326531
+456,VCYT,Veracyte Inc,Healthcare,Diagnostics & Research,USA,3260.51,,43.22,-2.66%,684684
+457,VET,Vermilion Energy Inc,Energy,Oil & Gas E&P,Canada,1461.04,,9.42,-0.95%,541050
+458,VMEO,Vimeo Inc,Technology,Software - Application,USA,1086.76,34.65,6.84,-4.20%,1366719
+459,VNO,Vornado Realty Trust,Real Estate,REIT - Office,USA,9370.81,,44.66,1.04%,1063711
+460,VNOM,Viper Energy Inc,Energy,Oil & Gas Midstream,USA,9638.99,21.91,51.19,-0.06%,807233
+461,VRN,Veren Inc,Energy,Oil & Gas E&P,Canada,2991.52,3.49,4.86,-2.61%,8154151
+462,VRT,Vertiv Holdings Co,Industrials,Electrical Equipment & Parts,USA,47489.15,83.7,125.78,0.59%,11623199
+463,VSCO,Victoria's Secret & Co,Consumer Cyclical,Apparel Retail,USA,3986.81,25.18,48.71,4.10%,1411151
+464,VSEC,VSE Corp,Industrials,Aerospace & Defense,USA,2190.73,138.02,108.21,-0.82%,113975
+465,VSTS,Vestis Corp,Industrials,Rental & Leasing Services,USA,2068.53,100.88,16.05,-2.01%,1173951
+466,VTLE,Vital Energy Inc,Energy,Oil & Gas E&P,USA,1188.61,2.21,31.49,-1.07%,487821
+467,VYX,NCR Voyix Corp,Technology,Information Technology Services,USA,2065.33,,14.67,-3.55%,1044762
+468,W,Wayfair Inc,Consumer Cyclical,Internet Retail,USA,6433.58,,52.29,-1.82%,4030421
+469,WBD,Warner Bros. Discovery Inc,Communication Services,Entertainment,USA,28614.02,,12.07,-3.36%,36587812
+470,WCC,"Wesco International, Inc",Industrials,Industrial Distribution,USA,9246.77,15.27,190.79,-1.09%,797612
+471,WD,Walker & Dunlop Inc,Financial,Mortgage Finance,USA,3518.74,37.68,105.57,-1.29%,159289
+472,WEAV,Weave Communications Inc,Healthcare,Health Information Services,USA,1117.81,,15.46,-0.64%,897952
+473,WES,Western Midstream Partners LP,Energy,Oil & Gas Midstream,USA,15058.92,10.17,39.76,-0.48%,911986
+474,WEX,WEX Inc,Technology,Software - Infrastructure,USA,6934.65,22.33,176.2,-1.07%,554703
+475,WFG,"West Fraser Timber Co., Ltd",Basic Materials,Lumber & Wood Production,Canada,7181.57,,89.49,-2.91%,261957
+476,WFRD,Weatherford International plc,Energy,Oil & Gas Equipment & Services,USA,5389.96,10.66,76.09,-2.50%,568833
+477,WGO,"Winnebago Industries, Inc",Consumer Cyclical,Recreational Vehicles,USA,1567.84,214.19,55.41,-2.15%,632196
+478,WGS,GeneDx Holdings Corp,Healthcare,Health Information Services,USA,2177.84,,75.43,5.10%,268358
+479,WHD,Cactus Inc,Energy,Oil & Gas Equipment & Services,USA,5017.8,22.37,63.17,-0.19%,397132
+480,WING,Wingstop Inc,Consumer Cyclical,Restaurants,USA,8214.78,88.07,301.33,-6.68%,926078
+481,WOOF,Petco Health and Wellness Co Inc,Consumer Cyclical,Specialty Retail,USA,1194.47,,4.45,-2.63%,4306471
+482,WRBY,Warby Parker Inc,Healthcare,Medical Instruments & Supplies,USA,2822.06,,23.63,-0.76%,1801816
+483,WS,Worthington Steel Inc,Basic Materials,Steel,USA,2071.32,16.68,42.12,-3.15%,162015
+484,WSM,"Williams-Sonoma, Inc",Consumer Cyclical,Specialty Retail,USA,24616.83,23.14,195.63,2.22%,2395097
+485,WTTR,Select Water Solutions Inc,Energy,Oil & Gas Equipment & Services,USA,1618.18,23.45,13.76,-1.43%,1024737
+486,WWW,"Wolverine World Wide, Inc",Consumer Cyclical,Footwear & Accessories,USA,1868.86,,23.51,-0.72%,705811
+487,WYNN,Wynn Resorts Ltd,Consumer Cyclical,Resorts & Casinos,USA,10498.53,11.42,94.53,1.13%,1778040
+488,X,United States Steel Corp,Basic Materials,Steel,USA,7321.88,21.76,33.26,-2.23%,7056011
+489,XHR,Xenia Hotels & Resorts Inc,Real Estate,REIT - Hotel & Motel,USA,1592.7,68.17,15.85,-1.31%,550708
+490,XPEL,XPEL Inc,Consumer Cyclical,Auto Parts,USA,1209.1,25.07,44.05,-0.72%,134356
+491,XPEV,XPeng Inc ADR,Consumer Cyclical,Auto Manufacturers,China,9509.87,,12.3,-3.98%,9744204
+492,XPO,XPO Inc,Industrials,Trucking,USA,17978.52,50.69,156.3,-1.18%,1478728
+493,XRX,Xerox Holdings Corp,Technology,Information Technology Services,USA,1104.58,,8.78,1.15%,1303803
+494,YETI,YETI Holdings Inc,Consumer Cyclical,Leisure,USA,3748.44,19,44.19,0.00%,1396460
+495,Z,Zillow Group Inc,Communication Services,Internet Content & Information,USA,18408.4,,79.93,-0.50%,2121843
+496,ZBRA,Zebra Technologies Corp,Technology,Communication Equipment,USA,20610.36,54.77,403.59,-0.99%,249260
+497,ZG,Zillow Group Inc,Communication Services,Internet Content & Information,USA,18366.66,,76.84,-0.72%,304754
+498,ZUO,Zuora Inc,Technology,Software - Infrastructure,USA,1523.56,,9.92,-0.10%,997124
