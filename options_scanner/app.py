@@ -10,7 +10,7 @@ from shortable_stocks import ss_options_scan_NOV, ss_options_scan_NOA, ss_option
 from general import pivot_generation_noa_calls, filter_noa_calls, pivot_generation_ovl
 from individual_stock_analysis_code import generate_strike_prices_data, generate_strike_prices_individual_ticker, generate_strike_prices_data_pivot_for_current_date_by_hour_individual_ticker
 from current_day_scan_code import current_day_scan_live
-from patterns_scan import yf_retrieve_period_60_daily, signals_scan, yf_retrieve_period_custom_last_cut_custom, data_enrichment, rsi_divergence_formulas_pre_signal
+from patterns_scan import yf_retrieve_daily, signals_scan, yf_retrieve_period_custom_last_cut_custom, data_enrichment, rsi_divergence_formulas_pre_signal
 
 
 app = Flask(__name__)
@@ -137,10 +137,10 @@ def current_day_quick_hourly_scan_main():
     return render_template('current_day_scan.html', table_time=table_time_html)
 
 
-@app.route('/yf_retrieve_period_60_daily')
-def yf_retrieve_period_60_daily_main():
+@app.route('/yf_retrieve_daily')
+def yf_retrieve_daily_main():
 
-    yf_retrieve_period_60_daily.data_retrieval_daily()
+    yf_retrieve_daily.data_retrieval_daily()
 
     return render_template('index.html')
 
@@ -173,8 +173,8 @@ def yf_retrieve_period_options_favourites_main():
     tickers_list_option = df['Ticker'].tolist()
     print("Updated list for retrieve from options favourites file")
     output_file = 'step1_retrieve_options_favourites.csv'
-    period = "3mo"
-    interval = "1h"
+    period = "1mo"
+    interval = "30m"
     cut_last = 120
     yf_retrieve_period_custom_last_cut_custom.data_retrieval_period_custom_last_cut_custom(period, interval, cut_last, tickers_list_option, output_file)
 
